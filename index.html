@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#090b0f" />
+  <title>DonUp | 기록은 짧게, 돈 감각은 바로 보이게</title>
+  <meta
+    name="description"
+    content="DonUp은 자연어, 사진, 결제 문자를 읽고 지출 기록을 홈, 예산, 위젯, 알림으로 이어주는 개인 가계부입니다."
+  />
+  <link rel="icon" href="./assets/donup-app-icon.png" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="site-header" data-header>
+    <a class="brand" href="#top" aria-label="DonUp 홈으로 이동">
+      <img src="./assets/donup-app-icon.png" alt="" />
+      <span>DonUp</span>
+    </a>
+    <nav class="desktop-nav" aria-label="주요 섹션">
+      <a href="#problem">불편함</a>
+      <a href="#solution">입력</a>
+      <a href="#features">관리</a>
+      <a href="#security">신뢰</a>
+      <a href="#pricing">Pro</a>
+    </nav>
+    <a class="header-cta" href="https://apps.apple.com/kr/app/donup/id6770472441" target="_blank" rel="noreferrer">App Store</a>
+  </header>
+
+  <main id="top">
+    <section class="hero section-dark" data-section>
+      <div class="hero-stage" aria-hidden="true">
+        <div class="phone-cluster" data-parallax="0.12">
+          <figure class="phone-mockup phone-main">
+            <img class="phone-shot" src="./assets/screen-home-summary.png" alt="" />
+            <img class="phone-frame-overlay" src="./assets/iphone-16-pro-max-frame.png" alt="" />
+          </figure>
+          <figure class="phone-mockup phone-side">
+            <img class="phone-shot" src="./assets/screen-budget-variable.png" alt="" />
+            <img class="phone-frame-overlay" src="./assets/iphone-16-pro-max-frame.png" alt="" />
+          </figure>
+          <figure class="phone-mockup phone-third">
+            <img class="phone-shot" src="./assets/screen-history.png" alt="" />
+            <img class="phone-frame-overlay" src="./assets/iphone-16-pro-max-frame.png" alt="" />
+          </figure>
+        </div>
+      </div>
+
+      <div class="hero-copy">
+        <p class="small-label">개인 가계부 DonUp</p>
+        <h1>기록은 짧게,<br />오늘 돈 감각은 바로 보이게</h1>
+        <p>
+          DonUp은 자연어, 사진, 결제 문자를 읽어 내역을 저장하고
+          홈, 예산, 위젯, 알림까지 이어주는 개인 가계부입니다.
+        </p>
+        <div class="hero-highlights" aria-label="DonUp 주요 특징">
+          <span>입력은 짧게</span>
+          <span>내역은 자동으로</span>
+          <span>예산은 한눈에</span>
+        </div>
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://apps.apple.com/kr/app/donup/id6770472441" target="_blank" rel="noreferrer">App Store에서 받기</a>
+          <a class="button button-ghost" href="#solution">입력 방식 보기</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="problem section-light" id="problem" data-section>
+      <div class="problem-intro reveal">
+        <h2>가계부가 오래 못 가는 이유는<br />돈 때문이 아니라 입력 때문입니다.</h2>
+        <p>
+          지출을 기억하는 일보다 매번 종류, 카테고리, 금액, 결제수단을 고르는 일이 더 오래 걸립니다.
+          DonUp은 그 과정을 빠른 내역 저장으로 줄입니다.
+        </p>
+      </div>
+
+      <div class="problem-story" data-problem-story style="--problem-steps: 6" aria-label="기존 가계부 입력 피로">
+        <div class="problem-sticky">
+          <div class="problem-copy-stack">
+            <div class="problem-steps">
+              <article class="problem-scene" data-problem-step>
+                <span>01</span>
+                <h3>앱을 열기 전부터<br />기록은 밀립니다.</h3>
+                <p>영수증, 카드 문자, 메모가 각각 흩어져 있으면 시작부터 귀찮아집니다.</p>
+              </article>
+              <article class="problem-scene" data-problem-step>
+                <span>02</span>
+                <h3>입력칸은<br />생각보다 많습니다.</h3>
+                <p>날짜, 금액, 거래유형, 카테고리, 결제수단을 매번 직접 맞춰야 합니다.</p>
+              </article>
+              <article class="problem-scene" data-problem-step>
+                <span>03</span>
+                <h3>카테고리는<br />늘 다시 고민합니다.</h3>
+                <p>카페인지 식비인지, 고정지출인지 변동지출인지 고르는 사이 기록할 마음이 줄어듭니다.</p>
+              </article>
+              <article class="problem-scene" data-problem-step>
+                <span>04</span>
+                <h3>며칠만 지나도<br />기억은 흐려집니다.</h3>
+                <p>그때는 분명 알았던 지출도 나중에는 어디에 쓴 돈인지 흐릿해집니다.</p>
+              </article>
+              <article class="problem-scene" data-problem-step>
+                <span>05</span>
+                <h3>기록이 없으면<br />예산도 흐려집니다.</h3>
+                <p>쌓인 내역이 없으면 이번 달 소비 흐름도, 다음 지출 판단도 늦어집니다.</p>
+              </article>
+              <article class="problem-scene problem-scene-final" data-problem-step>
+                <div>
+                  <span>DonUp은 이렇게 기록합니다</span>
+                  <h3>말하면 저장되고,<br />쓴 돈은 바로 보입니다.</h3>
+                  <p>한 줄 입력, 결제 문자, 사진 속 지출을 내역으로 저장하고 홈과 예산에서 바로 확인합니다.</p>
+                  <div class="donup-proof-points" aria-label="DonUp 기록 흐름">
+                    <strong>짧게 입력</strong>
+                    <strong>자동으로 저장</strong>
+                    <strong>예산에서 확인</strong>
+                  </div>
+                </div>
+                <figure class="problem-flow-media">
+                  <img src="./assets/traditional-ledger-flow.gif" alt="DonUp으로 내역을 기록하고 예산을 확인하는 흐름" />
+                </figure>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="solution input-flow" id="solution" data-section>
+      <div class="section-copy reveal">
+        <h2>말하듯 적거나,<br />이미 남아 있는 기록을 넣으세요.</h2>
+        <p>
+          텍스트, 결제 문자, 사진, 빠른 입력 위젯이 모두 같은 내역 저장 흐름으로 모입니다.
+          사용자는 짧게 입력하고 바로 기록하면 됩니다.
+        </p>
+      </div>
+
+      <div class="input-showcase">
+        <article class="input-primary reveal">
+          <figure class="phone-mockup mockup-large">
+            <img class="phone-shot" src="./assets/screen-compose-clean.png" alt="DonUp 한 줄 입력 화면" />
+            <img class="phone-frame-overlay" src="./assets/iphone-16-pro-max-frame.png" alt="" />
+          </figure>
+          <div>
+            <span>AI 기록</span>
+            <h3>한 줄 입력을 내역 저장으로</h3>
+            <p>“점심 12,000원”처럼 적으면 날짜, 금액, 분류, 결제수단을 한 화면에서 정리해 저장합니다.</p>
+          </div>
+        </article>
+
+        <div class="input-methods" aria-label="DonUp 입력 방식">
+          <article class="input-method reveal">
+            <span>Text</span>
+            <strong>자연어 입력</strong>
+            <p>짧게 쓰고 내역으로 저장합니다.</p>
+          </article>
+          <article class="input-method reveal">
+            <span>SMS</span>
+            <strong>결제 문자 자동화</strong>
+            <p>문자 속 가맹점과 금액을 읽어 저장합니다.</p>
+          </article>
+          <article class="input-method reveal">
+            <span>Photo</span>
+            <strong>사진·촬영 AI</strong>
+            <p>영수증과 지출 이미지를 나중에 정리합니다.</p>
+          </article>
+          <article class="input-method reveal">
+            <span>Widget</span>
+            <strong>빠른 입력 위젯</strong>
+            <p>앱을 찾기 전에 바로 입력을 시작합니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="features section-light" id="features" data-section>
+      <div class="section-copy reveal">
+        <h2>저장한 내역은<br />바로 관리 화면으로 이어집니다.</h2>
+        <p>홈 요약, 예산, 내역, 위젯, 알림이 같은 기록 흐름으로 연결됩니다.</p>
+      </div>
+
+      <div class="proof-grid">
+        <article class="proof-card reveal">
+          <figure class="phone-mockup">
+            <img class="phone-shot" src="./assets/screen-home-summary.png" alt="DonUp 홈 월 요약 화면" />
+            <img class="phone-frame-overlay" src="./assets/iphone-16-pro-max-frame.png" alt="" />
+          </figure>
+          <div>
+            <span>Home</span>
+            <h3>오늘의 돈 상태를 먼저 봅니다</h3>
+            <p>이번 달 수입과 지출, 고정지출, 변동지출 상태를 앱 첫 화면에서 확인합니다.</p>
+          </div>
+        </article>
+        <article class="proof-card reveal">
+          <figure class="phone-mockup">
+            <img class="phone-shot" src="./assets/screen-budget-variable.png" alt="DonUp 예산 변동지출 화면" />
+            <img class="phone-frame-overlay" src="./assets/iphone-16-pro-max-frame.png" alt="" />
+          </figure>
+          <div>
+            <span>Budget</span>
+            <h3>변동지출과 고정지출을 나눕니다</h3>
+            <p>식비, 카페, 교통처럼 매일 달라지는 돈과 월세, 구독 같은 고정 비용을 따로 봅니다.</p>
+          </div>
+        </article>
+        <article class="proof-card reveal">
+          <figure class="phone-mockup">
+            <img class="phone-shot" src="./assets/screen-calendar-widget.png" alt="DonUp 가계부 위젯 화면" />
+            <img class="phone-frame-overlay" src="./assets/iphone-16-pro-max-frame.png" alt="" />
+          </figure>
+          <div>
+            <span>Widget</span>
+            <h3>앱 밖에서도 흐름을 놓치지 않습니다</h3>
+            <p>달력, 남은 예산, 빠른 입력 위젯으로 기록과 확인 사이를 줄입니다.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="feature-tiles" aria-label="DonUp 기능 요약">
+        <article class="feature-tile reveal">
+          <span>자동 기록</span>
+          <strong>결제 문자 자동화</strong>
+          <p>문자 수신 후 가맹점과 금액을 읽어 내역으로 저장합니다.</p>
+        </article>
+        <article class="feature-tile reveal">
+          <span>리마인더</span>
+          <strong>알림과 무지출</strong>
+          <p>기록 없음, 예산 도달, 고정지출 전날 알림으로 루틴을 잡습니다.</p>
+        </article>
+        <article class="feature-tile reveal">
+          <span>분류</span>
+          <strong>예산 카테고리</strong>
+          <p>미선택 지출까지 보여줘 예산 밖으로 새는 돈을 놓치지 않습니다.</p>
+        </article>
+        <article class="feature-tile reveal">
+          <span>데이터 이동</span>
+          <strong>가져오기·내보내기</strong>
+          <p>CSV, 엑셀, PDF, DonUp JSON 백업을 다룹니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="security section-dark" id="security" data-section>
+      <div class="security-layout">
+        <div class="security-copy reveal">
+          <h2>기록이 많은 앱일수록<br />데이터 위치가 분명해야 합니다.</h2>
+          <p>
+            DonUp은 회원가입 없이 시작하고, 기본 기록은 이 기기에 둡니다.
+            iCloud와 AI 분석은 사용자가 필요한 기능을 켤 때만 이어집니다.
+          </p>
+          <div class="security-list">
+            <article class="reveal">
+              <span>Local first</span>
+              <strong>기본 가계부 데이터는 이 기기에 저장됩니다.</strong>
+            </article>
+            <article class="reveal">
+              <span>Private CloudKit</span>
+              <strong>iCloud 동기화는 Pro 사용자가 직접 켠 경우에만 사용합니다.</strong>
+            </article>
+            <article class="reveal">
+              <span>AI boundary</span>
+              <strong>AI 분석은 기록에 필요한 문장·이미지 정보만 요청합니다.</strong>
+            </article>
+          </div>
+        </div>
+        <figure class="phone-mockup security-phone reveal">
+          <img class="phone-shot" src="./assets/screen-my-settings.png" alt="DonUp My 설정 화면" />
+          <img class="phone-frame-overlay" src="./assets/iphone-16-pro-max-frame.png" alt="" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="pricing section-light" id="pricing" data-section>
+      <div class="section-copy reveal">
+        <h2>무료로 시작하고,<br />자주 쓰는 기능만 Pro로 넓히세요.</h2>
+        <p>결제 문자 자동화, 사진·촬영 AI, iCloud 동기화, 데이터 이동이 필요할 때 Pro가 더 편합니다.</p>
+      </div>
+
+      <div class="pro-benefits" aria-label="DonUp Pro 주요 혜택">
+        <article class="reveal">
+          <span>Automation</span>
+          <strong>결제 문자 자동화</strong>
+          <p>카드 승인 문자를 지출 내역으로 이어줍니다.</p>
+        </article>
+        <article class="reveal">
+          <span>AI input</span>
+          <strong>사진·촬영 AI 확장</strong>
+          <p>영수증, 메뉴판, 메모처럼 이미지로 남은 지출을 정리합니다.</p>
+        </article>
+        <article class="reveal">
+          <span>Sync</span>
+          <strong>iCloud와 데이터 이동</strong>
+          <p>기기 변경, 백업, 가져오기와 내보내기를 더 편하게 씁니다.</p>
+        </article>
+      </div>
+
+      <div class="pricing-table reveal" role="table" aria-label="DonUp 가격 비교표">
+        <div class="pricing-row pricing-head" role="row">
+          <div role="columnheader">기능</div>
+          <div role="columnheader">무료</div>
+          <div role="columnheader">Pro 월간</div>
+          <div role="columnheader">Pro 평생</div>
+        </div>
+        <div class="pricing-row pricing-price" role="row">
+          <div role="cell">가격</div><div role="cell">₩0</div><div role="cell">₩1,900</div><div role="cell">₩29,900</div>
+        </div>
+        <div class="pricing-row" role="row">
+          <div role="cell">수입·지출 기록</div><div role="cell"><span class="mark mark-yes">O</span></div><div role="cell"><span class="mark mark-yes">O</span></div><div role="cell"><span class="mark mark-yes">O</span></div>
+        </div>
+        <div class="pricing-row" role="row">
+          <div role="cell">예산 관리</div><div role="cell"><span class="mark mark-yes">O</span></div><div role="cell"><span class="mark mark-yes">O</span></div><div role="cell"><span class="mark mark-yes">O</span></div>
+        </div>
+        <div class="pricing-row" role="row">
+          <div role="cell">사진·촬영 AI 입력</div><div role="cell">1회/일</div><div role="cell"><span class="mark mark-yes">O</span></div><div role="cell"><span class="mark mark-yes">O</span></div>
+        </div>
+        <div class="pricing-row" role="row">
+          <div role="cell">결제 문자 자동화</div><div role="cell"><span class="mark mark-no">X</span></div><div role="cell"><span class="mark mark-yes">O</span></div><div role="cell"><span class="mark mark-yes">O</span></div>
+        </div>
+        <div class="pricing-row" role="row">
+          <div role="cell">iCloud 동기화</div><div role="cell"><span class="mark mark-no">X</span></div><div role="cell"><span class="mark mark-yes">O</span></div><div role="cell"><span class="mark mark-yes">O</span></div>
+        </div>
+        <div class="pricing-row" role="row">
+          <div role="cell">가져오기·내보내기</div><div role="cell"><span class="mark mark-no">X</span></div><div role="cell"><span class="mark mark-yes">O</span></div><div role="cell"><span class="mark mark-yes">O</span></div>
+        </div>
+        <div class="pricing-row" role="row">
+          <div role="cell">프리미엄 테마</div><div role="cell"><span class="mark mark-no">X</span></div><div role="cell">9종</div><div role="cell">9종</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="download" id="download" data-section>
+      <div class="download-panel reveal">
+        <img src="./assets/donup-app-icon.png" alt="" />
+        <h2>오늘 쓴 돈부터<br />가볍게 정리해보세요.</h2>
+        <p>
+          짧게 기록하고, 이번 달 돈 흐름을 바로 확인하세요.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://apps.apple.com/kr/app/donup/id6770472441" target="_blank" rel="noreferrer">
+            App Store에서 받기
+          </a>
+          <a class="button button-ghost dark" href="#top">맨 위로</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <strong>DonUp</strong>
+    <span>개인 가계부, 더 적게 입력하고 더 자주 확인하기.</span>
+    <nav aria-label="문서 링크">
+      <a href="../../docs/privacy-policy.md">개인정보 처리방침</a>
+    </nav>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
