@@ -9,7 +9,13 @@
     name="description"
     content="DonUp은 자연어, 사진, 결제 문자를 읽고 지출 기록을 홈, 예산, 위젯, 알림으로 이어주는 개인 가계부입니다."
   />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="DonUp | 기록은 짧게, 돈 감각은 바로 보이게" />
+  <meta property="og:description" content="자연어, 사진, 결제 문자를 읽어 지출을 기록하고 홈, 예산, 위젯, 알림으로 이어주는 개인 가계부입니다." />
+  <meta property="og:image" content="./assets/donup-app-icon.png" />
+  <meta name="twitter:card" content="summary" />
   <link rel="icon" href="./assets/donup-app-icon.png" />
+  <link rel="apple-touch-icon" href="./assets/donup-app-icon.png" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
@@ -116,7 +122,7 @@
                   </div>
                 </div>
                 <figure class="problem-flow-media">
-                  <img src="./assets/traditional-ledger-flow.gif" alt="DonUp으로 내역을 기록하고 예산을 확인하는 흐름" />
+                  <img loading="lazy" src="./assets/traditional-ledger-flow.gif" alt="DonUp으로 내역을 기록하고 예산을 확인하는 흐름" />
                 </figure>
               </article>
             </div>
@@ -137,7 +143,7 @@
       <div class="input-showcase">
         <article class="input-primary reveal">
           <figure class="phone-mockup mockup-large">
-            <img class="phone-shot" src="./assets/screen-compose-clean.png" alt="DonUp 한 줄 입력 화면" />
+            <img class="phone-shot" loading="lazy" src="./assets/screen-compose-clean.png" alt="DonUp 한 줄 입력 화면" />
             <img class="phone-frame-overlay" src="./assets/iphone-16-pro-max-frame.png" alt="" />
           </figure>
           <div>
@@ -149,9 +155,9 @@
 
         <div class="input-methods" aria-label="DonUp 입력 방식">
           <article class="input-method reveal">
-            <span>Text</span>
-            <strong>자연어 입력</strong>
-            <p>짧게 쓰고 내역으로 저장합니다.</p>
+            <span>Text·Voice</span>
+            <strong>자연어·음성 입력</strong>
+            <p>짧게 쓰거나 말하면 내역으로 저장합니다.</p>
           </article>
           <article class="input-method reveal">
             <span>SMS</span>
@@ -203,7 +209,7 @@
         </article>
         <article class="proof-card reveal">
           <figure class="phone-mockup">
-            <img class="phone-shot" src="./assets/screen-calendar-widget.png" alt="DonUp 가계부 위젯 화면" />
+            <img class="phone-shot" loading="lazy" src="./assets/screen-calendar-widget.png" alt="DonUp 가계부 위젯 화면" />
             <img class="phone-frame-overlay" src="./assets/iphone-16-pro-max-frame.png" alt="" />
           </figure>
           <div>
@@ -221,6 +227,11 @@
           <p>문자 수신 후 가맹점과 금액을 읽어 내역으로 저장합니다.</p>
         </article>
         <article class="feature-tile reveal">
+          <span>AI 비서</span>
+          <strong>돈워리에게 묻기</strong>
+          <p>내 가계부 데이터로 소비 요약, 예산 비교, 차트 답변을 만들어줍니다.</p>
+        </article>
+        <article class="feature-tile reveal">
           <span>리마인더</span>
           <strong>알림과 무지출</strong>
           <p>기록 없음, 예산 도달, 고정지출 전날 알림으로 루틴을 잡습니다.</p>
@@ -234,6 +245,11 @@
           <span>데이터 이동</span>
           <strong>가져오기·내보내기</strong>
           <p>CSV, 엑셀, PDF, DonUp JSON 백업을 다룹니다.</p>
+        </article>
+        <article class="feature-tile reveal">
+          <span>커스텀</span>
+          <strong>테마와 홈 문구</strong>
+          <p>테마 색상과 시간대별 홈 문구로 내 가계부답게 꾸밉니다.</p>
         </article>
       </div>
     </section>
@@ -262,7 +278,7 @@
           </div>
         </div>
         <figure class="phone-mockup security-phone reveal">
-          <img class="phone-shot" src="./assets/screen-my-settings.png" alt="DonUp My 설정 화면" />
+          <img class="phone-shot" loading="lazy" src="./assets/screen-my-settings.png" alt="DonUp My 설정 화면" />
           <img class="phone-frame-overlay" src="./assets/iphone-16-pro-max-frame.png" alt="" />
         </figure>
       </div>
@@ -282,8 +298,8 @@
         </article>
         <article class="reveal">
           <span>AI input</span>
-          <strong>사진·촬영 AI 확장</strong>
-          <p>영수증, 메뉴판, 메모처럼 이미지로 남은 지출을 정리합니다.</p>
+          <strong>사진·촬영 AI 무제한</strong>
+          <p>무료는 하루 1번, Pro는 제한 없이 이미지 속 지출을 정리합니다.</p>
         </article>
         <article class="reveal">
           <span>Sync</span>
@@ -309,7 +325,10 @@
           <div role="cell">예산 관리</div><div role="cell"><span class="mark mark-yes">O</span></div><div role="cell"><span class="mark mark-yes">O</span></div><div role="cell"><span class="mark mark-yes">O</span></div>
         </div>
         <div class="pricing-row" role="row">
-          <div role="cell">사진·촬영 AI 입력</div><div role="cell">1회/일</div><div role="cell"><span class="mark mark-yes">O</span></div><div role="cell"><span class="mark mark-yes">O</span></div>
+          <div role="cell">사진·촬영 AI 입력</div><div role="cell">1회/일</div><div role="cell">무제한</div><div role="cell">무제한</div>
+        </div>
+        <div class="pricing-row" role="row">
+          <div role="cell">AI 비서 돈워리</div><div role="cell">3회/일</div><div role="cell">20회/일</div><div role="cell">20회/일</div>
         </div>
         <div class="pricing-row" role="row">
           <div role="cell">결제 문자 자동화</div><div role="cell"><span class="mark mark-no">X</span></div><div role="cell"><span class="mark mark-yes">O</span></div><div role="cell"><span class="mark mark-yes">O</span></div>
@@ -321,9 +340,16 @@
           <div role="cell">가져오기·내보내기</div><div role="cell"><span class="mark mark-no">X</span></div><div role="cell"><span class="mark mark-yes">O</span></div><div role="cell"><span class="mark mark-yes">O</span></div>
         </div>
         <div class="pricing-row" role="row">
-          <div role="cell">프리미엄 테마</div><div role="cell"><span class="mark mark-no">X</span></div><div role="cell">9종</div><div role="cell">9종</div>
+          <div role="cell">지갑 나누기</div><div role="cell"><span class="mark mark-no">X</span></div><div role="cell"><span class="mark mark-yes">O</span></div><div role="cell"><span class="mark mark-yes">O</span></div>
+        </div>
+        <div class="pricing-row" role="row">
+          <div role="cell">테마 색상</div><div role="cell">기본 3종</div><div role="cell">12종</div><div role="cell">12종</div>
         </div>
       </div>
+      <p class="pricing-note reveal">
+        Pro 월간은 자동 갱신 구독, Pro 평생은 한 번 결제하는 상품입니다.
+        실제 결제 금액과 조건은 App Store 결제 화면에 표시되는 내용을 따릅니다.
+      </p>
     </section>
 
     <section class="download" id="download" data-section>
@@ -365,7 +391,8 @@
     <strong>DonUp</strong>
     <span>개인 가계부, 더 적게 입력하고 더 자주 확인하기.</span>
     <nav aria-label="문서 링크">
-      <a href="../../docs/privacy-policy.md">개인정보 처리방침</a>
+      <a href="https://zrxbrwvvxvkqszptxdmv.supabase.co/functions/v1/legal/privacy" target="_blank" rel="noreferrer">개인정보 처리방침</a>
+      <a href="https://zrxbrwvvxvkqszptxdmv.supabase.co/functions/v1/legal/terms" target="_blank" rel="noreferrer">이용약관</a>
     </nav>
   </footer>
 
