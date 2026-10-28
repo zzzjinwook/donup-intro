@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#000000" />
+  <title>개인정보 보호 | DonUp</title>
+  <meta name="description" content="DonUp이 가계부 데이터와 AI 요청을 어떻게 다루는지, 무엇을 직접 관리할 수 있는지 안내합니다." />
+  <link rel="canonical" href="https://donup.app/security" />
+  <link rel="icon" href="/assets/screens/donup-icon-256.png" />
+  <link rel="stylesheet" href="/support.css" />
+  <script src="/support.js" defer></script>
+</head>
+<body class="page-dark">
+  <a class="skip-link" href="#overview">본문으로 건너뛰기</a>
+
+  <header class="site-bar">
+    <a class="site-brand" href="/" aria-label="DonUp 홈">
+      <img src="/assets/screens/donup-icon-256.png" alt="" width="28" height="28" />
+      <span>DonUp</span>
+    </a>
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="/#intro">기능</a>
+      <a href="/security" aria-current="page">개인정보 보호</a>
+      <a href="/support">도움말</a>
+    </nav>
+    <a class="pill site-cta" href="/#download">앱 다운로드</a>
+  </header>
+
+  <div class="subnav">
+    <strong>개인정보 보호</strong>
+    <nav aria-label="이 페이지의 구성">
+      <a href="#overview">개요</a>
+      <a href="#principles">원칙</a>
+      <a href="#who">처리하는 곳</a>
+      <a href="#control">보관과 삭제</a>
+    </nav>
+  </div>
+
+  <!-- 문구는 앱 개인정보 처리방침(/privacy) 조항에 있는 사실만 옮겼다. 조항 번호는 각 블록 주석에 남긴다. -->
+  <main class="security">
+    <section class="security-hero" id="overview" aria-labelledby="security-title">
+      <img src="/assets/illustrations/privacy.webp" alt="" width="1254" height="1254" />
+      <h1 id="security-title">내 돈 기록은<br />내가 정한 만큼만 쓰여요</h1>
+      <span class="rule" aria-hidden="true"></span>
+      <!-- 제13조, 제6조 -->
+      <p>
+        DonUp은 가계부를 기록하고 동기화하는 데 필요한 정보만 처리해요.
+        외부 AI로 데이터를 보내는 기능은 따로 허용한 경우에만 동작하고,
+        허용하지 않아도 직접 입력과 일반 가계부 기능은 그대로 쓸 수 있어요.
+      </p>
+    </section>
+
+    <section class="security-section" id="principles" aria-labelledby="principles-title">
+      <h2 id="principles-title" class="reveal">네 가지 원칙</h2>
+      <div class="principles">
+        <!-- 제13조 -->
+        <article class="principle reveal">
+          <span class="glyph" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><rect x="2.5" y="7" width="19" height="10" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="16.5" cy="12" r="3" fill="currentColor"/></svg></span>
+          <h3>AI는 허용한 뒤에만</h3>
+          <p>외부 생성형 AI로 보내기 전에 전송 대상·자료·목적·보유 기간과 거부 방법을 안내하고 따로 허용을 받아요. 설정의 'AI 데이터 사용'에서 언제든 철회할 수 있고, 철회한 뒤에는 새 AI 요청을 보내지 않아요.</p>
+        </article>
+        <!-- 제7조, 제10조, 도움말 sharing/shared-ledger -->
+        <article class="principle reveal">
+          <span class="glyph" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="8" r="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M5 20a7 7 0 0 1 14 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+          <h3>가계부별로 접근 범위를 나눠요</h3>
+          <p>개인 데이터는 계정별로 분리되고, 행 단위 접근 정책으로 인증된 본인 데이터만 읽도록 제한해요. 다만 내가 만들거나 참여한 공유 가계부는 참여자가 그 가계부의 내역, 예산과 자산을 함께 보고 작성할 수 있어요.</p>
+        </article>
+        <!-- 제2조 -->
+        <article class="principle reveal">
+          <span class="glyph" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M6 6l12 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+          <h3>필요 없는 정보는 받지 않아요</h3>
+          <p>카드번호, 금융계좌 로그인 정보, 광고식별자, 위치정보, 연락처, 건강정보, 주민등록번호는 수집하지 않아요.</p>
+        </article>
+        <!-- 제8조 -->
+        <article class="principle reveal">
+          <span class="glyph" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 4v11M7.5 10.5L12 15l4.5-4.5M4 17v2a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 20 19v-2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>보고, 고치고, 지우고, 가져가요</h3>
+          <p>앱에서 내 가계부 데이터를 열람·수정·삭제·내보내기할 수 있고(JSON 파일 내보내기는 Pro), 계정 설정에서 DonUp 계정과 서버에 연결된 데이터를 삭제할 수 있어요.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 제4조, 제5조, 제6조 -->
+    <section class="security-section" id="who" aria-labelledby="who-title">
+      <h2 id="who-title" class="reveal">누가 무엇을 처리하나요?</h2>
+      <p class="section-lead reveal">
+        DonUp은 법령에 근거가 있거나 동의한 경우를 제외하고 개인정보를 제3자에게 판매하거나 제공하지 않아요.
+        서비스를 위해 아래 사업자가 DonUp의 지시에 따라 정보를 처리해요.
+      </p>
+      <div class="who-grid">
+        <article class="who-card reveal">
+          <p class="who-place">Supabase · 싱가포르</p>
+          <h3>계정과 동기화</h3>
+          <p>로그인, 가계부 데이터와 비공개 파일 저장, 여러 기기 동기화, 계정 삭제를 처리해요.</p>
+        </article>
+        <article class="who-card reveal">
+          <p class="who-place">OpenAI · 미국</p>
+          <h3>허용한 AI 기능에서</h3>
+          <p>허용 후 AI 기능을 쓰면 입력 문장, 선택한 이미지·문서, 필요한 범위의 가계부 정보를 분석해요. 켜 둔 자동 조언 카드도 해당 화면의 가계부 정보로 자동 요청할 수 있어요. 기본 설정에서 최대 30일 보관될 수 있어요.</p>
+        </article>
+        <article class="who-card reveal">
+          <p class="who-place">Cerebras · 미국</p>
+          <h3>AI를 실행할 때만</h3>
+          <p>해당 분석 기능을 실행할 때 입력 문장 또는 이미지를 분석해요. 추론 입력과 출력을 응답 뒤 보관하지 않는다고 고지해요.</p>
+        </article>
+        <article class="who-card reveal">
+          <p class="who-place">Apple · Google</p>
+          <h3>로그인과 결제</h3>
+          <p>Apple·Google 로그인, App Store·Google Play 결제와 구매 복원 확인에 쓰여요.</p>
+        </article>
+      </div>
+      <a class="text-link reveal" href="/privacy">개인정보 처리방침 전문 보기 <span aria-hidden="true">›</span></a>
+    </section>
+
+    <!-- 제3조, 제8조, 제9조 -->
+    <section class="security-section" id="control" aria-labelledby="control-title">
+      <h2 id="control-title" class="reveal">보관과 삭제</h2>
+      <ul class="facts">
+        <li class="reveal"><strong>삭제한 내역</strong><span>복구용 사본은 최대 30일 또는 최근 200건 한도에서 보관된 뒤 제거돼요. 복구 기록을 직접 지우거나 계정을 삭제하면 더 일찍 제거돼요.</span></li>
+        <li class="reveal"><strong>계정 삭제</strong><span>회원 정보, 동기화 데이터, 첨부파일과 결제 권한 검증 정보가 운영 시스템에서 삭제돼요. 기기의 로컬 사본과 내보낸 파일은 따로 지워야 해요.</span></li>
+        <li class="reveal"><strong>앱 삭제</strong><span>그 기기의 로컬 사본만 지워지고 계정 데이터는 남아요. 서버 데이터까지 지우려면 앱의 계정 삭제 기능을 사용해요.</span></li>
+        <li class="reveal"><strong>구독</strong><span>계정을 삭제해도 App Store·Google Play 구독은 해지되거나 환불되지 않아요. 구매한 스토어에서 따로 관리해요.</span></li>
+        <li class="reveal"><strong>돈워리 대화</strong><span>앱 안의 대화 기록 삭제 기능이나 계정 삭제로 지울 수 있어요.</span></li>
+      </ul>
+      <div class="security-cta reveal">
+        <a class="pill pill-light" href="/support#donworry">돈워리와 개인정보 도움말</a>
+        <a class="pill pill-outline" href="/support#contact">개인정보 문의</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav aria-label="문서와 문의">
+      <a href="/support">도움말</a>
+      <a href="/security" aria-current="page">개인정보 보호</a>
+      <a href="/privacy">개인정보 처리방침</a>
+      <a href="/terms">이용약관</a>
+      <a href="/support#contact">문의하기</a>
+    </nav>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "donup",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test scripts/*.test.mjs",
+    "deploy": "npm run build && npx --yes wrangler@4.154.0 pages deploy dist --project-name donup --branch main",
+    "deploy:legacy-redirect": "npx --yes wrangler@4.154.0 pages deploy legacy-redirect --project-name donup-intro --branch main"
+  }
+}

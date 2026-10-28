@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="{{LANG}}">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>{{TITLE}} | DonUp</title>
+  <meta name="description" content="{{SUBTITLE}}" />
+  <link rel="canonical" href="{{CANONICAL}}" />
+  <link rel="alternate" hreflang="ko" href="/privacy" />
+  <link rel="alternate" hreflang="en" href="/en/privacy" />
+  <link rel="icon" href="/assets/screens/donup-icon-256.png" />
+  <link rel="stylesheet" href="/legal.css" />
+</head>
+<body>
+  <a class="skip-link" href="#legal-main">{{SKIP_LABEL}}</a>
+
+  <header class="legal-bar">
+    <a class="legal-brand" href="/" aria-label="{{HOME_LABEL}}">
+      <img src="/assets/screens/donup-icon-256.png" alt="" width="26" height="26" />
+      <span>DonUp</span>
+    </a>
+    <nav class="legal-nav" aria-label="{{SITE_NAV_LABEL}}">
+      <a href="/support">{{SUPPORT_LABEL}}</a>
+      <a href="/security">{{SECURITY_LABEL}}</a>
+    </nav>
+    <nav class="legal-switch" aria-label="{{LANGUAGE_LABEL}}">
+      <a href="/privacy" hreflang="ko" lang="ko" {{KO_CURRENT}}>한국어</a>
+      <a href="/en/privacy" hreflang="en" lang="en" {{EN_CURRENT}}>English</a>
+    </nav>
+  </header>
+
+  <main class="legal" id="legal-main">
+    <article class="legal-doc">
+      <!-- LEGAL_CONTENT -->
+    </article>
+  </main>
+
+  <footer class="legal-footer">
+    <nav aria-label="{{DOCUMENTS_LABEL}}">
+      <a href="/support">{{SUPPORT_LABEL}}</a>
+      <a href="/security">{{SECURITY_LABEL}}</a>
+      <a href="{{LOCALE_PREFIX}}privacy" aria-current="page">{{PRIVACY_LABEL}}</a>
+      <a href="{{LOCALE_PREFIX}}terms">{{TERMS_LABEL}}</a>
+      <a href="/support#contact">{{CONTACT_LABEL}}</a>
+    </nav>
+  </footer>
+</body>
+</html>

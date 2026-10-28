@@ -2,399 +2,262 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#090b0f" />
-  <title>DonUp | 기록은 짧게, 돈 감각은 바로 보이게</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>DonUp | 말하면 기록되는 가계부</title>
   <meta
     name="description"
-    content="말 한마디, 문자 한 통으로 끝나는 가계부. DonUp이 자동으로 기록하고 예산까지 챙겨줍니다."
+    content="말하고 찍는 가계부. 소비와 예산을 한눈에."
   />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="DonUp | 기록은 짧게, 돈 감각은 바로 보이게" />
-  <meta property="og:description" content="말 한마디, 문자 한 통으로 끝나는 가계부. DonUp이 자동으로 기록하고 예산까지 챙겨줍니다." />
-  <meta property="og:image" content="./assets/donup-app-icon.png" />
-  <meta name="twitter:card" content="summary" />
-  <link rel="icon" href="./assets/donup-app-icon.png" />
+  <link rel="canonical" href="https://donup.app/" />
+  <link rel="icon" href="./assets/screens/donup-icon-256.png" />
   <link rel="apple-touch-icon" href="./assets/donup-app-icon.png" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-  <header class="site-header" data-header>
-    <a class="brand" href="#top" aria-label="DonUp 홈으로 이동">
-      <img src="./assets/donup-app-icon.png" alt="" />
+  <a class="skip-link" href="#intro">본문으로 건너뛰기</a>
+
+  <header class="topbar" data-topbar>
+    <a class="brand" href="#top" aria-label="DonUp 맨 위로">
+      <img src="./assets/screens/donup-icon-256.png" alt="" width="28" height="28" />
       <span>DonUp</span>
     </a>
-    <nav class="desktop-nav" aria-label="주요 섹션">
-      <a href="#problem">불편함</a>
-      <a href="#solution">입력</a>
-      <a href="#features">관리</a>
-      <a href="#security">신뢰</a>
-      <a href="#pricing">Pro</a>
+    <nav class="topbar-nav" aria-label="주요 메뉴">
+      <a href="#intro">기능</a>
+      <a href="#themes">테마</a>
+      <a href="./security">개인정보 보호</a>
+      <a href="./support">도움말</a>
     </nav>
-    <a class="header-cta" href="https://apps.apple.com/kr/app/donup/id6770472441" target="_blank" rel="noreferrer">App Store</a>
+    <a class="pill pill-dark topbar-cta" href="#download">앱 다운로드</a>
   </header>
 
   <main id="top">
-    <section class="hero section-dark" data-section>
-      <div class="hero-stage" aria-hidden="true">
-        <div class="phone-cluster" data-parallax="0.12">
-          <figure class="phone-mockup phone-main">
-            <img class="phone-shot" src="./assets/screen-home-summary.png" alt="" />
-            <img class="phone-frame-overlay" src="./assets/iphone-16-pro-max-frame.png" alt="" />
-          </figure>
-          <figure class="phone-mockup phone-side">
-            <img class="phone-shot" src="./assets/screen-budget-variable.png" alt="" />
-            <img class="phone-frame-overlay" src="./assets/iphone-16-pro-max-frame.png" alt="" />
-          </figure>
-          <figure class="phone-mockup phone-third">
-            <img class="phone-shot" src="./assets/screen-history.png" alt="" />
-            <img class="phone-frame-overlay" src="./assets/iphone-16-pro-max-frame.png" alt="" />
-          </figure>
+    <!-- 1. 히어로: 둥근 장면 + 카테고리 오브젝트 + 가운데 큰 문구 -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-frame" data-hero-frame>
+        <div class="hero-scene" aria-hidden="true">
+          <span class="dune dune-a"></span>
+          <span class="dune dune-b"></span>
+          <span class="dune dune-c"></span>
+          <img class="obj obj-1" data-depth="0.9" src="./assets/illustrations/food.webp" alt="" width="1254" height="1254" />
+          <img class="obj obj-2" data-depth="0.5" src="./assets/illustrations/coffee.webp" alt="" width="1254" height="1254" />
+          <img class="obj obj-3" data-depth="0.75" src="./assets/illustrations/transport.webp" alt="" width="1254" height="1254" />
+          <img class="obj obj-4" data-depth="0.4" src="./assets/illustrations/shopping.webp" alt="" width="1254" height="1254" />
+          <img class="obj obj-5" data-depth="0.65" src="./assets/illustrations/leisure.webp" alt="" width="1254" height="1254" />
+          <img class="obj obj-6" data-depth="0.35" src="./assets/illustrations/home.webp" alt="" width="1254" height="1254" />
         </div>
-      </div>
-
-      <div class="hero-copy">
-        <p class="small-label">개인 가계부 DonUp</p>
-        <h1>10초 기록으로,<br />오늘 내 돈 흐름이 보이게</h1>
-        <p>
-          DonUp은 자연어, 사진, 결제 문자를 읽어 내역을 저장하고
-          홈, 예산, 위젯, 알림까지 이어주는 개인 가계부입니다.
-        </p>
-        <div class="hero-highlights" aria-label="DonUp 주요 특징">
-          <span>3초 입력</span>
-          <span>자동 분류</span>
-          <span>예산 한눈에</span>
+        <div class="hero-copy">
+          <h1 id="hero-title" class="hero-title"><span>말하면 기록되고,</span><span>쓴 돈이 바로 보이는 가계부</span></h1>
+          <p>DonUp에서 시작하세요</p>
         </div>
-        <div class="hero-actions">
-          <a class="button button-primary" href="https://apps.apple.com/kr/app/donup/id6770472441" target="_blank" rel="noreferrer">무료로 시작하기</a>
-          <a class="button button-ghost" href="#solution">입력 방식 보기</a>
-        </div>
+        <a class="hero-next" href="#intro" aria-label="소개로 이동">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
       </div>
     </section>
 
-    <section class="problem section-light" id="problem" data-section>
-      <div class="problem-intro reveal">
-        <h2>가계부를 그만두는 이유,<br />돈이 아니라 '입력'이었습니다.</h2>
-        <p>
-          지출을 기억하는 일보다 매번 종류, 카테고리, 금액, 결제수단을 고르는 일이 더 오래 걸립니다.
-          DonUp은 그 과정을 빠른 내역 저장으로 줄입니다.
-        </p>
+    <!-- 2. 소개: 가운데 휴대폰 + 진행 막대 알약 -->
+    <section class="intro" id="intro" aria-labelledby="intro-title">
+      <div class="intro-head reveal">
+        <p class="eyebrow">소개합니다</p>
+        <h2 id="intro-title">한 줄이면 끝나는 기록,<br />나만의 가계부 DonUp</h2>
+        <div class="store-row" id="download">
+          <a class="pill pill-soft" href="https://apps.apple.com/kr/app/donup/id6770472441" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.2 1-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8 0 0-2.6-1-2.6-3.9zM14 5.5c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.6 2.8-1.4z"/></svg>
+            App Store
+          </a>
+          <button class="pill pill-coming" type="button" disabled>
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M3.5 2.5 13 12l-9.5 9.5V2.5Zm1.8-.3 11.4 6.5-2.6 2.6-8.8-9.1ZM17.8 9.4l3.1 1.8a.9.9 0 0 1 0 1.6l-3.1 1.8L15 12l2.8-2.6Zm-1.1 5.9L5.3 21.8l8.8-9.1 2.6 2.6Z"/></svg>
+            Google Play <span class="store-status">준비 중</span>
+          </button>
+        </div>
       </div>
 
-      <div class="problem-story" data-problem-story style="--problem-steps: 6" aria-label="기존 가계부 입력 피로">
-        <div class="problem-sticky">
-          <div class="problem-copy-stack">
-            <div class="problem-steps">
-              <article class="problem-scene" data-problem-step>
-                <span>01</span>
-                <h3>앱을 열기 전부터<br />기록은 밀립니다.</h3>
-                <p>영수증, 카드 문자, 메모가 각각 흩어져 있으면 시작부터 귀찮아집니다.</p>
-              </article>
-              <article class="problem-scene" data-problem-step>
-                <span>02</span>
-                <h3>입력칸은<br />생각보다 많습니다.</h3>
-                <p>날짜, 금액, 거래유형, 카테고리, 결제수단을 매번 직접 맞춰야 합니다.</p>
-              </article>
-              <article class="problem-scene" data-problem-step>
-                <span>03</span>
-                <h3>카테고리는<br />늘 다시 고민합니다.</h3>
-                <p>카페인지 식비인지, 고정지출인지 변동지출인지 고르는 사이 기록할 마음이 줄어듭니다.</p>
-              </article>
-              <article class="problem-scene" data-problem-step>
-                <span>04</span>
-                <h3>며칠만 지나도<br />"이게 뭐였지?"가 됩니다.</h3>
-                <p>분명 기억했던 지출인데, 나중엔 카드값만 남고 이유는 사라집니다.</p>
-              </article>
-              <article class="problem-scene" data-problem-step>
-                <span>05</span>
-                <h3>기록이 없으면<br />예산도 흐려집니다.</h3>
-                <p>쌓인 내역이 없으면 이번 달 소비 흐름도, 다음 지출 판단도 늦어집니다.</p>
-              </article>
-              <article class="problem-scene problem-scene-final" data-problem-step>
-                <div>
-                  <span>DonUp은 이렇게 기록합니다</span>
-                  <h3>말하면 저장되고,<br />쓴 돈은 바로 보입니다.</h3>
-                  <p>한 줄 입력, 결제 문자, 사진 속 지출을 내역으로 저장하고 홈과 예산에서 바로 확인합니다.</p>
-                  <div class="donup-proof-points" aria-label="DonUp 기록 흐름">
-                    <strong>짧게 입력</strong>
-                    <strong>자동으로 저장</strong>
-                    <strong>예산에서 확인</strong>
-                  </div>
-                </div>
-                <figure class="problem-flow-media">
-                  <img loading="lazy" src="./assets/traditional-ledger-flow.gif" alt="DonUp으로 내역을 기록하고 예산을 확인하는 흐름" />
-                </figure>
-              </article>
+      <div class="showcase" data-showcase>
+        <div class="showcase-stage" data-stage>
+          <span class="stage-glow" aria-hidden="true"></span>
+          <img class="obj obj-float obj-l1" data-scroll-depth="-0.16" src="./assets/illustrations/coffee.webp" alt="" width="1254" height="1254" loading="lazy" />
+          <img class="obj obj-float obj-l2" data-scroll-depth="0.12" src="./assets/illustrations/transport.webp" alt="" width="1254" height="1254" loading="lazy" />
+          <img class="obj obj-float obj-r1" data-scroll-depth="-0.1" src="./assets/illustrations/shopping.webp" alt="" width="1254" height="1254" loading="lazy" />
+          <img class="obj obj-float obj-r2" data-scroll-depth="0.18" src="./assets/illustrations/food.webp" alt="" width="1254" height="1254" loading="lazy" />
+
+          <figure class="phone" id="feature-panel" role="tabpanel" aria-labelledby="feature-tab-home" data-phone>
+            <div class="phone-screen">
+              <img class="screen is-active" data-screen="home" src="./assets/screens/iphone16promax/home-pink-light.webp" alt="DonUp 홈 화면. 이번 달 지출과 전달 대비 흐름, 남은 정기 지출과 예산 주의, 최근 내역이 보입니다." width="1320" height="2868" />
+              <img class="screen" data-screen="history" aria-hidden="true" src="./assets/screens/iphone16promax/history-mint-light.webp" alt="DonUp 내역 화면. 날짜별로 카테고리 아이콘과 금액이 정리된 목록이 보입니다." width="1320" height="2868" loading="lazy" />
+              <img class="screen" data-screen="budget" aria-hidden="true" src="./assets/screens/iphone16promax/budget-mint-light.webp" alt="DonUp 예산 화면. 카테고리별 예산과 남은 금액이 보입니다." width="1320" height="2868" loading="lazy" />
+              <img class="screen" data-screen="statistics" aria-hidden="true" src="./assets/screens/iphone16promax/statistics-skyblue-light.webp" alt="DonUp 통계 화면. 기간별 지출 흐름과 분석 카드가 보입니다." width="1320" height="2868" loading="lazy" />
+              <img class="screen" data-screen="donworry" aria-hidden="true" src="./assets/screens/iphone16promax/donworry-pink-light.webp" alt="DonUp 돈워리 화면. 가계부를 바탕으로 한 AI 답변과 제안이 보입니다." width="1320" height="2868" loading="lazy" />
             </div>
-          </div>
+            <figcaption class="phone-caption" data-caption aria-live="off">이번 달 지출과 남은 정기 지출, 예산 주의를 홈에서 먼저 확인해요.</figcaption>
+          </figure>
+        </div>
+
+        <div class="pill-track" role="tablist" aria-label="DonUp 기능 미리보기">
+          <button class="feature-pill is-current" type="button" role="tab" id="feature-tab-home" aria-controls="feature-panel" aria-selected="true" data-target="home" data-tint="pink" data-caption="이번 달 지출과 남은 정기 지출, 예산 주의를 홈에서 먼저 확인해요.">
+            <span class="pill-fill" aria-hidden="true"></span><span class="pill-label"><svg class="pill-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 11l8-6.5L20 11M6 9.5V19h12V9.5M10 19v-5h4v5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>홈에서 한눈에</span>
+          </button>
+          <button class="feature-pill" type="button" role="tab" id="feature-tab-history" aria-controls="feature-panel" aria-selected="false" tabindex="-1" data-target="history" data-tint="mint" data-caption="날짜별 내역이 카테고리 아이콘과 함께 정리돼요.">
+            <span class="pill-fill" aria-hidden="true"></span><span class="pill-label"><svg class="pill-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>내역을 모아 봐요</span>
+          </button>
+          <button class="feature-pill" type="button" role="tab" id="feature-tab-budget" aria-controls="feature-panel" aria-selected="false" tabindex="-1" data-target="budget" data-tint="mint" data-caption="카테고리별 예산과 남은 금액을 바로 확인해요.">
+            <span class="pill-fill" aria-hidden="true"></span><span class="pill-label"><svg class="pill-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3.5a8.5 8.5 0 1 0 8.5 8.5M12 3.5V12h8.5M12 3.5a8.5 8.5 0 0 1 8.5 8.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>예산을 지켜요</span>
+          </button>
+          <button class="feature-pill" type="button" role="tab" id="feature-tab-statistics" aria-controls="feature-panel" aria-selected="false" tabindex="-1" data-target="statistics" data-tint="sky" data-caption="기간별 지출 흐름을 비교하고 어디에 더 썼는지 살펴봐요.">
+            <span class="pill-fill" aria-hidden="true"></span><span class="pill-label"><svg class="pill-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 20h16M7 16v-4M12 16V7M17 16v-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>소비 흐름을 읽어요</span>
+          </button>
+          <button class="feature-pill" type="button" role="tab" id="feature-tab-donworry" aria-controls="feature-panel" aria-selected="false" tabindex="-1" data-target="donworry" data-tint="pink" data-caption="내 가계부를 바탕으로 AI 돈워리가 답하고 제안해요.">
+            <span class="pill-fill" aria-hidden="true"></span><span class="pill-label"><svg class="pill-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 18.5V7a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H8.5zM9 9.5h6M9 12.5h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>돈워리에게 물어봐요</span>
+          </button>
+        </div>
+        <div class="autoplay-row">
+          <button class="autoplay-toggle" type="button" data-autoplay-toggle aria-pressed="false">
+            <span class="autoplay-icon" aria-hidden="true"></span>
+            <span data-autoplay-label>자동 넘김 멈추기</span>
+          </button>
         </div>
       </div>
     </section>
 
-    <section class="solution input-flow" id="solution" data-section>
-      <div class="section-copy reveal">
-        <h2>말하듯 적으세요.<br />나머지는 DonUp이 압니다.</h2>
-        <p>
-          텍스트, 결제 문자, 사진, 빠른 입력 위젯이 모두 같은 내역 저장 흐름으로 모입니다.
-          사용자는 짧게 입력하고 바로 기록하면 됩니다.
-        </p>
+    <!-- 3. 테마: 스크롤하면 휴대폰 세 대가 펼쳐진다 -->
+    <section class="themes" id="themes" aria-labelledby="themes-title">
+      <div class="themes-head reveal">
+        <p class="eyebrow">테마</p>
+        <h2 id="themes-title">매일 여는 가계부,<br />내 취향대로</h2>
+        <p>라이트와 다크, 여러 강조 색상으로 바꿔 쓸 수 있어요. 무료 3가지 색상에 Pro에서 프리미엄 색상을 더해요.</p>
       </div>
-
-      <div class="input-showcase">
-        <article class="input-primary reveal">
-          <figure class="phone-mockup mockup-large">
-            <img class="phone-shot" loading="lazy" src="./assets/screen-compose-clean.png" alt="DonUp 한 줄 입력 화면" />
-            <img class="phone-frame-overlay" src="./assets/iphone-16-pro-max-frame.png" alt="" />
-          </figure>
-          <div>
-            <span>AI 기록</span>
-            <h3>한 줄 입력을 내역 저장으로</h3>
-            <p>“점심 12,000원”처럼 적으면 날짜, 금액, 분류, 결제수단을 한 화면에서 정리해 저장합니다.</p>
-          </div>
-        </article>
-
-        <div class="input-methods" aria-label="DonUp 입력 방식">
-          <article class="input-method reveal">
-            <span>Text·Voice</span>
-            <strong>자연어·음성 입력</strong>
-            <p>짧게 쓰거나 말하면 내역으로 저장합니다.</p>
-          </article>
-          <article class="input-method reveal">
-            <span>SMS</span>
-            <strong>결제 문자 자동화</strong>
-            <p>문자 속 가맹점과 금액을 읽어 저장합니다.</p>
-          </article>
-          <article class="input-method reveal">
-            <span>Photo</span>
-            <strong>사진·촬영 AI</strong>
-            <p>영수증과 지출 이미지를 나중에 정리합니다.</p>
-          </article>
-          <article class="input-method reveal">
-            <span>Widget</span>
-            <strong>빠른 입력 위젯</strong>
-            <p>앱을 찾기 전에 바로 입력을 시작합니다.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="features section-light" id="features" data-section>
-      <div class="section-copy reveal">
-        <h2>기록 한 번이면,<br />홈·예산·위젯·알림까지 한 번에.</h2>
-        <p>홈 요약, 예산, 내역, 위젯, 알림이 같은 기록 흐름으로 연결됩니다.</p>
-      </div>
-
-      <div class="proof-grid">
-        <article class="proof-card reveal">
-          <figure class="phone-mockup">
-            <img class="phone-shot" src="./assets/screen-home-summary.png" alt="DonUp 홈 월 요약 화면" />
-            <img class="phone-frame-overlay" src="./assets/iphone-16-pro-max-frame.png" alt="" />
-          </figure>
-          <div>
-            <span>Home</span>
-            <h3>오늘의 돈 상태를 먼저 봅니다</h3>
-            <p>이번 달 수입과 지출, 고정지출, 변동지출 상태를 앱 첫 화면에서 확인합니다.</p>
-          </div>
-        </article>
-        <article class="proof-card reveal">
-          <figure class="phone-mockup">
-            <img class="phone-shot" src="./assets/screen-budget-variable.png" alt="DonUp 예산 변동지출 화면" />
-            <img class="phone-frame-overlay" src="./assets/iphone-16-pro-max-frame.png" alt="" />
-          </figure>
-          <div>
-            <span>Budget</span>
-            <h3>변동지출과 고정지출을 나눕니다</h3>
-            <p>식비, 카페, 교통처럼 매일 달라지는 돈과 월세, 구독 같은 고정 비용을 따로 봅니다.</p>
-          </div>
-        </article>
-        <article class="proof-card reveal">
-          <figure class="phone-mockup">
-            <img class="phone-shot" loading="lazy" src="./assets/screen-calendar-widget.png" alt="DonUp 가계부 위젯 화면" />
-            <img class="phone-frame-overlay" src="./assets/iphone-16-pro-max-frame.png" alt="" />
-          </figure>
-          <div>
-            <span>Widget</span>
-            <h3>앱 밖에서도 흐름을 놓치지 않습니다</h3>
-            <p>달력, 남은 예산, 빠른 입력 위젯으로 기록과 확인 사이를 줄입니다.</p>
-          </div>
-        </article>
-      </div>
-
-      <div class="feature-tiles" aria-label="DonUp 기능 요약">
-        <article class="feature-tile reveal">
-          <span>자동 기록</span>
-          <strong>결제 문자 자동화</strong>
-          <p>문자 수신 후 가맹점과 금액을 읽어 내역으로 저장합니다.</p>
-        </article>
-        <article class="feature-tile reveal">
-          <span>AI 비서</span>
-          <strong>돈워리에게 묻기</strong>
-          <p>내 가계부 데이터로 소비 요약, 예산 비교, 차트 답변을 만들어줍니다.</p>
-        </article>
-        <article class="feature-tile reveal">
-          <span>리마인더</span>
-          <strong>알림과 무지출</strong>
-          <p>기록 없음, 예산 도달, 고정지출 전날 알림으로 루틴을 잡습니다.</p>
-        </article>
-        <article class="feature-tile reveal">
-          <span>분류</span>
-          <strong>예산 카테고리</strong>
-          <p>미선택 지출까지 보여줘 예산 밖으로 새는 돈을 놓치지 않습니다.</p>
-        </article>
-        <article class="feature-tile reveal">
-          <span>데이터 이동</span>
-          <strong>가져오기·내보내기</strong>
-          <p>CSV, 엑셀, PDF, DonUp JSON 백업을 다룹니다.</p>
-        </article>
-        <article class="feature-tile reveal">
-          <span>커스텀</span>
-          <strong>테마와 홈 문구</strong>
-          <p>테마 색상과 시간대별 홈 문구로 내 가계부답게 꾸밉니다.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="security section-dark" id="security" data-section>
-      <div class="security-layout">
-        <div class="security-copy reveal">
-          <h2>내 지출 기록,<br />내 기기 밖으로 나가지 않습니다.</h2>
-          <p>
-            DonUp은 회원가입 없이 시작하고, 기본 기록은 이 기기에 둡니다.
-            iCloud와 AI 분석은 사용자가 필요한 기능을 켤 때만 이어집니다.
-          </p>
-          <div class="security-list">
-            <article class="reveal">
-              <span>Local first</span>
-              <strong>회원가입 없이, 데이터는 이 기기 안에만 남습니다.</strong>
-            </article>
-            <article class="reveal">
-              <span>Private CloudKit</span>
-              <strong>iCloud 동기화는 Pro 사용자가 직접 켠 경우에만 사용합니다.</strong>
-            </article>
-            <article class="reveal">
-              <span>AI boundary</span>
-              <strong>AI 분석은 기록에 필요한 문장·이미지 정보만 요청합니다.</strong>
-            </article>
-          </div>
-        </div>
-        <figure class="phone-mockup security-phone reveal">
-          <img class="phone-shot" loading="lazy" src="./assets/screen-my-settings.png" alt="DonUp My 설정 화면" />
-          <img class="phone-frame-overlay" src="./assets/iphone-16-pro-max-frame.png" alt="" />
+      <div class="fan" data-fan>
+        <figure class="fan-phone fan-left">
+          <img src="./assets/screens/iphone16promax/home-skyblue-light.webp" alt="스카이블루 라이트 테마의 DonUp 홈 화면" width="1320" height="2868" loading="lazy" />
+          <figcaption>스카이블루 · 라이트</figcaption>
+        </figure>
+        <figure class="fan-phone fan-center">
+          <img src="./assets/screens/iphone16promax/home-pink-dark.webp" alt="핑크 다크 테마의 DonUp 홈 화면" width="1320" height="2868" loading="lazy" />
+          <figcaption>핑크 · 다크</figcaption>
+        </figure>
+        <figure class="fan-phone fan-right">
+          <img src="./assets/screens/iphone16promax/budget-mint-light.webp" alt="민트 라이트 테마의 DonUp 예산 화면" width="1320" height="2868" loading="lazy" />
+          <figcaption>민트 · 라이트</figcaption>
         </figure>
       </div>
     </section>
 
-    <section class="pricing section-light" id="pricing" data-section>
-      <div class="section-copy reveal">
-        <h2>무료로 시작하고,<br />자주 쓰는 기능만 Pro로 넓히세요.</h2>
-        <p>결제 문자 자동화, 사진·촬영 AI, iCloud 동기화, 데이터 이동이 필요할 때 Pro가 더 편합니다.</p>
-      </div>
-
-      <div class="pro-benefits" aria-label="DonUp Pro 주요 혜택">
-        <article class="reveal">
-          <span>Automation</span>
-          <strong>결제 문자 자동화</strong>
-          <p>카드 승인 문자를 지출 내역으로 이어줍니다.</p>
-        </article>
-        <article class="reveal">
-          <span>AI input</span>
-          <strong>사진·촬영 AI 무제한</strong>
-          <p>무료는 하루 1번, Pro는 제한 없이 이미지 속 지출을 정리합니다.</p>
-        </article>
-        <article class="reveal">
-          <span>Sync</span>
-          <strong>iCloud와 데이터 이동</strong>
-          <p>기기 변경, 백업, 가져오기와 내보내기를 더 편하게 씁니다.</p>
-        </article>
-      </div>
-
-      <div class="pricing-table reveal" role="table" aria-label="DonUp 가격 비교표">
-        <div class="pricing-row pricing-head" role="row">
-          <div role="columnheader">기능</div>
-          <div role="columnheader">무료</div>
-          <div role="columnheader">Pro 월간</div>
-          <div role="columnheader">Pro 평생 · 인기</div>
-        </div>
-        <div class="pricing-row pricing-price" role="row">
-          <div role="cell">가격</div><div role="cell">₩0</div><div role="cell">₩1,900</div><div role="cell">₩29,900</div>
-        </div>
-        <div class="pricing-row" role="row">
-          <div role="cell">수입·지출 기록</div><div role="cell"><span class="mark mark-yes">O</span></div><div role="cell"><span class="mark mark-yes">O</span></div><div role="cell"><span class="mark mark-yes">O</span></div>
-        </div>
-        <div class="pricing-row" role="row">
-          <div role="cell">예산 관리</div><div role="cell"><span class="mark mark-yes">O</span></div><div role="cell"><span class="mark mark-yes">O</span></div><div role="cell"><span class="mark mark-yes">O</span></div>
-        </div>
-        <div class="pricing-row" role="row">
-          <div role="cell">사진·촬영 AI 입력</div><div role="cell">1회/일</div><div role="cell">무제한</div><div role="cell">무제한</div>
-        </div>
-        <div class="pricing-row" role="row">
-          <div role="cell">AI 비서 돈워리</div><div role="cell">3회/일</div><div role="cell">20회/일</div><div role="cell">20회/일</div>
-        </div>
-        <div class="pricing-row" role="row">
-          <div role="cell">결제 문자 자동화</div><div role="cell"><span class="mark mark-no">X</span></div><div role="cell"><span class="mark mark-yes">O</span></div><div role="cell"><span class="mark mark-yes">O</span></div>
-        </div>
-        <div class="pricing-row" role="row">
-          <div role="cell">iCloud 동기화</div><div role="cell"><span class="mark mark-no">X</span></div><div role="cell"><span class="mark mark-yes">O</span></div><div role="cell"><span class="mark mark-yes">O</span></div>
-        </div>
-        <div class="pricing-row" role="row">
-          <div role="cell">가져오기·내보내기</div><div role="cell"><span class="mark mark-no">X</span></div><div role="cell"><span class="mark mark-yes">O</span></div><div role="cell"><span class="mark mark-yes">O</span></div>
-        </div>
-        <div class="pricing-row" role="row">
-          <div role="cell">지갑 나누기</div><div role="cell"><span class="mark mark-no">X</span></div><div role="cell"><span class="mark mark-yes">O</span></div><div role="cell"><span class="mark mark-yes">O</span></div>
-        </div>
-        <div class="pricing-row" role="row">
-          <div role="cell">테마 색상</div><div role="cell">기본 3종</div><div role="cell">12종</div><div role="cell">12종</div>
+    <!-- 4. 자동 기록: 스크롤하면 배경이 어두워지는 장면 -->
+    <section class="automation" id="automation" aria-labelledby="automation-title">
+      <div class="automation-backdrop" aria-hidden="true"></div>
+      <div class="automation-layout">
+        <figure class="automation-media reveal">
+          <img src="./assets/screens/iphone16promax/automation-pink-dark.webp" alt="DonUp 내역 기록 자동화 화면. 결제 문자, 카드·은행 알림, 빠른 작성, 애플페이, 후면 탭 항목과 Pro 표시가 보입니다." width="1320" height="2868" loading="lazy" />
+        </figure>
+        <div class="automation-copy reveal">
+          <p class="eyebrow eyebrow-muted">자동 기록</p>
+          <h2 id="automation-title">결제 알림이<br />가계부 기록으로</h2>
+          <p>
+            단축어를 한 번 설정하면 지원되는 결제 문자, Apple Pay, 이미지에서
+            내역을 간편하게 기록할 수 있어요.
+          </p>
+          <ul class="automation-points">
+            <li class="reveal"><strong>결제 문자 · Apple Pay</strong><span>Pro · 마이페이지 &gt; 내역 기록 자동화에서 설정</span></li>
+            <li class="reveal"><strong>사진 · 촬영 AI 입력</strong><span>무료 하루 1회(사진·촬영 합산), Pro는 제한 없이</span></li>
+            <li class="reveal"><strong>문장 · 음성 입력</strong><span>"점심 12,000원"처럼 말하듯 적으면 정리해요</span></li>
+          </ul>
+          <p class="fine-print">AI 입력은 'AI 데이터 사용'을 허용한 경우에 동작해요.</p>
         </div>
       </div>
-      <p class="pricing-note reveal">
-        Pro 월간은 자동 갱신 구독, Pro 평생은 한 번 결제하는 상품입니다.
-        실제 결제 금액과 조건은 App Store 결제 화면에 표시되는 내용을 따릅니다.
-      </p>
     </section>
 
-    <section class="download" id="download" data-section>
-      <div class="download-panel reveal">
-        <img src="./assets/donup-app-icon.png" alt="" />
-        <h2>지금 쓴 돈,<br />3초면 정리 끝.</h2>
+    <!-- 5. 개인정보 보호 요약 → /security -->
+    <section class="privacy" id="privacy" aria-labelledby="privacy-title">
+      <div class="privacy-head reveal">
+        <img class="privacy-art" src="./assets/illustrations/privacy.webp" alt="" width="1254" height="1254" loading="lazy" />
+        <h2 id="privacy-title">내 돈 기록은<br />내가 정한 만큼만 쓰여요</h2>
         <p>
-          짧게 기록하고, 이번 달 돈 흐름을 바로 확인하세요.
+          AI 기능은 선택 사항이에요. 허용하지 않아도 직접 입력과
+          일반 가계부 기능은 그대로 쓸 수 있어요.
         </p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="https://apps.apple.com/kr/app/donup/id6770472441" target="_blank" rel="noreferrer">
-            무료로 다운로드
-          </a>
-          <a class="button button-ghost dark" href="#top">맨 위로</a>
+        <div class="privacy-actions">
+          <a class="pill pill-light" href="./security">개인정보 보호 자세히 보기</a>
+          <a class="pill pill-outline" href="./privacy">개인정보 처리방침</a>
         </div>
+      </div>
+
+      <div class="privacy-cards">
+        <article class="privacy-card reveal">
+          <span class="card-glyph" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="26" height="26"><path d="M4 12a8 8 0 0 1 13.7-5.6M20 12a8 8 0 0 1-13.7 5.6M17.7 3v3.4h-3.4M6.3 21v-3.4h3.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <p class="card-label">계정</p>
+          <h3>기기를 바꿔도<br />기록이 이어져요</h3>
+          <p>Apple 또는 Google 계정으로 로그인하면 기록이 계정에 동기화돼요. 계정 동기화와 자동 백업은 무료예요.</p>
+        </article>
+        <article class="privacy-card reveal">
+          <span class="card-glyph" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="26" height="26"><rect x="2.5" y="7" width="19" height="10" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="16.5" cy="12" r="3" fill="currentColor"/></svg>
+          </span>
+          <p class="card-label">AI 동의</p>
+          <h3>허용했을 때만<br />AI로 보내요</h3>
+          <p>기능에 필요한 정보만 외부 AI로 보내고, 언제든 'AI 데이터 사용'에서 허용을 철회할 수 있어요.</p>
+        </article>
+        <article class="privacy-card reveal">
+          <span class="card-glyph" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="26" height="26"><path d="M7 3h7l5 5v13H7z M14 3v5h5 M10 13h6 M10 17h6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/></svg>
+          </span>
+          <p class="card-label">내 파일</p>
+          <h3>쌓아온 기록을<br />파일로 가져가요</h3>
+          <p>DonUp 데이터를 JSON 파일로 내보내고 복원할 수 있어요. 파일 내보내기는 Pro 기능이에요.</p>
+        </article>
       </div>
     </section>
 
-    <section class="contact" id="contact" aria-labelledby="contact-title" data-section>
-      <div class="contact-inner reveal">
-        <div class="contact-copy">
-          <h2 id="contact-title">문의</h2>
-        </div>
-        <div class="contact-links" aria-label="연락처">
-          <a href="https://www.threads.com/@macintosh._.hong" target="_blank" rel="noreferrer">
-            <span>Threads</span>
-            @macintosh._.hong
+    <!-- 6. 자주 묻는 질문: 빌드가 featured 항목을 정적으로 넣는다 -->
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <div class="faq-head reveal">
+        <h2 id="faq-title">자주 묻는 질문</h2>
+        <a class="text-link" href="./support">도움말 전체 보기 <span aria-hidden="true">›</span></a>
+      </div>
+      <div class="faq-list">
+        <!-- HOME_FAQ -->
+      </div>
+    </section>
+
+    <!-- 7. 마무리: 검정 무대가 끝나며 하늘 장면이 드러남 -->
+    <section class="finale" id="contact" aria-labelledby="finale-title">
+      <div class="finale-scene" aria-hidden="true">
+        <img class="obj obj-f1" src="./assets/illustrations/food.webp" alt="" width="1254" height="1254" loading="lazy" />
+        <img class="obj obj-f2" src="./assets/illustrations/leisure.webp" alt="" width="1254" height="1254" loading="lazy" />
+        <img class="obj obj-f3" src="./assets/illustrations/home.webp" alt="" width="1254" height="1254" loading="lazy" />
+        <img class="obj obj-f4" src="./assets/illustrations/transport.webp" alt="" width="1254" height="1254" loading="lazy" />
+        <img class="obj obj-f5" src="./assets/illustrations/coffee.webp" alt="" width="1254" height="1254" loading="lazy" />
+      </div>
+      <div class="finale-copy reveal">
+        <h2 id="finale-title">오늘 쓴 돈,<br />지금 한 줄로 남겨보세요.</h2>
+        <div class="store-row">
+          <a class="pill pill-dark" href="https://apps.apple.com/kr/app/donup/id6770472441" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.2 1-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8 0 0-2.6-1-2.6-3.9zM14 5.5c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.6 2.8-1.4z"/></svg>
+            App Store
           </a>
-          <a href="mailto:zzzjinwook98@gmail.com">
-            <span>Email</span>
-            zzzjinwook98@gmail.com
-          </a>
+          <button class="pill pill-coming" type="button" disabled>
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M3.5 2.5 13 12l-9.5 9.5V2.5Zm1.8-.3 11.4 6.5-2.6 2.6-8.8-9.1ZM17.8 9.4l3.1 1.8a.9.9 0 0 1 0 1.6l-3.1 1.8L15 12l2.8-2.6Zm-1.1 5.9L5.3 21.8l8.8-9.1 2.6 2.6Z"/></svg>
+            Google Play <span class="store-status">준비 중</span>
+          </button>
         </div>
       </div>
+      <footer class="footer">
+        <div class="footer-brand">
+          <img src="./assets/screens/donup-icon-256.png" alt="" width="24" height="24" />
+          <strong>DonUp</strong>
+        </div>
+        <nav class="footer-links" aria-label="문서와 문의">
+          <a href="./support">도움말</a>
+          <a href="./security">개인정보 보호</a>
+          <a href="./privacy">개인정보 처리방침</a>
+          <a href="./terms">이용약관</a>
+          <a href="https://www.threads.com/@macintosh._.hong" target="_blank" rel="noreferrer">Threads @macintosh._.hong</a>
+          <a href="/support#contact">문의하기</a>
+        </nav>
+      </footer>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <strong>DonUp</strong>
-    <span>개인 가계부, 더 적게 입력하고 더 자주 확인하기.</span>
-    <nav aria-label="문서 링크">
-      <a href="https://zrxbrwvvxvkqszptxdmv.supabase.co/functions/v1/legal/privacy" target="_blank" rel="noreferrer">개인정보 처리방침</a>
-      <a href="https://zrxbrwvvxvkqszptxdmv.supabase.co/functions/v1/legal/terms" target="_blank" rel="noreferrer">이용약관</a>
-    </nav>
-  </footer>
 
   <script src="./script.js"></script>
 </body>
