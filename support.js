@@ -2,6 +2,7 @@
 document.documentElement.classList.add("js");
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const messages = document.documentElement.dataset;
 
 /* ---------- 등장 효과 ---------- */
 
@@ -43,7 +44,7 @@ document.querySelectorAll(".support-nav a[href^='#']").forEach((link) => {
   }
   const count = document.createElement("span");
   count.className = "support-nav-count";
-  count.textContent = `질문 ${section.querySelectorAll(".support-faq").length}개`;
+  count.textContent = messages.questionCount.replace("{count}", section.querySelectorAll(".support-faq").length);
   link.append(count);
 });
 // 빌드가 넣은 도움말 카드와 주제 묶음도 같은 방식으로 등장시킨다.
@@ -77,11 +78,11 @@ if (copyEmail && navigator.clipboard?.writeText) {
   copyEmail.addEventListener("click", async () => {
     try {
       await navigator.clipboard.writeText(email.value);
-      status.textContent = "메일 주소를 복사했어요. 받는 사람에 붙여 넣어 주세요.";
+      status.textContent = messages.copySuccess;
     } catch {
       email.focus();
       email.select();
-      status.textContent = "브라우저가 복사를 허용하지 않았어요. 선택된 주소를 직접 복사해 주세요.";
+      status.textContent = messages.copyError;
     }
   });
 }
@@ -156,7 +157,7 @@ if (searchForm) {
     if (nav) nav.hidden = isSearching;
     clearButton.hidden = !isSearching;
     emptyNote.hidden = !isSearching || matches > 0;
-    countLabel.textContent = isSearching ? `${matches}개의 답을 찾았어요` : "";
+    countLabel.textContent = isSearching ? messages.searchMatches.replace("{count}", matches) : "";
   }
 
   searchForm.hidden = false;

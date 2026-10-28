@@ -1,0 +1,142 @@
+{
+  "홈": {
+    "ko": "홈",
+    "en": "Home",
+    "ja": "ホーム",
+    "zh-Hans": "首页",
+    "zh-Hant": "首頁"
+  },
+  "내역": {
+    "ko": "내역",
+    "en": "Entries",
+    "ja": "明細",
+    "zh-Hans": "记录",
+    "zh-Hant": "記錄"
+  },
+  "예산": {
+    "ko": "예산",
+    "en": "Budget",
+    "ja": "予算",
+    "zh-Hans": "预算",
+    "zh-Hant": "預算"
+  },
+  "통계": {
+    "ko": "통계",
+    "en": "Statistics",
+    "ja": "統計",
+    "zh-Hans": "统计",
+    "zh-Hant": "統計"
+  },
+  "자산": {
+    "ko": "자산",
+    "en": "Assets",
+    "ja": "資産",
+    "zh-Hans": "资产",
+    "zh-Hant": "資產"
+  },
+  "부채": {
+    "ko": "부채",
+    "en": "Liabilities",
+    "ja": "負債",
+    "zh-Hans": "负债",
+    "zh-Hant": "負債"
+  },
+  "순자산": {
+    "ko": "순자산",
+    "en": "Net Worth",
+    "ja": "純資産",
+    "zh-Hans": "净资产",
+    "zh-Hant": "淨資產"
+  },
+  "가계부": {
+    "ko": "가계부",
+    "en": null,
+    "ja": null,
+    "zh-Hans": null,
+    "zh-Hant": null
+  },
+  "정기 지출": {
+    "ko": "정기 지출",
+    "en": "Recurring Expenses",
+    "ja": "定期支出",
+    "zh-Hans": "定期支出",
+    "zh-Hant": "定期支出"
+  },
+  "결제 수단": {
+    "ko": "결제 수단",
+    "en": null,
+    "ja": null,
+    "zh-Hans": null,
+    "zh-Hant": null
+  },
+  "마이페이지": {
+    "ko": "마이페이지",
+    "en": "My Page",
+    "ja": "マイページ",
+    "zh-Hans": "我的",
+    "zh-Hant": "我的"
+  },
+  "내역 기록 자동화": {
+    "ko": "내역 기록 자동화",
+    "en": "Entry Automations",
+    "ja": "明細記録のオートメーション",
+    "zh-Hans": "记录自动化",
+    "zh-Hant": "記錄自動化"
+  },
+  "AI 데이터 사용": {
+    "ko": "AI 데이터 사용",
+    "en": "AI data use",
+    "ja": "AIのデータ利用",
+    "zh-Hans": "AI 数据使用",
+    "zh-Hant": "AI 資料使用"
+  },
+  "돈워리": {
+    "ko": "돈워리",
+    "en": "DonWorry",
+    "ja": "DonWorry",
+    "zh-Hans": "DonWorry",
+    "zh-Hant": "DonWorry"
+  },
+  "수입": {
+    "ko": "수입",
+    "en": "Income",
+    "ja": "収入",
+    "zh-Hans": "收入",
+    "zh-Hant": "收入"
+  },
+  "지출": {
+    "ko": "지출",
+    "en": "Expenses",
+    "ja": "支出",
+    "zh-Hans": "支出",
+    "zh-Hant": "支出"
+  },
+  "사진": {
+    "ko": "사진",
+    "en": "Photo",
+    "ja": "写真",
+    "zh-Hans": "照片",
+    "zh-Hant": "照片"
+  },
+  "계정": {
+    "ko": "계정",
+    "en": "Account",
+    "ja": "アカウント",
+    "zh-Hans": "账户",
+    "zh-Hant": "帳號"
+  },
+  "동기화": {
+    "ko": "동기화",
+    "en": null,
+    "ja": null,
+    "zh-Hans": null,
+    "zh-Hant": null
+  },
+  "공유 가계부": {
+    "ko": "공유 가계부",
+    "en": "Shared ledger",
+    "ja": "共有家計簿",
+    "zh-Hans": "共享账本",
+    "zh-Hant": "共享記帳本"
+  }
+}

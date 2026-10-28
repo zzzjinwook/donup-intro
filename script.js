@@ -137,6 +137,7 @@ if (heroFrame) {
 const showcase = document.querySelector("[data-showcase]");
 
 if (showcase) {
+  const messages = document.documentElement?.dataset ?? {};
   const pills = Array.from(showcase.querySelectorAll(".feature-pill"));
   const screens = Array.from(showcase.querySelectorAll("[data-screen]"));
   const caption = showcase.querySelector("[data-caption]");
@@ -161,7 +162,7 @@ if (showcase) {
   function renderToggle() {
     const paused = !isAutoplaying();
     toggle.setAttribute("aria-pressed", String(paused));
-    toggleLabel.textContent = paused ? "자동 넘김 재생" : "자동 넘김 멈추기";
+    toggleLabel.textContent = paused ? (messages.autoplayPlay || "자동 넘김 재생") : (messages.autoplayPause || "자동 넘김 멈추기");
     // 자동으로 넘어가는 동안에는 바뀔 때마다 읽지 않고, 멈춘 뒤 직접 고른 화면만 알린다.
     caption.setAttribute("aria-live", paused ? "polite" : "off");
   }

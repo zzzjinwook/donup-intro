@@ -1,0 +1,294 @@
+{
+  "title": "How can we help?",
+  "subtitle": "From logging to syncing, find out how to use DonUp.",
+  "categories": [
+    {
+      "id": "account",
+      "title": "Account and sync",
+      "description": "Pick up where you left off, on any device, with the same account.",
+      "items": [
+        {
+          "id": "storage",
+          "question": "Where are my records stored?",
+          "answer": [
+            "They’re stored as a local copy on your device and on the server for the DonUp account you’re signed in to. Basic account sync is free, and records stored on the server are available on any supported device where you sign in with the same account."
+          ],
+          "featured": true
+        },
+        {
+          "id": "new-phone",
+          "question": "What should I do if I change phones or reinstall the app?",
+          "answer": [
+            "Sign in with the DonUp account you were using before. You can load the data stored on the server again. Entries that hadn’t finished saving to the server, and files that exist only on your device, need to be checked separately."
+          ]
+        },
+        {
+          "id": "login-link",
+          "question": "Can I use both Sign in with Apple and Google?",
+          "answer": [
+            "In the app’s account settings, you can link both Apple and Google sign-in methods to one DonUp account. If you sign up separately with each, you may end up with two different accounts even if the email address is the same, so please use the same account or a linked sign-in method on your other devices too."
+          ]
+        },
+        {
+          "id": "delete-account",
+          "question": "If I delete the app, are my account and data deleted too?",
+          "answer": [
+            "Deleting the app can remove the local copy on your device, but it doesn’t automatically delete your DonUp account or data on the server. To delete server data as well, use Delete Account in the app.",
+            "Deleting your account doesn’t automatically cancel your App Store subscription. Files you’ve exported and any remaining older iCloud copies also need to be managed separately."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "recording",
+      "title": "Entries and automation",
+      "description": "From manual entry to photos and payment messages.",
+      "items": [
+        {
+          "id": "manual",
+          "question": "Can I use DonUp without allowing AI?",
+          "answer": [
+            "Yes. You can use manual entry and all the regular budgeting features. Features that use external AI, such as AI entry and DonWorry, require you to allow “AI data use” separately."
+          ],
+          "featured": true
+        },
+        {
+          "id": "sentence",
+          "question": "Can I add several entries in one sentence?",
+          "answer": [
+            "Write the date, place, and amount together in the input field. For example, you can write several entries at once, like “Lunch today $12, coffee $4.50.” Check the amount, date, and category of each entry the AI splits out, and edit them if needed."
+          ]
+        },
+        {
+          "id": "photo",
+          "question": "Can I log entries from a receipt photo or a screenshot of a payment?",
+          "answer": [
+            "Take a photo or choose one to use AI entry. On the free plan, you can use it once a day, with camera and photos combined. Pro removes this limit.",
+            "The results may differ from the original, so please check the amount, date, currency, and whether it’s income or an expense."
+          ],
+          "featured": true
+        },
+        {
+          "id": "automation",
+          "question": "How do I set up automatic entries from payment messages and Apple Pay?",
+          "answer": [
+            "In My Page, open “Entry Automations” and follow the Payment Message or Apple Pay guide to set up a Shortcuts automation. This feature is available with DonUp Pro.",
+            "A shortcut running isn’t the same as an entry being saved successfully. If you don’t see the entry, first check the run result and any error message."
+          ],
+          "featured": true
+        },
+        {
+          "id": "currency",
+          "question": "How do I enter a currency used in several countries, like the dollar?",
+          "answer": [
+            "Adding a currency code such as USD, CAD, or TWD makes your meaning clearer. After a photo or sentence is analyzed, check that the selected currency and amount are correct."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "budget",
+      "title": "Budgets and recurring items",
+      "description": "Purchase dates, payment dates, and repeat schedules are handled separately.",
+      "items": [
+        {
+          "id": "card-date",
+          "question": "Why is the date of my card purchase different from the date in DonUp?",
+          "answer": [
+            "If you turn on “Add Entry by Payment Date” for a card payment method, entries are recorded on the card bill payment date instead of the purchase date. Please also check the billing period and billing month settings. Settings that apply to recurring expenses are separate."
+          ]
+        },
+        {
+          "id": "budget-ratio",
+          "question": "What does the category budget bar mean?",
+          "answer": [
+            "It shows how much of a category’s budget you’ve spent in that category. If categories have different budgets, you can’t compare actual spending amounts by bar length alone."
+          ]
+        },
+        {
+          "id": "one-month",
+          "question": "Can I change the amount for just this month or just this occurrence?",
+          "answer": [
+            "When editing a budget, you can choose “Change this month only,” and for recurring items, “Change this occurrence only.” To apply the change going forward too, choose “Change this and all future occurrences.”"
+          ]
+        },
+        {
+          "id": "recurring-history",
+          "question": "If I edit a recurring item, do entries I’ve already recorded change too?",
+          "answer": [
+            "Changing a repeat setting is separate from editing entries you’ve already saved. To change the amount, date, or title of a saved entry, open that entry and edit it."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "backup",
+      "title": "Import and recovery",
+      "description": "How to move your data in and get earlier records back.",
+      "items": [
+        {
+          "id": "import",
+          "question": "Can I import records from another budget app?",
+          "answer": [
+            "Use “Import Data from Another Budget App” in Settings. Importing is free, and you can review the analyzed content in a preview before saving. Check the app’s file picker for the file formats you can actually choose."
+          ]
+        },
+        {
+          "id": "missing-records",
+          "question": "I can’t see entries I imported or saved.",
+          "answer": [
+            "First, check the wallet you’re viewing, the selected period, and any search terms or filters. Also check whether an error message appeared when saving.",
+            "If you still can’t see them, or if deleted entries reappear, contact us with your app version, the time it happened, whether you use other devices, and a screenshot of the error."
+          ]
+        },
+        {
+          "id": "backup-sync",
+          "question": "What’s the difference between automatic backup and sync?",
+          "answer": [
+            "Sync keeps your current data up to date across devices on the same account. A backup is a separate copy for recovering data from an earlier point in time.",
+            "Automatic backup is free. When it’s on, a backup is created on your device once on each day you open the app, and the 10 most recent are kept. Rather than relying only on backups on your device, keep important files somewhere else as well."
+          ]
+        },
+        {
+          "id": "restore-deleted",
+          "question": "Can I bring back entries I deleted by mistake?",
+          "answer": [
+            "Check “Restore Deleted Records” in the app. Recovery copies of deleted entries are kept for up to 30 days or the 200 most recent items. They may be removed sooner if you clear the recovery history yourself or delete your account."
+          ]
+        },
+        {
+          "id": "export",
+          "question": "Can I export my records to a file?",
+          "answer": [
+            "With DonUp Pro, you can export a JSON file using “Back Up Donup Data” in Settings. “Restore Donup Data” is also a Pro feature. JSON backup is separate from the free feature for importing data from other budget apps."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "donworry",
+      "title": "DonWorry and privacy",
+      "description": "Learn what DonWorry can help with and how data is used.",
+      "items": [
+        {
+          "id": "donworry",
+          "question": "What can DonWorry help with?",
+          "answer": [
+            "Based on your question and the budget information it needs, DonWorry can show spending trends, budget comparisons, and charts. You can also ask it to work with entries, budgets, and assets.",
+            "AI results can be wrong. Please check and edit any entries saved automatically, too. Answers are not a substitute for professional accounting, tax, investment, or other advice."
+          ]
+        },
+        {
+          "id": "donworry-limit",
+          "question": "How many times a day can I use DonWorry?",
+          "answer": [
+            "In the current app, free accounts can use it 3 times a day and Pro accounts 20 times a day. Check the app for your current availability."
+          ]
+        },
+        {
+          "id": "ai-data",
+          "question": "Is my financial information sent to external AI?",
+          "answer": [
+            "After you allow “AI data use,” using the relevant features may send the text, selected photos or files, and budget information needed for analysis. This includes auto advice you’ve turned on after allowing it.",
+            "Transfers to Supabase in Singapore, and to OpenAI and Cerebras in the United States, are disclosed. You can find what each provider processes and how long it’s kept in the Privacy Policy."
+          ],
+          "featured": true
+        },
+        {
+          "id": "ai-revoke",
+          "question": "Can I withdraw permission for AI data use?",
+          "answer": [
+            "You can withdraw it in “AI data use” in the app. After you withdraw, no new AI requests are sent.",
+            "Withdrawing permission is different from deleting records already saved. Delete saved budget entries and DonWorry chats or attachments separately if needed."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sharing",
+      "title": "Shared ledgers",
+      "description": "Check what’s shared when you record together.",
+      "items": [
+        {
+          "id": "shared-ledger",
+          "question": "Can I keep a budget with my family or partner?",
+          "answer": [
+            "You can create a shared ledger and invite others. Members can view and edit that ledger’s existing entries, budgets, and assets together, so check what you’re sharing before you invite anyone."
+          ]
+        },
+        {
+          "id": "leave-shared",
+          "question": "What happens if I leave a shared ledger?",
+          "answer": [
+            "If other members remain, ownership may be transferred. If you’re the last member and you leave, the ledger is deleted too. Please check the message shown in the app before you proceed. You may need a new invitation to rejoin."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "appearance",
+      "title": "Display and themes",
+      "description": "Set it up the way that feels right to you.",
+      "items": [
+        {
+          "id": "themes",
+          "question": "Can I change the theme color and switch between light and dark?",
+          "answer": [
+            "You can choose the appearance and theme color in the app’s settings. Coral, Pink, and Mint are free, and other premium colors are available with DonUp Pro."
+          ]
+        },
+        {
+          "id": "navigation",
+          "question": "Can I change the start screen and the bottom menu?",
+          "answer": [
+            "In Settings, you can adjust the start screen, the menu items and their order, and how the entry buttons and tab bar are shown. Try arranging it around the screens you use most."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pro",
+      "title": "Pro and contact",
+      "description": "Check these before purchasing, restoring, or contacting us.",
+      "items": [
+        {
+          "id": "free-pro",
+          "question": "What can I use for free?",
+          "answer": [
+            "Basic entries, budgets, recurring expenses, statistics, account sync, and automatic backup are free. Photo and camera AI entry is available once a day combined, and DonWorry 3 times a day.",
+            "Payment message and Apple Pay automation, unlimited photo AI entry, DonWorry 20 times a day, premium colors, and JSON backup and restore are among the Pro features."
+          ],
+          "featured": true
+        },
+        {
+          "id": "pricing",
+          "question": "Where can I check Pro pricing and free trials?",
+          "answer": [
+            "Check the current price and terms on the Pro screen in the app and on the App Store payment screen. Monthly and annual subscriptions and lifetime access are available. Whether a free trial is offered depends on the product and on the eligibility confirmed by the store."
+          ]
+        },
+        {
+          "id": "purchase-restore",
+          "question": "I paid, but Pro isn’t active.",
+          "answer": [
+            "Check the App Store account you paid with, the DonUp account you’re currently signed in to, and your subscription status, then tap “Restore Purchases” in the app. If Pro still isn’t active, contact us with the date and time of payment and any error message. You don’t need to send your card number or password."
+          ]
+        },
+        {
+          "id": "cancel",
+          "question": "How do I cancel my subscription or get a refund?",
+          "answer": [
+            "Cancel or change your plan in the subscription management screen of the store where you made the purchase. Refund requests and approval also follow that store’s process. Deleting the app or your DonUp account alone does not cancel your subscription."
+          ]
+        },
+        {
+          "id": "contact",
+          "question": "What information should I send if something goes wrong?",
+          "answer": [
+            "Email support@donup.app with your app version, device and OS version, when it happened, the steps to reproduce it, and the error message. If you attach screenshots, please hide anything you don’t want to share, such as personal transaction details."
+          ]
+        }
+      ]
+    }
+  ]
+}

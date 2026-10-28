@@ -6,7 +6,7 @@ import { runInNewContext } from 'node:vm';
 const source = readFileSync(new URL('../script.js', import.meta.url), 'utf8');
 const autoplay = source.slice(source.indexOf('const showcase ='));
 
-function fixture(reduced = false) {
+function fixture(reduced = false, messages = {}) {
   function element(dataset = {}) {
     const listeners = new Map(), attributes = new Map(), styles = new Map(), classes = new Set();
     return {
@@ -25,7 +25,7 @@ function fixture(reduced = false) {
   const selectors = { '[data-caption]': caption, "[role='tabpanel']": panel, '.phone-screen': swipeSurface, '.pill-track': track, '[data-autoplay-toggle]': toggle, '[data-autoplay-label]': label };
   showcase.querySelector = key => selectors[key];
   showcase.querySelectorAll = key => key === '.feature-pill' ? pills : screens;
-  const document = Object.assign(element(), { hidden: false, querySelector: () => showcase });
+  const document = Object.assign(element(), { hidden: false, documentElement: { dataset: messages }, querySelector: () => showcase });
   const reduceMotion = Object.assign(element(), { matches: reduced });
   let frame, observer, options;
   runInNewContext(autoplay, {
@@ -150,4 +150,12 @@ test('swiping preserves explicit pause and reduced-motion preference', () => {
     assert.equal(f.current(), 1);
     assert.equal(f.label.textContent, '자동 넘김 재생');
   }
+});
+
+
+test('autoplay controls use the rendered page language', () => {
+  const f = fixture(false, { autoplayPlay: 'Play slideshow', autoplayPause: 'Pause slideshow' });
+  assert.equal(f.label.textContent, 'Pause slideshow');
+  f.toggle.emit('click');
+  assert.equal(f.label.textContent, 'Play slideshow');
 });

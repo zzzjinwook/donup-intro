@@ -47,7 +47,7 @@ npx --yes wrangler@4.154.0 pages deploy dist --project-name donup --branch previ
 
 실제 URL은 배포 결과에서 확인합니다. Direct Upload 방식은 GitHub 푸시 자동 배포를 켜지 않습니다. 추후 Git 연결 방식으로 전환하려면 별도 Pages 프로젝트가 필요합니다.
 
-기존 GitHub Pages 주소는 유지 중입니다. 새 주소로의 안내·리디렉션과 App Store 마케팅 URL 변경은 별도 작업입니다. Supabase 프로젝트의 도메인·인증·데이터베이스 설정은 변경하지 않았습니다.
+App Store Connect 다음 버전 초안에는 donup.app 링크를 저장했습니다. 공개 스토어 링크는 다음 버전 출시 후 반영됩니다. Supabase 인증·데이터베이스 설정은 변경하지 않았습니다.
 
 ## 개인정보 처리방침·이용약관
 
@@ -75,3 +75,17 @@ npm run deploy
 ## 링크 공유 미리보기
 
 공유 이미지는 `assets/donup-share-v1.png`(1200×630)입니다. `social-card.html`은 원본 디자인으로 배포에서 제외하며, 기존 일러스트와 실제 앱 캡처를 사용합니다. 수정할 때 1200×630 영역을 캡처하고 실제 PNG 형식인지 확인합니다. `scripts/build.mjs`가 각 공개 페이지의 제목·설명·대표 주소와 공통 공유 이미지를 OG/Twitter 메타 태그로 출력합니다. 이미지 변경 시 파일명도 올려 외부 이미지 캐시를 구분하세요. 카카오 URL 메타정보 관리 도구에서 `https://donup.app/`의 캐시를 초기화한 뒤 재조회할 수 있습니다.
+
+## 다국어 페이지
+
+앱의 `DonupSupportedLanguage`와 같은 한국어(`ko`), 영어(`en`), 일본어(`ja`), 중국어 간체(`zh-Hans`), 중국어 번체·대만(`zh-Hant`)를 지원합니다. 한국어는 `/`, 나머지는 `/en/`, `/ja/`, `/zh-Hans/`, `/zh-Hant/` 아래에서 소개·도움말·개인정보 보호·처리방침·이용약관을 모두 읽을 수 있습니다.
+
+- `i18n/source.json`: 한국어 템플릿·동적 UI 문구의 원문. `i18n/<언어>.json`은 동일한 키를 가진 번역입니다. 문구를 추가하면 4개 언어에도 같은 키를 추가합니다.
+- `i18n/app-glossary.json`: 현재 앱 `Localizable.xcstrings`의 용어를 추출한 참고 자료. 앱의 `scripts/validate_localizations.py` 내 `EXACT_GLOSSARY`와 함께 번역 기준으로 사용합니다.
+- `i18n/support-<언어>.json`: 한국어 `support-content.json`과 동일한 ID·질문·문단 구조를 갖는 도움말 번역입니다.
+- `legal-content.json`: 앱에서 추출한 한국어·영어 법적 원문입니다. `i18n/legal-<언어>.json`은 영어 원문과 조항·문단 순서를 맞춘 일본어·중국어 번역이며, 해당 페이지에 번역본 안내와 영어 원문 링크를 표시합니다.
+- `i18n/screenshots.json`: 언어별 실제 iPhone 캡처 경로. `I18N_CAPTURE_NOTES.md`에 출처와 재현 조건을 기록합니다. 글자가 없는 일러스트는 공통으로 사용합니다.
+- `language.js`: 첫 홈 방문 시 브라우저 언어를 선택하고, 사용자가 직접 고른 언어를 우선합니다. 페이지 안의 언어 전환은 현재 질문/섹션 위치와 URL 쿼리를 유지합니다. JavaScript를 꺼도 언어 메뉴·문서·도움말은 읽을 수 있습니다.
+- 빌드는 언어별 HTML, canonical/hreflang, SNS 메타데이터, 사이트맵을 생성합니다. 소스 JSON과 작업 문서는 배포하지 않습니다.
+
+공유 이미지 원본을 다시 만들 때는 앱 화면을 준비한 뒤 `node scripts/social-previews.mjs`를 실행합니다. 저장소 루트를 제공하는 로컬 서버에서 `.local-preview/social-<언어>.html`을 1200×630으로 캡처해 `assets/donup-share-<언어>.png`에 저장하고 다시 빌드합니다. `.local-preview/`는 Git과 배포에서 제외됩니다.
