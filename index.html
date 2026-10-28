@@ -25,6 +25,7 @@
     <nav class="topbar-nav" aria-label="주요 메뉴">
       <a href="#intro">기능</a>
       <a href="#themes">테마</a>
+      <a href="#pricing">요금제</a>
       <a href="./security">개인정보 보호</a>
       <a href="./support">도움말</a>
     </nav>
@@ -242,6 +243,57 @@
           </button>
         </div>
       </div>
+    </section>
+    <section class="pricing" id="pricing" aria-labelledby="pricing-title">
+      <div class="pricing-inner">
+        <header class="pricing-heading reveal">
+          <h2 id="pricing-title">시작은 무료로.<br />더 편하게, Pro로.</h2>
+          <p>기록·예산·통계는 무료로 시작하고, Pro로 자산관리·자동 기록·맞춤 설정까지 더해보세요.</p>
+        </header>
+        <div class="pricing-plans">
+          <div class="pricing-free">
+            <h3>무료</h3>
+            <p class="pricing-amount">₩0</p>
+            <p>매일의 기록에 필요한 기본 기능</p>
+            <a class="pill pill-dark" href="#download">무료로 시작하기</a>
+          </div>
+          <div class="pricing-pro">
+            <div class="pricing-pro-heading"><h3>DonUp Pro</h3><span>모든 Pro 기능 포함</span></div>
+            <dl class="pricing-billing">
+              <div><dt>월간</dt><dd>₩1,900<span>매월 결제</span></dd></div>
+              <div><dt>연간</dt><dd>₩15,000<span>매년 결제</span></dd></div>
+              <div><dt>평생</dt><dd>₩29,900<span>한 번 결제</span></dd></div>
+            </dl>
+            <a class="pill pill-dark" href="https://apps.apple.com/kr/app/donup/id6770472441" target="_blank" rel="noreferrer">앱에서 Pro 보기 <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <table class="pricing-comparison">
+          <caption class="sr-only">무료와 Pro 기능 비교</caption>
+          <colgroup><col class="pricing-feature-col" /><col /><col /></colgroup>
+          <thead><tr><th scope="col">기능</th><th scope="col">무료</th><th scope="col">DonUp Pro</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">자산관리<small>예금·투자·부채, 순자산 추이·자산 비중·수익률</small></th><td><span class="pricing-no" role="img" aria-label="미포함">X</span></td><td><span class="pricing-yes" role="img" aria-label="포함">O</span></td></tr>
+            <tr><th scope="row">추가 지갑 만들기<small>직접 만든 개인·공유 지갑 합산</small></th><td>기본 지갑 + 1개</td><td>제한 없음</td></tr>
+            <tr><th scope="row">내역 기록 · 예산 · 통계</th><td><span class="pricing-yes" role="img" aria-label="포함">O</span></td><td><span class="pricing-yes" role="img" aria-label="포함">O</span></td></tr>
+            <tr><th scope="row">계정 동기화 · 자동 백업</th><td><span class="pricing-yes" role="img" aria-label="포함">O</span></td><td><span class="pricing-yes" role="img" aria-label="포함">O</span></td></tr>
+            <tr><th scope="row">사진 · 촬영 AI 입력<small>사진과 촬영 횟수 합산</small></th><td>하루 1회</td><td>제한 없음</td></tr>
+            <tr><th scope="row">고속 이미지 분석</th><td><span class="pricing-no" role="img" aria-label="미포함">X</span></td><td><span class="pricing-yes" role="img" aria-label="포함">O</span></td></tr>
+            <tr><th scope="row">돈워리 대화</th><td>하루 3회</td><td>하루 20회</td></tr>
+            <tr><th scope="row">결제·이미지 자동 기록<small>결제 문자·카드/은행 알림·Apple Pay·후면 탭</small></th><td><span class="pricing-no" role="img" aria-label="미포함">X</span></td><td><span class="pricing-yes" role="img" aria-label="포함">O</span></td></tr>
+            <tr><th scope="row">테마 색상</th><td>기본 3가지</td><td>기본 + 프리미엄 14가지</td></tr>
+            <tr><th scope="row">홈 문구 편집<small>고정 문구와 시간대별 문구</small></th><td>기본 문구</td><td>직접 편집</td></tr>
+            <tr><th scope="row">JSON 파일 백업·복원</th><td><span class="pricing-no" role="img" aria-label="미포함">X</span></td><td><span class="pricing-yes" role="img" aria-label="포함">O</span></td></tr>
+          </tbody>
+        </table>
+        <div class="pricing-notes">
+          <p>자산관리는 개인·공유 지갑 모두 Pro에서 이용할 수 있어요. 빠른 작성 단축어는 무료예요.</p>
+          <p>한국 App Store 가격 기준입니다. 국가·지역에 따라 가격이 다르며, 최종 가격과 체험 혜택은 앱의 구매 화면에서 확인하세요.</p>
+          <p>월간·연간은 자동 갱신 구독이며, 평생은 한 번 결제하는 상품입니다. AI 기능은 데이터 사용 동의 후 이용할 수 있어요.</p>
+          <a href="./support#pro">Pro에 대해 더 알아보기 <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
       <footer class="footer">
         <div class="footer-brand">
           <img src="./assets/screens/donup-icon-256.png" alt="" width="24" height="24" />
@@ -256,7 +308,6 @@
           <a href="/support#contact">문의하기</a>
         </nav>
       </footer>
-    </section>
   </main>
 
   <script src="./script.js"></script>

@@ -21,3 +21,19 @@ Paths below are relative to `/Users/hjw/Developer/donup`.
 ## Deliberately excluded
 
 Unconfirmed release promises, exact store prices, assurances of end-to-end encryption or inaccessible server plaintext, blanket claims of zero AI retention, unsupported recovery guarantees, and draft answers still needing current behavior verification. Screenshots are public fixture data and generated illustrations are decorative; neither is evidence of security guarantees.
+
+## 요금제 비교표 보완 (2026-10-28)
+
+홈 `#pricing`은 다운로드 장면 다음, 푸터 바로 앞의 마지막 본문 섹션입니다. 5개 언어에 같은 11개 비교 항목을 제공합니다.
+
+- 자산관리(예금·투자·부채, 순자산 추이·자산 비중·수익률): `donup/LedgerProPaywallPage.swift`의 assets 슬라이드, `ContentView.swift`의 `canAccessAssets`, `LedgerScreen.swift`의 자산 진입 가드. 개인·공유 지갑 모두 Pro 이용자만 이용할 수 있습니다. 2026-10-28 사용자 요청으로 공유 지갑 무료 예외를 제거했습니다.
+- 추가 지갑: `LedgerWalletContext.swift`의 `ledgerCanAddWallet`. 무료는 기본 지갑 외 직접 만든 개인·공유 지갑 합산 1개, Pro는 생성 개수 제한 없음. 초대로 참여한 공유 지갑 수와 구분합니다.
+- 고속 이미지 분석: `LedgerSettingsPage.swift`의 `usesCerebrasImageAnalysis` 바인딩과 Pro 비활성화 처리.
+- 결제·이미지 자동 기록: `LedgerEntryAutomationSettingsPage`의 Pro 표시 4개(결제 문자, 카드/은행 알림, Apple Pay, 후면 탭), `DonupProFeaturePolicy`의 실행 권한 검사. 빠른 작성 단축어는 무료입니다.
+- 홈 문구 편집: `LedgerSettingsPreferencePages.swift`의 고정·시간대별 편집 UI Pro 가드.
+- JSON 파일 백업·복원: `LedgerSettingsPage.swift`의 `handleDonupDataImportTap`, `performDonupDataImport`, `handleDataExportTap` Pro 가드. 무료 계정 동기화·자동 백업과 별개입니다.
+- 사진/촬영 합산 하루 1회: `DonupProFeaturePolicy.swift`. Pro는 제한 없음.
+- 돈워리: `DonworryClient.swift`의 무료 3회/Pro 20회 일일 요청 한도.
+- 테마: `DonupProFeaturePolicy.swift` 무료 3색, `LedgerProPaywallPage.swift` 프리미엄 14색.
+
+앱 소스 경로는 `/Users/hjw/Developer/donup` 기준입니다. 서버 동작을 바꾸거나 실제 결제하지 않고 소스의 접근 제한을 대조했습니다.
