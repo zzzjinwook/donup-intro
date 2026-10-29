@@ -188,3 +188,70 @@
 - build.mjs에서 홈/도움말/보호/한영법적7페이지 OG와 Twitter summary_large_image 생성; 각 페이지의 title/description/canonical 사용. 홈 설명은 ‘말하고 찍는 가계부. 소비와 예산을 한눈에.’로 단축.
 - 테스트 통과, 운영 이미지 바이트 동일 및 새 메타 확인. 최종 배포 b69de1ca(이미지 최초 e6ca11b0).
 - 사용자가 카카오 개발자 로그인. 공식 URL메타정보 도구에서 기존 캐시의 아이콘을 확인한 뒤 초기화(1개 삭제)하고 새 카드로 재수집 확인. 실제 채팅 발송 없음.
+
+## 돈워리 차트 미리보기 (2026-10-29)
+
+- 기능 소개의 돈워리 화면을 `donworry-chart-pink-light.webp`로 교체. ko/en/ja/zh-Hans/zh-Hant 각 언어에서 실제 앱을 실행해 1320×2868로 캡처했습니다.
+- 원본과 재캡처 스크립트·실행 인자·SHA-256: `/Users/hjw/Developer/donup/output/website-donworry-chart-20261029/`의 `capture.py`, `provenance.jsonl`, 언어별 PNG.
+- 앱의 DEBUG 마케팅 샘플 함수 `prepareDonupProMarketingExtras`에서 해당 월 공개용 샘플 내역의 카테고리별 지출 합계를 구해 상위 4개를 실제 DonworryChart(.bar)로 표시합니다. 개인 기록이나 외부 AI 호출은 사용하지 않았습니다.
+- iPhone 16 Pro Max 전용 시뮬레이터, iOS 26.5, 핑크·라이트, 9:41·Wi-Fi·배터리 가득. 답변/차트 범례의 등장 애니메이션이 완료된 뒤 캡처합니다.
+- 웹은 cwebp q88로 인코딩한 버전을 사용하며, 새 파일 이름으로 이전 이미지 캐시를 분리했습니다. 이미지 설명과 캡션도 5개 언어로 수정했습니다.
+
+## 요금 비교표 섹션형 정리 (2026-10-29)
+- 기존 11개 기능과 무료/Pro 이용 한도를 유지하고 기록, AI와 자동화, 자산, 맞춤 설정, 동기화와 백업의 5개 tbody로 분류했습니다. 각 그룹은 rowgroup 제목과 aria-labelledby로 연결합니다.
+- 사용자 참고 화면에 맞춰 칸 테두리와 Pro 열의 배경색을 제거하고, 넓은 항목 열·회색 무료 값·분홍 Pro 값으로 구분합니다. 기존 O/X 표기, 항목 행 hover/active/키보드 강조, 무료체험 안내는 유지합니다.
+- 새 제목 6개는 한국어·영어·일본어·중국어 간체·번체에 모두 반영했습니다. 모바일에서 3열을 유지하며 320px에서 5개 언어 모두 가로 넘침 없이 5개 그룹·11개 항목이 표시되는 것을 확인했습니다.
+
+## 2026-10-29 — 최신 앱 색상 / 내추럴 티타늄 스크린샷
+
+- iPhone 16 Pro Max(iOS 26.5) 샘플 시뮬레이터에서 한국어·영어·일본어·중국어 간체·번체 8종씩 총 40장을 다시 촬영·렌더링했습니다. 라이트 배경 #F7F8FA, 카드 #FFFFFF가 반영된 빌드입니다.
+- 원본·실행 인자: `/Users/hjw/Developer/donup/output/website-titanium-20261029/`의 `capture.py`, `provenance.jsonl`. 최종 이미지별 원본/출력 해시와 설정은 `render-provenance.json`입니다.
+- 내역 화면은 실제 UI에서 정기 지출 추천을 닫아 샘플 거래 목록을 보여 줍니다. 원본: `output/website-history-list-20261029/{locale}/history-mint-light-dismissed.png`.
+- 돈워리는 예전 독립 페이지가 아니라 작성창 질문 전송 → 실제 돈워리 드로어 → 확장 흐름입니다. `DonworryWebsiteCaptureUITests`로 촬영하며 DEBUG + `DONUP_APP_STORE_SCREENSHOTS=1` + `DONUP_UI_TEST_DONWORRY_COMPOSE_CAPTURE=1`일 때만 외부 AI 대신 공개 샘플 기록으로 구성한 응답을 사용합니다. 일반 앱/Release 경로는 바꾸지 않습니다.
+- 돈워리 최종 원본은 `output/website-donworry-compose-20261029/{locale}/donworry-chart-pink-dark.png`입니다. 웹 파일명 `donworry-chart-pink-light.webp`는 기존 다국어 매핑 호환을 위해 유지하지만 실제 테마는 pink/dark입니다. 상세 출처는 같은 폴더 `provenance.json`의 `darkCaptures`입니다.
+- shots.so 실제 편집기로 iPhone 16 Pro Max / Natural Titanium / Shadow None / Transparent 설정에서 PNG를 출력했습니다. 1080×1920 출력의 투명 외곽만 alpha bbox (182,218,899,1702)로 잘라 717×1484 WebP(q90)로 배포합니다. 화면 내용은 합성/보정하지 않았습니다.
+- 기존 CSS의 가짜 검정 프레임과 그림자를 제거했습니다. 기존 1320:2868 이미지 영역은 유지하고 object-fit: contain으로 하드웨어 목업 전체를 표시합니다. 320/390/768/1440px × 5언어에서 기존 이미지 영역 크기 동일, 가로 넘침 0을 확인했습니다.
+- 무료/Pro 가격 카드는 여백·글자·간격을 줄였습니다. 1440px 기준 높이 339→272px, 390px에서 무료 189→164px / Pro 301→241px입니다.
+- 다국어 공유 미리보기 5개도 새 목업으로 다시 출력했습니다. 화면 이미지 URL에는 파일 SHA-256 앞 12자리 버전을 붙여 오래 캐시된 이미지가 남지 않도록 했습니다.
+- 최종 검증: `npm test` 12/12 통과, `git diff --check` 통과. Cloudflare Pages 배포 `f926abfb` 완료. 실제 `donup.app`에서 스크린샷 40장 + OG 5장 SHA-256이 로컬 최종 파일과 모두 일치했고, 5개 언어 페이지의 새 이미지 버전 URL을 확인했습니다. 배포본 모바일 390px에서 가로 넘침 0, 콘솔 오류 0, 모든 앱 이미지 로딩 완료를 확인했습니다. 실제 iPhone Safari는 별도 확인하지 않았습니다.
+
+## 2026-10-29 — 웹폰트 비교 버튼
+
+- 소개·도움말·개인정보 보호·개인정보 처리방침·약관(5개 언어)에 오른쪽 아래 `Pretendard / Wanted Sans` 비교 버튼을 추가했습니다. 기본은 Pretendard입니다.
+- `font-preview.css`는 Wanted Sans v1.0.3 공식 npm 웹폰트를 jsDelivr에서 불러옵니다. `html[data-site-font="wanted"]`에서 기존 `--font` 토큰만 바꿔 크기·굵기·행간·자간을 유지합니다. 스크린샷 속 글자는 이미지이므로 바뀌지 않습니다.
+- `font-preview.js`는 `donup.website.font` localStorage 키에 `pretendard|wanted`를 저장하고 페이지 이동·새로고침·다른 탭에 반영합니다. 접근성은 버튼 `aria-pressed`와 그룹 이름, 44px 터치 영역, 키보드 포커스 표시로 제공합니다.
+- 실제 브라우저 렌더링 검사(CDP CSS.getPlatformFontsForNode)에서 Wanted Sans Variable과 Pretendard 사용을 각각 확인했습니다. 제목 크기54px/굵기650 그대로 유지, 320px 버튼 넘침 없음, 페이지 이동·새로고침 후 선택 유지 확인. 기존 Node 테스트12/12 및 node --check·git diff --check 통과.
+
+## 2026-10-29 — 기본 폰트 확정·일본어 표시 JP
+
+- 비교용 UI와 `font-preview.css/js`를 제거했습니다. 저장된 비교 선택은 더 이상 읽지 않습니다.
+- `fonts.css`를 공통 폰트 소스로 사용합니다. 한국어/영어는 Wanted Sans Variable v1.0.3, 일본어는 Noto Sans JP, 간체는 Noto Sans SC, 번체는 Noto Sans TC. 언어별 Noto Google Fonts CSS(가변 굵기100~900)는 해당 페이지에서만 불러옵니다. 기존 Pretendard import와 중복 --font 선언은 제거했습니다.
+- `scripts/i18n.mjs` 일본어 short 표시는 JP입니다. `lang=ja`, `/ja/`, hreflang, og locale는 표준 언어 코드 그대로 유지합니다.
+- 일본어 요금제 제목 `Proで。`를 nowrap span으로 묶어 한 글자만 다음 줄로 남지 않도록 했습니다. 공유 카드 일본어도 같은 이유로 구절 경계를 조정했습니다.
+- 소개·도움말·개인정보 보호·약관·404 및 OG5개에 새 폰트를 적용했습니다. OG URL은 이미지 SHA256 앞12자리 버전을 포함합니다. 앱 스크린샷 속 글자는 앱이 그린 원본 그대로입니다.
+- 검수: CDP 실제 렌더링 폰트에서 ko/en Wanted Sans Variable, ja Noto Sans JP, zh-Hans Noto Sans SC, zh-Hant Noto Sans TC 확인. 5언어×소개/개인정보보호/처리방침×320/390/768/1440 총60건에서 가로넘침0, 비교UI0, 일본어 JP 확인. 기존 Node테스트12/12 통과. 기록: `output/website-titanium-20261029/font-migration-checks.json`.
+
+## 2026-10-29 — 이미지 무손실 최적화
+
+- 실제 본문 앱 화면/일러스트47장은 이미 WebP였습니다. 추가 손실 압축이나 리사이즈 없이 유지했습니다. 로고(256×256)만 `cwebp -lossless -z 9 -exact`로 WebP를 추가해 13,313→2,994bytes(77.5% 감소), 모든 본문 img 및 공유 카드 소스의 로고 참조를 WebP로 바꿨습니다. 표시 크기는 유지합니다.
+- 공유 OG5개·apple-touch-icon·favicon은 PNG 호환성을 유지하고 `oxipng -o 4`로 무손실 최적화했습니다. PNG압축 최대 Zopfli 검토 중 256아이콘은 추가 최적화가 먼저 완료됐으며 나머지 파일은 기본deflate 최적화를 사용했습니다.
+- 배포 스크린샷 목록을 `i18n/screenshots.json`에서 생성하여 미사용 JPG6개와 예전 돈워리WebP5개를 배포에서 제외합니다. 저장소 원본은 삭제하지 않습니다.
+- 모든 배포 이미지에 SHA256앞12자리 버전URL을 적용해 최적화된 파일을 받도록 했습니다.
+- 사용이미지 총합5,015,062→4,415,232bytes(11.96% 감소). 배포이미지65개/6,139,694→55개/4,415,232bytes(28.09% 감소). 이는 5개 언어와 OG/아이콘을 합한 파일용량이며 단일페이지 전송량 수치는 아닙니다.
+- 기존 사용이미지54개 RGBA SHA256·크기 모두 원본과 일치, 새WebP로고도 PNG와RGBA동일을 확인했습니다. 검증기록 `/Users/hjw/Developer/donup/output/website-image-optimization-20261029/verification.json`, 최적화전사본 `/tmp/donup-image-optimize-20261029/originals/`.
+- Node테스트12/12, gitdiffcheck 통과. 빌드검사는 모든 본문img가 버전붙은WebP인지 확인합니다.
+
+
+## 2026-10-29 — SEO·AEO·접근성·성능
+
+- 운영 배포 `d8217dc1`: `SEO_AUDIT.md`에 변경 내용과 검증 범위를 정리했습니다. 구조화 데이터/25URL 사이트맵·언어 연결/안정적인 언어 URL/접근성/페이지 스타일 및 폰트 제공/화면 밖 애니메이션 중단을 반영했습니다.
+- PageSpeed 모바일91·데스크톱100, 두 환경 접근성/SEO/권장사항100. Node16/16, 5언어30페이지 axe 위반0 및320px 넘침0. 최종 공개URL34개와 폰트·메타 확인. 증거는 `output/website-seo-aeo-20261029/`(앱 저장소)에 있습니다.
+- 색인/순위/AI인용의 실제 성과, 실기기 Safari·VoiceOver는 미검증입니다. 자동 검사 점수를 완전한 접근성 준수나 검색 성과로 해석하지 않습니다. 커밋·푸시 안 함.
+
+
+## 2026-10-29 — Marketing Skills GEO·SEO 후속
+
+- `MARKETING_SKILLS_AUDIT.md` 참조. 공식스킬5개를커밋0cd9b3a0에고정설치했고Claude작성support5개JSON/내부마케팅초안을검수·통합했습니다. 사용자대상앱정의/호환/언어질문3개와Pro자산/지갑조건보강, 관련링크·메타·경로·지원JSON-LD를반영했습니다.
+- 최종배포2bdc81e2, Node17/17, 문서20개·열린도움말10개axe위반0/넘침0. 공개25페이지검증. 모바일PageSpeed90/접근성100/SEO100/권장사항100.
+- 사용자요청으로GoogleSearchConsole도메인속성DNS인증완료. 사이트맵25페이지발견/성공, 홈과도움말재수집요청접수. Googlelive가현재rootcanonical과도움말Breadcrumb유효1개를확인했습니다. 재색인·검색순위·AI인용성과는대기상태입니다.
+- 내부.agents/product-marketing.md와검수문서·스킬은배포하지않습니다. 커밋/푸시안함.

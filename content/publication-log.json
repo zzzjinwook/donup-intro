@@ -1,0 +1,50 @@
+{
+  "timezone": "Asia/Seoul",
+  "posts": [
+    {
+      "date": "2026-10-30",
+      "slot": "manual-launch",
+      "platform": "naver",
+      "channel": "https://blog.naver.com/ugi_snap",
+      "title": "가계부, 왜 써야 할까요? 자꾸 밀리는 기록을 가볍게 시작하는 돈업",
+      "status": "published",
+      "url": "https://blog.naver.com/ugi_snap/224458417049",
+      "publishingStartedAt": "2026-10-30T00:30:31.903013+09:00",
+      "category": "돈업 가계부",
+      "categoryId": 6,
+      "topic": "IT·컴퓨터",
+      "verifiedAt": "2026-10-30T00:34:06.743714+09:00",
+      "verification": {
+        "publicTitle": true,
+        "bodyScreensLoaded": 3,
+        "screensNaturalWidth": 717,
+        "appStoreCard": true,
+        "appStoreLink": true,
+        "officialSiteLink": true,
+        "guideLink": true,
+        "public": true,
+        "searchAllowed": true
+      }
+    },
+    {
+      "date": "2026-10-30",
+      "slot": "manual-launch",
+      "platform": "tistory",
+      "channel": "https://macintosh-hong-dev.tistory.com/",
+      "title": "가계부를 쓰는 이유, 부부·커플 생활비부터 한눈에 | 돈업 공식 소개",
+      "status": "published",
+      "url": "https://macintosh-hong-dev.tistory.com/1",
+      "publishingStartedAt": "2026-10-30T00:22:45.808507+09:00",
+      "publishedAt": "2026-10-30T00:22:00+09:00",
+      "verifiedAt": "2026-10-30T00:28:08.347639+09:00",
+      "verification": {
+        "publicTitle": true,
+        "bodyImagesLoaded": 3,
+        "appStoreLink": true,
+        "officialSiteLink": true,
+        "guideLink": true,
+        "representativeImageUploaded": true
+      }
+    }
+  ]
+}
