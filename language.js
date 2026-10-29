@@ -18,17 +18,4 @@ document.addEventListener('keydown', event => {
   const menu = document.querySelector('.language-menu[open]');
   if (menu) { menu.open = false; menu.querySelector('summary').focus(); }
 });
-// 직접 고른 언어를 우선하고, 첫 홈 방문만 브라우저 언어에 맞춘다.
-if (location.pathname === '/') {
-  let preferred;
-  try { preferred = localStorage.getItem('donup.website.language'); } catch {}
-  if (!preferred) {
-    for (const language of navigator.languages ?? [navigator.language]) {
-      const value = language?.toLowerCase().replaceAll('_', '-') ?? '';
-      if (/^(zh|yue)(-|$)/.test(value)) { preferred = /hant|tw|hk|mo|^yue/.test(value) ? 'zh-Hant' : 'zh-Hans'; break; }
-      preferred = ['ko', 'en', 'ja'].find(code => value === code || value.startsWith(code + '-'));
-      if (preferred) break;
-    }
-  }
-  if (['en', 'ja', 'zh-Hans', 'zh-Hant'].includes(preferred)) location.replace(`/${preferred}/${location.search}${location.hash}`);
-}
+// 언어별 URL은 항상 같은 본문을 제공한다. 자동 이동 대신 언어 메뉴로 선택한다.

@@ -26,12 +26,13 @@ function preferred(languages, saved, pathname = '/') {
   });
   return destination;
 }
-test('home language follows stored preference and supported browser locales', () => {
+test('canonical locale remains stable regardless of browser or stored language', () => {
   assert.equal(preferred(['en-US'], 'ko'), undefined);
-  assert.equal(preferred(['en-US']), '/en/?from=share#download');
-  assert.equal(preferred(['zh-HK']), '/zh-Hant/?from=share#download');
-  assert.equal(preferred(['zh-CN']), '/zh-Hans/?from=share#download');
-  assert.equal(preferred(['fr', 'ja-JP']), '/ja/?from=share#download');
+  assert.equal(preferred(['en-US']), undefined);
+  assert.equal(preferred(['zh-HK']), undefined);
+  assert.equal(preferred(['zh-CN']), undefined);
+  assert.equal(preferred(['fr', 'ja-JP']), undefined);
+  assert.equal(preferred(['en-US'], 'ja'), undefined);
   assert.equal(preferred(['ko-KR']), undefined);
   assert.equal(preferred(['ja-JP'], null, '/en/privacy'), undefined);
 });

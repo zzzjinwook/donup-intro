@@ -5,7 +5,9 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "test": "node --test scripts/*.test.mjs",
-    "deploy": "npm run build && npx --yes wrangler@4.154.0 pages deploy dist --project-name donup --branch main",
-    "deploy:legacy-redirect": "npx --yes wrangler@4.154.0 pages deploy legacy-redirect --project-name donup-intro --branch main"
+    "deploy": "npm run build && npx --yes wrangler@4.154.0 pages deploy dist --project-name donup --branch main && npm run indexnow",
+    "deploy:legacy-redirect": "npx --yes wrangler@4.154.0 pages deploy legacy-redirect --project-name donup-intro --branch main",
+    "indexnow": "node scripts/indexnow.mjs",
+    "predeploy": "npm test"
   }
 }

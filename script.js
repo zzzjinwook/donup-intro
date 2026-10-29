@@ -23,8 +23,8 @@ const faq = document.querySelector("#faq");
 const clamp01 = (value) => Math.min(Math.max(value, 0), 1);
 
 // 요소의 위쪽이 화면 start 비율에서 end 비율까지 올라오는 동안 0→1
-function enterProgress(element, start, end) {
-  const top = element.getBoundingClientRect().top / window.innerHeight;
+function enterProgress(rect, start, end) {
+  const top = rect.top / window.innerHeight;
   return clamp01((start - top) / (start - end));
 }
 
@@ -53,6 +53,10 @@ function updateOnScroll() {
   const vh = window.innerHeight;
   const y = window.scrollY;
   const animate = !reduceMotion.matches;
+  // Read geometry before changing styles to avoid repeated synchronous layouts.
+  const elements = new Set([faq, automation, stage, fan, finale, ...trackedSections,
+    ...floatObjects.map(obj => obj.parentElement)].filter(Boolean));
+  const bounds = new Map(Array.from(elements, element => [element, element.getBoundingClientRect()]));
 
   topbar.classList.toggle("is-scrolled", y > 8);
 
@@ -60,23 +64,29 @@ function updateOnScroll() {
     heroFrame.style.setProperty("--shrink", clamp01(y / (vh * 0.9)).toFixed(3));
   }
 
-  // 자동 기록 섹션이 화면 가운데쯤 오면 페이지 전체가 어두워지고, 마무리 장면 전까지 유지한다.
+  // 검정 무대의 하단이 들어올 때 곡률을 연속적으로 키운다.
+  // 뒤의 요금제 배경이 모서리를 받쳐 주므로 body 색 전환과 분리된다.
+  const faqBottom = bounds.get(faq).bottom;
+  const exit = animate ? clamp01((vh - faqBottom) / (vh * 0.65)) : 1;
+  faq.style.setProperty("--exit", exit.toFixed(3));
+
+  // 자동 기록부터 FAQ까지 어두운 배경을 유지한다.
   const isNight =
-    automation.getBoundingClientRect().top < vh * 0.55 && faq.getBoundingClientRect().bottom > vh * 0.45;
+    bounds.get(automation).top < vh * 0.55 && faqBottom > vh * 0.45;
   document.body.classList.toggle("is-night", isNight);
   topbar.classList.toggle("is-night", isNight);
 
   if (animate) {
-    if (stage) stage.style.setProperty("--enter", enterProgress(stage, 1, 0.35).toFixed(3));
-    if (fan) fan.style.setProperty("--fan", enterProgress(fan, 0.95, 0.3).toFixed(3));
+    if (stage) stage.style.setProperty("--enter", enterProgress(bounds.get(stage), 1, 0.35).toFixed(3));
+    if (fan) fan.style.setProperty("--fan", enterProgress(bounds.get(fan), 0.95, 0.3).toFixed(3));
     if (finale) {
-      const rise = enterProgress(finale, 1, 0.2).toFixed(3);
+      const rise = enterProgress(bounds.get(finale), 1, 0.2).toFixed(3);
       finale.querySelectorAll(".obj").forEach((obj, index) => {
         obj.style.setProperty("--rise", clamp01(rise * 1.3 - index * 0.06).toFixed(3));
       });
     }
     floatObjects.forEach((obj) => {
-      const rect = obj.parentElement.getBoundingClientRect();
+      const rect = bounds.get(obj.parentElement);
       if (rect.bottom < -200 || rect.top > vh + 200) return;
       const distance = rect.top + rect.height / 2 - vh / 2;
       obj.style.setProperty("--sy", `${(distance * Number(obj.dataset.scrollDepth)).toFixed(1)}px`);
@@ -85,7 +95,7 @@ function updateOnScroll() {
 
   let current = null;
   trackedSections.forEach((section) => {
-    if (section.getBoundingClientRect().top < vh * 0.4) current = section.id;
+    if (bounds.get(section).top < vh * 0.4) current = section.id;
   });
   sectionLinks.forEach((link) => {
     const isActive = link.getAttribute("href") === `#${current}`;
@@ -107,6 +117,7 @@ function queueScrollUpdate() {
 
 window.addEventListener("scroll", queueScrollUpdate, { passive: true });
 window.addEventListener("resize", queueScrollUpdate);
+reduceMotion.addEventListener("change", queueScrollUpdate);
 updateOnScroll();
 
 /* ---------- 히어로 오브젝트: 포인터를 따라 살짝 움직임 ---------- */
@@ -146,12 +157,13 @@ if (showcase) {
   const track = showcase.querySelector(".pill-track");
   const toggle = showcase.querySelector("[data-autoplay-toggle]");
   const toggleLabel = showcase.querySelector("[data-autoplay-label]");
-  const duration = 4800;
+  const duration = 3000;
   let index = 0;
   let elapsed = 0;
   let lastTime = null;
   let isInView = false;
   let swipe = null;
+  let frameScheduled = false;
   // 동작 줄이기를 켠 사용자는 멈춘 상태로 시작하고, 재생을 직접 누른 경우에만 넘어간다.
   let isPausedByUser = reduceMotion.matches;
 
@@ -165,6 +177,7 @@ if (showcase) {
     toggleLabel.textContent = paused ? (messages.autoplayPlay || "자동 넘김 재생") : (messages.autoplayPause || "자동 넘김 멈추기");
     // 자동으로 넘어가는 동안에는 바뀔 때마다 읽지 않고, 멈춘 뒤 직접 고른 화면만 알린다.
     caption.setAttribute("aria-live", paused ? "polite" : "off");
+    queueTick();
   }
 
   function select(nextIndex, { focus = false } = {}) {
@@ -203,9 +216,17 @@ if (showcase) {
       track.scrollTo({ left, behavior: reduceMotion.matches ? "auto" : "smooth" });
     }
     if (focus) pill.focus();
+    queueTick();
+  }
+
+  function queueTick() {
+    if (frameScheduled || !isAutoplaying() || !isInView || document.hidden || swipe !== null) return;
+    frameScheduled = true;
+    requestAnimationFrame(tick);
   }
 
   function tick(time) {
+    frameScheduled = false;
     const isRunning = isAutoplaying() && isInView && !document.hidden && swipe === null;
     if (isRunning && lastTime !== null) {
       elapsed += time - lastTime;
@@ -214,7 +235,7 @@ if (showcase) {
       if (progress >= 1) select(index + 1);
     }
     lastTime = isRunning ? time : null;
-    requestAnimationFrame(tick);
+    queueTick();
   }
 
   pills.forEach((pill, pillIndex) => {
@@ -258,9 +279,10 @@ if (showcase) {
     if (Math.abs(dx) >= 40 && Math.abs(dx) > Math.abs(dy) * 1.25) {
       select(gesture.index + (dx < 0 ? 1 : -1));
     }
+    queueTick();
   });
   for (const type of ["pointercancel", "lostpointercapture"]) {
-    swipeSurface.addEventListener(type, () => { swipe = null; lastTime = null; });
+    swipeSurface.addEventListener(type, () => { swipe = null; lastTime = null; queueTick(); });
   }
   swipeSurface.addEventListener("dragstart", (event) => event.preventDefault());
 
@@ -276,12 +298,13 @@ if (showcase) {
     ([entry]) => {
       isInView = entry.isIntersecting;
       lastTime = null;
+      queueTick();
     },
     { threshold: 0 }
   ).observe(showcase);
 
   // 백그라운드에서 RAF가 중단된 시간을 슬라이드 재생 시간에 더하지 않는다.
-  document.addEventListener("visibilitychange", () => { swipe = null; lastTime = null; });
+  document.addEventListener("visibilitychange", () => { swipe = null; lastTime = null; queueTick(); });
 
   reduceMotion.addEventListener("change", () => {
     isPausedByUser = reduceMotion.matches;
@@ -290,5 +313,5 @@ if (showcase) {
   });
   renderToggle();
   select(0);
-  requestAnimationFrame(tick);
+  queueTick();
 }

@@ -6,8 +6,8 @@
     "home-pink-dark": "/assets/screens/iphone16promax/en/home-pink-dark.webp",
     "home-skyblue-light": "/assets/screens/iphone16promax/en/home-skyblue-light.webp",
     "automation-pink-dark": "/assets/screens/iphone16promax/en/automation-pink-dark.webp",
-    "donworry-pink-light": "/assets/screens/iphone16promax/en/donworry-pink-light.webp",
-    "home-pink-light": "/assets/screens/iphone16promax/en/home-pink-light.webp"
+    "home-pink-light": "/assets/screens/iphone16promax/en/home-pink-light.webp",
+    "donworry-chart-pink-light": "/assets/screens/iphone16promax/en/donworry-chart-pink-light.webp"
   },
   "ja": {
     "home-pink-light": "/assets/screens/iphone16promax/ja/home-pink-light.webp",
@@ -16,8 +16,8 @@
     "home-pink-dark": "/assets/screens/iphone16promax/ja/home-pink-dark.webp",
     "home-skyblue-light": "/assets/screens/iphone16promax/ja/home-skyblue-light.webp",
     "automation-pink-dark": "/assets/screens/iphone16promax/ja/automation-pink-dark.webp",
-    "donworry-pink-light": "/assets/screens/iphone16promax/ja/donworry-pink-light.webp",
-    "history-mint-light": "/assets/screens/iphone16promax/ja/history-mint-light.webp"
+    "history-mint-light": "/assets/screens/iphone16promax/ja/history-mint-light.webp",
+    "donworry-chart-pink-light": "/assets/screens/iphone16promax/ja/donworry-chart-pink-light.webp"
   },
   "zh-Hans": {
     "home-pink-light": "/assets/screens/iphone16promax/zh-Hans/home-pink-light.webp",
@@ -26,8 +26,8 @@
     "home-pink-dark": "/assets/screens/iphone16promax/zh-Hans/home-pink-dark.webp",
     "home-skyblue-light": "/assets/screens/iphone16promax/zh-Hans/home-skyblue-light.webp",
     "automation-pink-dark": "/assets/screens/iphone16promax/zh-Hans/automation-pink-dark.webp",
-    "donworry-pink-light": "/assets/screens/iphone16promax/zh-Hans/donworry-pink-light.webp",
-    "history-mint-light": "/assets/screens/iphone16promax/zh-Hans/history-mint-light.webp"
+    "history-mint-light": "/assets/screens/iphone16promax/zh-Hans/history-mint-light.webp",
+    "donworry-chart-pink-light": "/assets/screens/iphone16promax/zh-Hans/donworry-chart-pink-light.webp"
   },
   "zh-Hant": {
     "home-pink-light": "/assets/screens/iphone16promax/zh-Hant/home-pink-light.webp",
@@ -37,6 +37,6 @@
     "home-pink-dark": "/assets/screens/iphone16promax/zh-Hant/home-pink-dark.webp",
     "home-skyblue-light": "/assets/screens/iphone16promax/zh-Hant/home-skyblue-light.webp",
     "automation-pink-dark": "/assets/screens/iphone16promax/zh-Hant/automation-pink-dark.webp",
-    "donworry-pink-light": "/assets/screens/iphone16promax/zh-Hant/donworry-pink-light.webp"
+    "donworry-chart-pink-light": "/assets/screens/iphone16promax/zh-Hant/donworry-chart-pink-light.webp"
   }
 }

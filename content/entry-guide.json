@@ -1,0 +1,397 @@
+{
+  "slug": "start-budgeting",
+  "published": "2026-10-30",
+  "updated": "2026-10-30",
+  "locales": {
+    "ko": {
+      "title": "가계부, 왜 써야 할까요? 처음 시작하는 돈 관리와 돈업",
+      "description": "가계부를 써야 하는 이유와 처음 시작하는 방법을 정리했어요. 사회초년생 3단계, 부부·커플 공유 가계부, AI 입력과 돈워리의 무료·Pro 범위, 지원 기기까지 돈업 공식 안내로 확인하세요.",
+      "answer": "가계부는 아끼기 위한 숙제가 아니라, 내 돈이 어디로 가고 다음에 무엇이 빠져나갈지 미리 보는 도구예요. 처음에는 쓴 돈을 한 줄씩 남기는 습관부터 가볍게 시작하면 충분해요.",
+      "sections": [
+        {
+          "id": "not-your-fault",
+          "title": "가계부가 자꾸 끊겼다면, 의지 탓이 아니에요",
+          "paragraphs": [
+            "가계부를 며칠 쓰다 멈춘 경험은 흔해요. 영수증을 모아 두었다가 한꺼번에 정리하려면 시간이 들고, 하루 이틀 빠지면 다시 시작하기가 부담스러워지죠.",
+            "그래서 처음에는 완벽하게 쓰는 것보다 쉽게 남기는 것이 중요해요. 빠진 날이 있어도 오늘부터 다시 적으면 되고, 기록이 쌓이는 만큼 보이는 것도 늘어나요."
+          ]
+        },
+        {
+          "id": "why",
+          "title": "가계부를 쓰면 보이는 세 가지",
+          "paragraphs": [
+            "첫째, 소비 패턴이 보여요. 어느 카테고리에 돈이 많이 갔는지 알면 줄일 곳과 지킬 곳을 내가 정할 수 있어요. 둘째, 다가올 반복 지출이 보여요. 월세·통신비·구독료처럼 매달 나가는 돈을 미리 알면 결제일 전에 대비할 수 있어요.",
+            "셋째, 함께 쓰는 생활비가 분명해져요. 가족이나 연인과 생활비를 나눈다면 같은 기록을 함께 보는 것만으로 누가 무엇에 썼는지 묻고 기억을 맞추는 일이 줄어들어요."
+          ]
+        },
+        {
+          "id": "choose-an-app",
+          "title": "가계부 추천을 볼 때, 무엇부터 확인할까요?",
+          "paragraphs": [
+            "가계부 앱을 고를 때는 입력 방식, 무료 범위, 함께 쓰는 기능, 데이터 선택권을 먼저 보세요. 사회초년생이라면 짧게 기록하고 정기 지출을 미리 볼 수 있는지, 부부라면 개인 지출을 분리한 채 생활비만 공유할 수 있는지가 실용적인 기준이에요.",
+            "돈업은 직접 입력과 선택형 AI 입력을 제공하고, 기록·예산·통계·계정 동기화는 무료예요. 결제 문자·Apple Pay 자동 기록과 자산관리 등은 Pro 기능이에요. 모든 기능을 쓰기보다 내게 필요한 기록 방식부터 비교해 보세요."
+          ]
+        },
+        {
+          "id": "first-job",
+          "title": "사회초년생을 위한 3단계 시작법",
+          "paragraphs": [
+            "1단계, 처음 2주는 쓴 돈을 그때그때 한 줄로 남겨요. 돈업에서는 직접 입력할 수 있고, ‘AI 데이터 사용’을 허용했다면 “점심 12,000원”처럼 문장이나 말로 적을 수도 있어요. 2단계, 월세·통신비·구독처럼 매달 나가는 돈을 정기 지출로 등록해요. 3단계, 쌓인 기록을 보고 식비처럼 자주 쓰는 카테고리부터 예산을 정해요.",
+            "예산은 처음부터 빡빡하게 잡지 않아도 괜찮아요. 홈에서 이번 달 지출과 남은 정기 지출, 예산 주의를 먼저 보여주니 한 달을 지내 본 뒤 조정해도 늦지 않아요."
+          ]
+        },
+        {
+          "id": "couples",
+          "title": "부부·커플이라면 개인 지갑과 공유 가계부를 나눠요",
+          "paragraphs": [
+            "돈업에서는 개인 지갑과 공유 가계부를 따로 쓸 수 있어요. 각자 쓰는 용돈은 개인 지갑에, 함께 내는 생활비는 공유 가계부에 기록하면 개인 지출까지 모두 보여줄 필요가 없어요.",
+            "공유 가계부에 참여한 사람은 그 가계부의 기존 내역·예산·자산을 함께 보고 작성할 수 있으니, 초대하기 전에 어떤 지출까지 함께 볼지 먼저 정해 두세요. 무료로는 기본 지갑 외에 개인·공유 지갑을 1개 더 만들 수 있고, 자산관리는 개인·공유 지갑 모두 Pro 기능이에요."
+          ]
+        },
+        {
+          "id": "ai",
+          "title": "AI 입력과 돈워리는 선택이에요",
+          "paragraphs": [
+            "AI 기능은 ‘AI 데이터 사용’을 허용한 경우에만 동작해요. 허용하지 않아도 직접 입력과 예산·정기 지출·통계 같은 기본 기능은 그대로 쓸 수 있고, 허용은 언제든 철회할 수 있어요.",
+            "무료로도 문장·음성 AI 입력을 쓸 수 있고, 사진·촬영 AI 입력은 합쳐 하루 1회, 내 기록을 바탕으로 질문에 답하는 돈워리는 하루 3회 제공해요. DonUp Pro는 사진 AI 입력 제한을 풀고 돈워리를 하루 20회로 늘리며, 결제 문자·Apple Pay 자동 기록과 자산관리를 더해요."
+          ]
+        },
+        {
+          "id": "devices",
+          "title": "어디서 쓸 수 있나요",
+          "paragraphs": [
+            "돈업은 App Store에서 받을 수 있고, iOS 26.0 이상의 iPhone과 iPadOS 26.0 이상의 iPad를 지원해요. 같은 계정으로 로그인하면 기기를 바꿔도 기록이 이어지며, 계정 동기화와 자동 백업은 무료예요. Android 버전은 준비 중이에요.",
+            "이 글은 돈업을 만든 개발자가 작성한 공식 안내예요. 기능과 무료·Pro 범위는 게시일 기준이며, 최신 조건과 가격은 앱과 App Store에서 확인해 주세요."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "가계부는 꼭 매일 써야 하나요?",
+          "answer": "아니요. 빠진 날이 있어도 괜찮아요. 쓴 직후 한 줄로 남기는 습관이 가장 쉽고, 매달 나가는 돈은 정기 지출로 등록해 두면 홈에서 남은 정기 지출을 미리 볼 수 있어요."
+        },
+        {
+          "question": "부부가 함께 써도 각자 지출은 따로 둘 수 있나요?",
+          "answer": "네. 개인 지갑과 공유 가계부를 나눠 기록할 수 있어요. 공유 가계부 참여자는 그 가계부의 내역·예산·자산을 함께 보고 작성할 수 있으니 공유할 범위를 먼저 정해 주세요."
+        },
+        {
+          "question": "AI를 허용하지 않아도 돈업을 쓸 수 있나요?",
+          "answer": "네. 직접 입력과 예산·정기 지출·통계 같은 기본 기능을 쓸 수 있어요. AI 입력과 돈워리는 ‘AI 데이터 사용’을 허용한 경우에만 동작해요."
+        }
+      ],
+      "imageAlt": "돈업 앱의 홈·예산·통계 샘플 화면. 이번 달 지출과 남은 정기 지출, 카테고리별 예산, 소비 통계를 보여준다."
+    },
+    "en": {
+      "title": "Why Keep a Budget? Getting Started with Money Management and DonUp",
+      "description": "Why a budget helps and how to start: three steps for your first job, shared ledgers for couples, free and Pro AI features, and supported devices. An official DonUp guide.",
+      "answer": "A budget isn’t homework about cutting back. It’s a way to see where your money goes and what’s coming up next. Starting with a simple habit of logging each expense in one line is enough.",
+      "sections": [
+        {
+          "id": "not-your-fault",
+          "title": "If your budget keeps slipping, it isn’t a lack of willpower",
+          "paragraphs": [
+            "Many people stop budgeting after a few days. Saving receipts to sort out later takes time, and after missing a day or two it feels harder to start again.",
+            "So at first, logging easily matters more than logging perfectly. If you miss a day, just start again today. The more you record, the more you can see."
+          ]
+        },
+        {
+          "id": "why",
+          "title": "Three things a budget shows you",
+          "paragraphs": [
+            "First, your spending patterns. Knowing which categories take the most money lets you decide where to cut and what to keep. Second, the recurring expenses ahead. When you know about rent, phone bills, and subscriptions in advance, you can prepare before they’re charged.",
+            "Third, shared living costs become clear. If you split costs with family or a partner, looking at the same records means less guessing about who paid for what."
+          ]
+        },
+        {
+          "id": "choose-an-app",
+          "title": "What should you check in a budget app recommendation?",
+          "paragraphs": [
+            "Start with entry methods, free limits, shared spending features and control over your data. For your first paycheck, look for quick entries and a view of upcoming recurring expenses. For couples, check whether household expenses can be shared while personal spending stays separate.",
+            "DonUp offers manual entry and optional AI entry. Entries, budgets, statistics and account sync are free. Automatic logging from payment messages and Apple Pay, and asset management, are Pro features. Compare the methods you need rather than assuming you need every feature."
+          ]
+        },
+        {
+          "id": "first-job",
+          "title": "Three steps for starting your first job",
+          "paragraphs": [
+            "Step 1: for the first two weeks, log each expense in one line as you spend. In DonUp you can enter it yourself, or, if you’ve allowed “AI data use,” type or say something like “Lunch 12,000 won.” Step 2: add the money that leaves every month, such as rent, phone bills, and subscriptions, as Recurring Expenses. Step 3: look at your records and set a Budget for the categories you use most, such as food.",
+            "Your budget doesn’t need to be tight from day one. Home shows this month’s spending, remaining recurring expenses, and budget warnings first, so you can adjust after living with it for a month."
+          ]
+        },
+        {
+          "id": "couples",
+          "title": "For couples: keep personal wallets and a shared ledger separate",
+          "paragraphs": [
+            "DonUp lets you use personal wallets and shared ledgers separately. Record personal spending money in your own wallet and shared living costs in a shared ledger, so you don’t have to show every personal expense.",
+            "Members of a shared ledger can view and edit its existing Entries, Budget, and Assets, so decide what you’ll share before inviting someone. On the free plan you can create one more personal or shared wallet besides the default wallet, and asset management requires Pro in both personal and shared wallets."
+          ]
+        },
+        {
+          "id": "ai",
+          "title": "AI entry and DonWorry are optional",
+          "paragraphs": [
+            "AI features work only when “AI data use” is allowed. Without it, you can still enter items yourself and use Budget, Recurring Expenses, Statistics, and other basic features. You can withdraw permission at any time.",
+            "The free plan includes text and voice AI entry, photo and camera AI entry once a day combined, and DonWorry—which answers questions based on your records—3 times a day. DonUp Pro removes the photo AI entry limit, raises DonWorry to 20 times a day, and adds automatic logging from payment messages and Apple Pay, as well as asset management."
+          ]
+        },
+        {
+          "id": "devices",
+          "title": "Where can I use DonUp?",
+          "paragraphs": [
+            "DonUp is available on the App Store for iPhone with iOS 26.0 or later and iPad with iPadOS 26.0 or later. Sign in with the same Account to keep your records when you change devices; account sync and automatic backup are free. An Android version is in preparation.",
+            "This is an official guide written by the developer of DonUp. Features and the Free/Pro scope are as of the publication date; check the app and the App Store for the latest terms and prices."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Do I have to update my budget every day?",
+          "answer": "No. It’s fine to miss a day. Logging right after you spend is the easiest habit, and if you add monthly payments as Recurring Expenses, Home shows the remaining ones in advance."
+        },
+        {
+          "question": "Can a couple share a budget and still keep personal spending separate?",
+          "answer": "Yes. You can record in personal wallets and a shared ledger separately. Shared ledger members can view and edit its Entries, Budget, and Assets, so decide what to share first."
+        },
+        {
+          "question": "Can I use DonUp without allowing AI?",
+          "answer": "Yes. You can enter items yourself and use basic features such as Budget, Recurring Expenses, and Statistics. AI entry and DonWorry work only when “AI data use” is allowed."
+        }
+      ],
+      "imageAlt": "Sample DonUp Home, Budget, and Statistics screens showing this month’s spending, remaining recurring expenses, category budgets, and spending statistics."
+    },
+    "ja": {
+      "title": "家計簿はなぜつけるの？はじめてのお金の管理とDonUp",
+      "description": "家計簿をつける理由と始め方をまとめました。新社会人の3ステップ、夫婦・カップルの共有家計簿、AI入力とDonWorryの無料・Proの範囲、対応デバイスまで、DonUpの公式ガイドで確認できます。",
+      "answer": "家計簿は節約のための宿題ではなく、お金がどこへ行き、次に何が引き落とされるかを先に見るための道具です。最初は、使ったお金を1行ずつ残す習慣から気軽に始めれば十分です。",
+      "sections": [
+        {
+          "id": "not-your-fault",
+          "title": "家計簿が続かなかったのは、意志の弱さのせいではありません",
+          "paragraphs": [
+            "家計簿を数日つけてやめてしまうのはよくあることです。レシートをためてまとめて整理するのは手間がかかり、1〜2日抜けると再開するのが負担になります。",
+            "だから最初は、完璧につけるより気軽に残すことが大切です。抜けた日があっても今日からまたつければよく、記録が増えるほど見えることも増えていきます。"
+          ]
+        },
+        {
+          "id": "why",
+          "title": "家計簿をつけると見える3つのこと",
+          "paragraphs": [
+            "1つ目は支出のパターンです。どのカテゴリにお金が多く使われているかがわかれば、減らすところと守るところを自分で決められます。2つ目は、これからの定期的な支出です。家賃・通信費・サブスクのように毎月出ていくお金を先に知っておけば、引き落とし日の前に備えられます。",
+            "3つ目は、一緒に使う生活費がはっきりすることです。家族やパートナーと生活費を分けているなら、同じ記録を一緒に見るだけで、誰が何に使ったかを確かめ合う手間が減ります。"
+          ]
+        },
+        {
+          "id": "choose-an-app",
+          "title": "家計簿アプリのおすすめを見るとき、何を確認すればよいですか？",
+          "paragraphs": [
+            "入力方法、無料で使える範囲、共有機能、データ利用を選べるかを確認しましょう。社会人になったばかりなら短く記録できることと今後の定期支出が見えること、夫婦なら個人の支出を分けたまま生活費を共有できることが実用的な基準です。",
+            "DonUpは直接入力と任意のAI入力に対応し、記録・予算・統計・アカウント同期は無料です。カード利用通知・Apple Payの自動記録や資産管理などはProの機能です。すべての機能を使おうとせず、自分に必要な記録方法から比べてみてください。"
+          ]
+        },
+        {
+          "id": "first-job",
+          "title": "新社会人のための3ステップ",
+          "paragraphs": [
+            "ステップ1：最初の2週間は、使ったお金をその都度1行で残します。DonUpでは直接入力でき、「AIのデータ利用」を許可していれば「ランチ 1,200円」のように文章や音声で入力することもできます。ステップ2：家賃・通信費・サブスクのように毎月出ていくお金を定期支出に登録します。ステップ3：たまった記録を見て、食費のようによく使うカテゴリから予算を決めます。",
+            "予算は最初から厳しく設定しなくても大丈夫です。ホームで今月の支出、残りの定期支出、予算の注意を先に表示するので、1か月過ごしてから調整しても遅くありません。"
+          ]
+        },
+        {
+          "id": "couples",
+          "title": "夫婦・カップルなら、個人ウォレットと共有家計簿を分けて",
+          "paragraphs": [
+            "DonUpでは、個人ウォレットと共有家計簿を分けて使えます。それぞれのお小遣いは個人ウォレットに、一緒に払う生活費は共有家計簿に記録すれば、個人の支出まですべて見せる必要はありません。",
+            "共有家計簿に参加した人は、その家計簿の既存の明細・予算・資産を一緒に閲覧・作成できます。招待する前に、どこまでの支出を一緒に見るかを決めておきましょう。無料では基本ウォレットのほかに個人・共有ウォレットを1個追加でき、資産管理は個人・共有ウォレットともにProの機能です。"
+          ]
+        },
+        {
+          "id": "ai",
+          "title": "AI入力とDonWorryは任意です",
+          "paragraphs": [
+            "AI機能は「AIのデータ利用」を許可した場合にのみ動作します。許可しなくても、直接入力や予算・定期支出・統計などの基本機能はそのまま使えます。許可はいつでも取り消せます。",
+            "無料でも文章・音声からのAI入力を使え、写真・撮影からのAI入力は合わせて1日1回、自分の記録をもとに質問に答えるDonWorryは1日3回利用できます。DonUp Proでは写真からのAI入力の制限が解除され、DonWorryが1日20回に増え、カード利用通知・Apple Payからの自動記録と資産管理が加わります。"
+          ]
+        },
+        {
+          "id": "devices",
+          "title": "どこで使えますか",
+          "paragraphs": [
+            "DonUpはApp Storeから入手でき、iOS 26.0以降のiPhoneとiPadOS 26.0以降のiPadに対応しています。同じアカウントでログインすれば、デバイスを変えても記録を引き継げます。アカウント同期と自動バックアップは無料です。Android版は準備中です。",
+            "この記事は、DonUpの開発者が作成した公式ガイドです。機能と無料・Proの範囲は掲載日時点のもので、最新の条件と価格はアプリとApp Storeで確認してください。"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "家計簿は毎日つけないといけませんか？",
+          "answer": "いいえ。抜けた日があっても大丈夫です。使った直後に1行で残すのがいちばん簡単な習慣で、毎月出ていくお金を定期支出に登録しておけば、ホームで残りの定期支出を先に確認できます。"
+        },
+        {
+          "question": "夫婦で一緒に使っても、それぞれの支出は分けられますか？",
+          "answer": "はい。個人ウォレットと共有家計簿を分けて記録できます。共有家計簿の参加者は、その家計簿の明細・予算・資産を一緒に閲覧・作成できるので、共有する範囲を先に決めてください。"
+        },
+        {
+          "question": "AIを許可しなくてもDonUpを使えますか？",
+          "answer": "はい。直接入力や予算・定期支出・統計などの基本機能を使えます。AI入力とDonWorryは「AIのデータ利用」を許可した場合にのみ動作します。"
+        }
+      ],
+      "imageAlt": "DonUpアプリのホーム・予算・統計のサンプル画面。今月の支出、残りの定期支出、カテゴリ別の予算、支出の統計を表示している。"
+    },
+    "zh-Hans": {
+      "title": "为什么要记账？从零开始管理金钱与 DonUp",
+      "description": "整理了记账的理由和入门方法：职场新人的三个步骤、夫妻和情侣的共享账本、AI 输入与 DonWorry 的免费及 Pro 范围，以及支持的设备。DonUp 官方指南。",
+      "answer": "记账不是为了省钱而做的作业，而是提前看清钱去了哪里、接下来会有哪些支出的工具。刚开始时，只要养成把每笔花费记成一行的习惯就够了。",
+      "sections": [
+        {
+          "id": "not-your-fault",
+          "title": "记账总是中断，并不是你意志力不够",
+          "paragraphs": [
+            "记了几天账就停下来，是很常见的事。把小票攒起来再一起整理很费时间，漏记一两天后，再开始也会变得有压力。",
+            "所以一开始，轻松记下来比记得完美更重要。漏了几天也没关系，从今天重新开始就好；记录越多，能看清的东西也越多。"
+          ]
+        },
+        {
+          "id": "why",
+          "title": "记账能让你看清的三件事",
+          "paragraphs": [
+            "第一，看清消费习惯。知道钱主要花在哪些分类上，就能自己决定哪里要减少、哪里要保留。第二，看清即将到来的固定支出。提前知道房租、话费、订阅等每月都要付的钱，就能在扣款前做好准备。",
+            "第三，共同的生活费变得清楚。如果和家人或伴侣分担生活费，只要一起看同一份记录，就不必反复确认谁为什么付了钱。"
+          ]
+        },
+        {
+          "id": "choose-an-app",
+          "title": "查看记账应用推荐时，先确认什么？",
+          "paragraphs": [
+            "先看输入方式、免费范围、共同记账功能，以及能否自主选择数据使用。刚开始工作时，可以关注记录是否简便、能否提前看到定期支出；夫妻或情侣则可以确认，是否能在保留个人支出隐私的同时共享生活费。",
+            "DonUp 支持直接输入和可选的 AI 输入，记录、预算、统计和账户同步免费。支付短信与 Apple Pay 自动记录、资产管理等是 Pro 功能。先比较自己需要的记录方式，不必一开始就使用所有功能。"
+          ]
+        },
+        {
+          "id": "first-job",
+          "title": "职场新人的三个入门步骤",
+          "paragraphs": [
+            "第 1 步：最初两周，每花一笔钱就随手记成一行。在 DonUp 中可以直接输入；如果已允许“AI 数据使用”，也可以像“午饭 50 元”这样用文字或语音输入。第 2 步：把房租、话费、订阅等每月都要付的钱登记为定期支出。第 3 步：根据积累的记录，从餐饮等常用分类开始设定预算。",
+            "预算一开始不必定得太紧。首页会先显示本月支出、剩余的定期支出和预算提醒，过一个月再调整也不迟。"
+          ]
+        },
+        {
+          "id": "couples",
+          "title": "夫妻或情侣，可以把个人钱包和共享账本分开",
+          "paragraphs": [
+            "在 DonUp 中，个人钱包和共享账本可以分开使用。各自的零花钱记在个人钱包里，共同支付的生活费记在共享账本里，就不必公开所有个人支出。",
+            "加入共享账本的成员，可以一起查看和编辑该账本已有的记录、预算和资产，所以邀请之前请先决定要一起查看哪些支出。免费版除默认钱包外，还可以再创建 1 个个人或共享钱包；资产管理在个人和共享钱包中都是 Pro 功能。"
+          ]
+        },
+        {
+          "id": "ai",
+          "title": "AI 输入和 DonWorry 都是可选的",
+          "paragraphs": [
+            "AI 功能只有在允许“AI 数据使用”后才会运行。即使不允许，也可以照常直接输入，并使用预算、定期支出、统计等基本功能。许可可以随时撤回。",
+            "免费版也可以使用文字和语音 AI 输入；照片和拍照 AI 输入合计每天 1 次，根据你的记录回答问题的 DonWorry 每天 3 次。DonUp Pro 会取消照片 AI 输入的次数限制，把 DonWorry 增加到每天 20 次，并加入支付短信与 Apple Pay 自动记录以及资产管理。"
+          ]
+        },
+        {
+          "id": "devices",
+          "title": "可以在哪里使用？",
+          "paragraphs": [
+            "DonUp 可在 App Store 下载，支持 iOS 26.0 或更高版本的 iPhone，以及 iPadOS 26.0 或更高版本的 iPad。使用同一个账户登录，换了设备也能继续使用记录；账户同步和自动备份免费。Android 版本正在准备中。",
+            "本文是 DonUp 开发者撰写的官方指南。功能及免费与 Pro 的范围以发布日期为准，最新条件和价格请在 App 和 App Store 中确认。"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "一定要每天记账吗？",
+          "answer": "不必。漏记几天也没关系。花完钱马上记成一行是最简单的习惯；把每月固定要付的钱登记为定期支出后，就能在首页提前看到剩余的定期支出。"
+        },
+        {
+          "question": "夫妻一起记账，也能把各自的支出分开吗？",
+          "answer": "可以。个人钱包和共享账本可以分开记录。共享账本的成员可以一起查看和编辑该账本的记录、预算和资产，请先决定要共享的范围。"
+        },
+        {
+          "question": "不允许 AI 也能使用 DonUp 吗？",
+          "answer": "可以。可以直接输入，并使用预算、定期支出、统计等基本功能。AI 输入和 DonWorry 只有在允许“AI 数据使用”后才会运行。"
+        }
+      ],
+      "imageAlt": "DonUp App 的首页、预算和统计示例界面，显示本月支出、剩余的定期支出、分类预算和消费统计。"
+    },
+    "zh-Hant": {
+      "title": "為什麼要記帳？從零開始管理金錢與 DonUp",
+      "description": "整理了記帳的理由與入門方法：社會新鮮人的三個步驟、夫妻與情侶的共享記帳本、AI 輸入與 DonWorry 的免費及 Pro 範圍，以及支援的裝置。DonUp 官方指南。",
+      "answer": "記帳不是為了省錢而寫的作業，而是提前看清錢花到哪裡、接下來會有哪些支出的工具。剛開始時，只要養成把每筆花費紀錄成一行的習慣就夠了。",
+      "sections": [
+        {
+          "id": "not-your-fault",
+          "title": "記帳總是中斷，並不是你意志力不夠",
+          "paragraphs": [
+            "記了幾天帳就停下來，是很常見的事。把收據收起來再一次整理很花時間，漏掉一兩天之後，要重新開始也會覺得有壓力。",
+            "所以一開始，輕鬆紀錄比紀錄得完美更重要。漏了幾天也沒關係，從今天重新開始就好；記錄越多，能看清的東西也越多。"
+          ]
+        },
+        {
+          "id": "why",
+          "title": "記帳能讓你看清的三件事",
+          "paragraphs": [
+            "第一，看清消費習慣。知道錢主要花在哪些分類，就能自己決定哪裡要減少、哪裡要保留。第二，看清即將到來的固定支出。提前知道房租、電信費、訂閱等每月都要付的錢，就能在扣款前做好準備。",
+            "第三，共同的生活費變得清楚。如果和家人或另一半分攤生活費，只要一起看同一份記錄，就不必反覆確認誰為了什麼付了錢。"
+          ]
+        },
+        {
+          "id": "choose-an-app",
+          "title": "查看記帳 App 推薦時，先確認什麼？",
+          "paragraphs": [
+            "先看輸入方式、免費範圍、共同記帳功能，以及能否自行選擇資料使用。剛開始工作時，可以留意記錄是否簡便、能否提前看到定期支出；夫妻或情侶則可以確認，是否能在保留個人支出隱私的同時共享生活費。",
+            "DonUp 支援直接輸入和可選的 AI 輸入，記錄、預算、統計與帳號同步免費。付款簡訊與 Apple Pay 自動記錄、資產管理等是 Pro 功能。先比較自己需要的記錄方式，不必一開始就使用所有功能。"
+          ]
+        },
+        {
+          "id": "first-job",
+          "title": "社會新鮮人的三個入門步驟",
+          "paragraphs": [
+            "第 1 步：最初兩週，每花一筆錢就隨手紀錄成一行。在 DonUp 中可以直接輸入；如果已允許「AI 資料使用」，也可以像「午餐 150 元」這樣用文字或語音輸入。第 2 步：把房租、電信費、訂閱等每月都要付的錢登錄為定期支出。第 3 步：根據累積的記錄，從餐飲等常用分類開始設定預算。",
+            "預算一開始不必訂得太緊。首頁會先顯示本月支出、剩餘的定期支出與預算提醒，過一個月再調整也不遲。"
+          ]
+        },
+        {
+          "id": "couples",
+          "title": "夫妻或情侶，可以把個人錢包和共享記帳本分開",
+          "paragraphs": [
+            "在 DonUp 中，個人錢包和共享記帳本可以分開使用。各自的零用錢紀錄在個人錢包，共同支付的生活費紀錄在共享記帳本，就不必公開所有個人支出。",
+            "加入共享記帳本的成員，可以一起查看並編輯該記帳本現有的記錄、預算與資產，因此邀請前請先決定要一起查看哪些支出。免費版除了預設錢包，還可以再建立 1 個個人或共享錢包；資產管理在個人與共享錢包中都是 Pro 功能。"
+          ]
+        },
+        {
+          "id": "ai",
+          "title": "AI 輸入和 DonWorry 都是可選的",
+          "paragraphs": [
+            "AI 功能只有在允許「AI 資料使用」後才會運作。即使不允許，也可以照常直接輸入，並使用預算、定期支出、統計等基本功能。許可可以隨時撤回。",
+            "免費版也可以使用文字與語音 AI 輸入；照片與拍照 AI 輸入合計每天 1 次，根據你的記錄回答問題的 DonWorry 每天 3 次。DonUp Pro 會解除照片 AI 輸入的次數限制，把 DonWorry 增加到每天 20 次，並加入付款簡訊與 Apple Pay 自動記錄以及資產管理。"
+          ]
+        },
+        {
+          "id": "devices",
+          "title": "可以在哪裡使用？",
+          "paragraphs": [
+            "DonUp 可在 App Store 下載，支援 iOS 26.0 或以上版本的 iPhone，以及 iPadOS 26.0 或以上版本的 iPad。使用同一個帳號登入，即使換了裝置，記錄也能延續；帳號同步與自動備份免費。Android 版本正在準備中。",
+            "本文是 DonUp 開發者撰寫的官方指南。功能及免費與 Pro 的範圍以發布日期為準，最新條件與價格請在 App 與 App Store 中確認。"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "一定要每天記帳嗎？",
+          "answer": "不必。漏掉幾天也沒關係。花完錢馬上紀錄成一行是最簡單的習慣；把每月固定要付的錢登錄為定期支出後，就能在首頁提前看到剩餘的定期支出。"
+        },
+        {
+          "question": "夫妻一起記帳，也能把各自的支出分開嗎？",
+          "answer": "可以。個人錢包和共享記帳本可以分開紀錄。共享記帳本的成員可以一起查看並編輯該記帳本的記錄、預算與資產，請先決定要共享的範圍。"
+        },
+        {
+          "question": "不允許 AI 也能使用 DonUp 嗎？",
+          "answer": "可以。可以直接輸入，並使用預算、定期支出、統計等基本功能。AI 輸入和 DonWorry 只有在允許「AI 資料使用」後才會運作。"
+        }
+      ],
+      "imageAlt": "DonUp App 的首頁、預算與統計範例畫面，顯示本月支出、剩餘的定期支出、分類預算與消費統計。"
+    }
+  }
+}

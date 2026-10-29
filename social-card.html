@@ -3,14 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <title>DonUp 공유 카드 원본 (배포 제외)</title>
+  <link rel="stylesheet" href="/fonts.css" />
   <!--
     링크 미리보기(og:image)용 1200x630 카드의 원본. 배포하지 않는다.
     이 페이지를 1200x630 뷰포트로 열어 그대로 캡처한다(deviceScaleFactor 1 또는 2).
     중요한 요소는 가장자리에서 64px 이상 떨어뜨려, 서비스마다 조금씩 잘려도 안전하게 둔다.
   -->
   <style>
-    @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.css");
-
     * {
       box-sizing: border-box;
       margin: 0;
@@ -24,7 +23,7 @@
     }
 
     body {
-      font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
+      font-family: var(--font);
       color: #0b0b0d;
       word-break: keep-all;
     }
@@ -103,15 +102,13 @@
       width: 214px;
       aspect-ratio: 1320 / 2868;
       overflow: hidden;
-      border-radius: 36px;
-      background: #f3f3f5;
-      box-shadow: 0 0 0 7px #111114, 0 0 0 9px #2a2a2e, 0 30px 50px -30px rgba(60, 20, 40, 0.45);
+      background: transparent;
     }
 
     .phone img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       display: block;
     }
 
@@ -154,7 +151,7 @@
 
     <section class="copy">
       <div class="brand">
-        <img src="./assets/screens/donup-icon-256.png" alt="" />
+        <img src="./assets/screens/donup-icon-256.webp" alt="" />
         <span>DonUp</span>
       </div>
       <h1>말하면 기록되고,<br />쓴 돈이 바로 보이는<br />가계부</h1>

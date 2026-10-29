@@ -3,6 +3,36 @@
   "subtitle": "From logging to syncing, find out how to use DonUp.",
   "categories": [
     {
+      "id": "start",
+      "title": "Getting started",
+      "description": "What DonUp is and where you can use it.",
+      "items": [
+        {
+          "id": "about",
+          "question": "What is DonUp?",
+          "answer": [
+            "DonUp is a budget app for recording income and expenses with text, voice, and photos, and reviewing budgets, recurring expenses, and spending statistics in one place.",
+            "Entries, budgets, statistics, and account sync are free. Automatic logging from payment messages and Apple Pay, asset management, and more are available with DonUp Pro."
+          ]
+        },
+        {
+          "id": "devices",
+          "question": "Which devices can I use DonUp on?",
+          "answer": [
+            "You can install it from the App Store on iPhone with iOS 26.0 or later and on iPad with iPadOS 26.0 or later. Sign in with the same DonUp account to keep your records across devices.",
+            "An Android version is in preparation. Check the App Store for availability and pricing in your country or region."
+          ]
+        },
+        {
+          "id": "languages",
+          "question": "Which languages does DonUp support?",
+          "answer": [
+            "Both the app and the website support Korean, English, Japanese, Simplified Chinese, and Traditional Chinese. The app follows your device language at first, and you can choose a different one under “App Language” in My Page."
+          ]
+        }
+      ]
+    },
+    {
       "id": "account",
       "title": "Account and sync",
       "description": "Pick up where you left off, on any device, with the same account.",
@@ -72,10 +102,11 @@
           "id": "automation",
           "question": "How do I set up automatic entries from payment messages and Apple Pay?",
           "answer": [
-            "In My Page, open “Entry Automations” and follow the Payment Message or Apple Pay guide to set up a Shortcuts automation. This feature is available with DonUp Pro.",
-            "A shortcut running isn’t the same as an entry being saved successfully. If you don’t see the entry, first check the run result and any error message."
+            "In My Page, open “Entry Automations” and follow the Payment Message, Card/Bank Notifications, or Apple Pay guide to set up a Shortcuts automation. This feature is available with DonUp Pro. Payment messages and card or bank notifications are analyzed with AI, so you need to be signed in to your DonUp account and allow “AI data use.”",
+            "Automatic logging from card and bank notifications requires iOS 27 or later. A shortcut running isn’t the same as an entry being saved successfully. If you don’t see the entry, first check the run result and any error message."
           ],
-          "featured": true
+          "featured": true,
+          "updated": "2026-10-29"
         },
         {
           "id": "currency",
@@ -130,8 +161,36 @@
           "id": "import",
           "question": "Can I import records from another budget app?",
           "answer": [
-            "Use “Import Data from Another Budget App” in Settings. Importing is free, and you can review the analyzed content in a preview before saving. Check the app’s file picker for the file formats you can actually choose."
-          ]
+            "Yes. Use “Import Data from Another Budget App” under My Page > Data Management to bring in entries from another budget app or a spreadsheet for free. Review and edit the analyzed entries in the preview before saving.",
+            "File analysis uses AI, so “AI data use” must be allowed. Password-protected PDF, Excel, and Word files open when you enter the password. AI results can be wrong, so check amounts, dates, and currencies.",
+            "Choosing “Delete Everything and Replace with Imported Data” replaces your personal data with the imported data. Shared ledgers you participate in are kept. To keep your existing records, choose “Add to Existing Entries.”"
+          ],
+          "facts": [
+            {
+              "label": "Supported files",
+              "value": "Excel (xlsx, xls), CSV and TSV, PDF, images (JPG, PNG, HEIC, and more), documents (docx, doc, odt, rtf, txt, md, html, xml), and JSON"
+            },
+            {
+              "label": "File size",
+              "value": "Up to 13 MB"
+            },
+            {
+              "label": "Price",
+              "value": "Importing from another budget app is free. “Restore Donup Data,” which restores a DonUp JSON backup, is a Pro feature."
+            },
+            {
+              "label": "Password-protected files",
+              "value": "PDFs are opened on your device, and the password is not sent to the server. Excel and Word files (xlsx, xls, docx, doc) are sent to the server with the password, opened there, and then analyzed."
+            }
+          ],
+          "steps": [
+            "Go to My Page > Data Management and tap “Import Data from Another Budget App.”",
+            "Read the guide and tap “Choose a File” to pick the file. If “AI data use” needs to be allowed, the app will ask.",
+            "If the file is password-protected, enter the file password.",
+            "In “Import Preview,” review and edit the entries, then choose the wallet to save to and the import currency. The import currency applies only to entries without a currency.",
+            "Tap “Add to Existing Entries” or “Delete Everything and Replace with Imported Data” to save."
+          ],
+          "updated": "2026-10-29"
         },
         {
           "id": "missing-records",
@@ -255,8 +314,8 @@
           "id": "free-pro",
           "question": "What can I use for free?",
           "answer": [
-            "Basic entries, budgets, recurring expenses, statistics, account sync, and automatic backup are free. Photo and camera AI entry is available once a day combined, and DonWorry 3 times a day.",
-            "Payment message and Apple Pay automation, unlimited photo AI entry, DonWorry 20 times a day, premium colors, and JSON backup and restore are among the Pro features."
+            "Basic entries, budgets, recurring expenses, statistics, account sync, and automatic backup are free. You can create one more personal or shared wallet in addition to the default wallet. Photo and camera AI entry is available once a day combined, and DonWorry 3 times a day.",
+            "Payment message and Apple Pay automation, unlimited photo AI entry, DonWorry 20 times a day, asset management (deposits, investments, debt, and net worth trends), unlimited wallets, premium colors, and JSON backup and restore are among the Pro features. Asset management requires Pro in both personal and shared wallets."
           ],
           "featured": true
         },

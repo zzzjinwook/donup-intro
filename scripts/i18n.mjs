@@ -1,9 +1,9 @@
 export const locales = {
   ko: { name: '한국어', short: 'KO', og: 'ko_KR' },
   en: { name: 'English', short: 'EN', og: 'en_US' },
-  ja: { name: '日本語', short: 'JA', og: 'ja_JP' },
-  'zh-Hans': { name: '简体中文', short: '简中', og: 'zh_CN' },
-  'zh-Hant': { name: '繁體中文', short: '繁中', og: 'zh_TW' },
+  ja: { name: '日本語', short: 'JP', og: 'ja_JP', font: 'Noto Sans JP' },
+  'zh-Hans': { name: '简体中文', short: '简中', og: 'zh_CN', font: 'Noto Sans SC' },
+  'zh-Hant': { name: '繁體中文', short: '繁中', og: 'zh_TW', font: 'Noto Sans TC' },
 };
 export const prefix = locale => locale === 'ko' ? '/' : `/${locale}/`;
 export const pageURL = (locale, page = '') => prefix(locale) + page;

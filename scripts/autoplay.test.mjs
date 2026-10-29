@@ -34,12 +34,28 @@ function fixture(reduced = false, messages = {}) {
   });
   return {
     pills, screens, showcase, swipeSurface, document, toggle, label, caption, reduceMotion,
-    frame: time => frame(time),
+    frame: time => { const callback = frame; frame = null; callback?.(time); },
+    pendingFrame: () => Boolean(frame),
     visible(on = true) { observer([{ isIntersecting: on, intersectionRatio: on ? 0.1 : 0 }]); },
     current: () => pills.findIndex(pill => pill.attributes.get('aria-selected') === 'true'),
     options,
   };
 }
+
+test('animation work stops outside the viewport and while paused, then resumes on demand', () => {
+  const f = fixture();
+  assert.equal(f.pendingFrame(), false);
+  f.visible(); assert.equal(f.pendingFrame(), true);
+  f.frame(0); f.visible(false); f.frame(100);
+  assert.equal(f.pendingFrame(), false);
+  f.visible(); f.frame(200);
+  f.toggle.emit('click'); f.frame(300);
+  assert.equal(f.pendingFrame(), false);
+  f.toggle.emit('click'); assert.equal(f.pendingFrame(), true);
+  f.frame(400); f.frame(3400); assert.equal(f.current(), 1);
+  const reduced = fixture(true); reduced.visible();
+  assert.equal(reduced.pendingFrame(), false);
+});
 
 test('mouse hover and pointer selection do not silently stop autoplay', () => {
   const f = fixture();
@@ -47,10 +63,12 @@ test('mouse hover and pointer selection do not silently stop autoplay', () => {
   f.visible();
   f.showcase.emit('pointerenter', { pointerType: 'mouse' });
   f.showcase.emit('focusin', { target: { matches: () => false } });
-  f.frame(0); f.frame(4800);
+  f.frame(0); f.frame(2999);
+  assert.equal(f.current(), 0, 'must wait a full three seconds');
+  f.frame(3000);
   assert.equal(f.current(), 1);
   f.pills[3].emit('click');
-  f.frame(4900); f.frame(9700);
+  f.frame(3100); f.frame(6100);
   assert.equal(f.current(), 4);
   assert.equal(f.label.textContent, '자동 넘김 멈추기');
 });
@@ -62,7 +80,7 @@ test('explicit pause stays paused and resume works with keyboard focus still ins
   f.pills[2].emit('click'); f.frame(14000);
   assert.equal(f.current(), 2);
   f.showcase.emit('focusin', { target: { matches: () => true } });
-  f.toggle.emit('click'); f.frame(15000); f.frame(19800);
+  f.toggle.emit('click'); f.frame(15000); f.frame(18000);
   assert.equal(f.current(), 3);
   assert.equal(f.caption.attributes.get('aria-live'), 'off');
 });
@@ -84,10 +102,10 @@ test('hidden tab time is not counted and viewport re-entry resumes remaining tim
   f.document.hidden = false; f.document.emit('visibilitychange');
   f.frame(100000);
   assert.equal(f.current(), 0);
-  f.frame(102800); assert.equal(f.current(), 1);
+  f.frame(101000); assert.equal(f.current(), 1);
   f.visible(false); f.frame(110000); f.frame(120000);
   assert.equal(f.current(), 1);
-  f.visible(); f.frame(130000); f.frame(134800);
+  f.visible(); f.frame(130000); f.frame(133000);
   assert.equal(f.current(), 2);
 });
 
@@ -96,7 +114,7 @@ test('reduced motion starts paused but explicit play runs a full cycle', () => {
   assert.equal(f.current(), 0);
   assert.equal(f.label.textContent, '자동 넘김 재생');
   f.toggle.emit('click');
-  for (let i = 0; i <= 5; i++) f.frame(10000 + i * 4800);
+  for (let i = 0; i <= 5; i++) f.frame(10000 + i * 3000);
   assert.equal(f.current(), 0);
   assert.equal(f.label.textContent, '자동 넘김 멈추기');
 });
@@ -109,14 +127,14 @@ function swipeEnd(f, x, y = 100) {
 }
 
 test('horizontal swipe wraps both ways and restarts a full autoplay interval', () => {
-  const f = fixture(); f.visible(); f.frame(0); f.frame(4700);
+  const f = fixture(); f.visible(); f.frame(0); f.frame(2900);
   swipeStart(f); f.frame(10000);
   assert.equal(f.current(), 0, 'timer must not advance while a finger is down');
   swipeEnd(f, 100);
   assert.equal(f.current(), 1);
   assert.equal(f.label.textContent, '자동 넘김 멈추기');
-  f.frame(11000); f.frame(15799); assert.equal(f.current(), 1);
-  f.frame(15800); assert.equal(f.current(), 2);
+  f.frame(11000); f.frame(13999); assert.equal(f.current(), 1);
+  f.frame(14000); assert.equal(f.current(), 2);
   f.pills[0].emit('click'); swipeStart(f); swipeEnd(f, 280);
   assert.equal(f.current(), 4);
   assert.equal(f.screens[4].styles.get('--dir'), -1);
@@ -136,7 +154,7 @@ test('vertical scroll, taps, canceled gestures and pinch do not change screens o
   ]) {
     const f = fixture(); f.visible(); swipeStart(f); action(f);
     assert.equal(f.current(), 0);
-    f.frame(0); f.frame(4800); assert.equal(f.current(), 1);
+    f.frame(0); f.frame(3000); assert.equal(f.current(), 1);
   }
 });
 

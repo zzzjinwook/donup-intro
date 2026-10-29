@@ -6,6 +6,14 @@
 .language-menu nav a:hover, .language-menu nav a[aria-current] { background: #f5f0f4; }
 .language-menu nav a[aria-current] { font-weight: 700; }
 .legal-translation-note { max-width: 712px; margin: 0 auto 28px; padding: 16px 20px; border-radius: 14px; background: #f6f3f5; font-size: 14px; line-height: 1.7; }
+.page-path { max-width: var(--column); margin: 0 auto 16px; font-size: 13px; line-height: 1.5; }
+.page-path ol { display: flex; align-items: center; flex-wrap: wrap; gap: 0; margin: 0; padding: 0; list-style: none; }
+.page-path li { display: inline-flex; align-items: center; min-height: 44px; }
+.page-path li + li::before { content: "/"; margin: 0 12px; }
+.page-path a { display: inline-flex; align-items: center; min-height: 44px; color: inherit; text-decoration: none; }
+.page-path a:hover { text-decoration: underline; }
+.faq-related { margin-top: 16px; }
+.faq-related a { display: inline-flex; align-items: center; min-height: 44px; text-underline-offset: 4px; }
 html:not([lang="ko"]) .hero-title { font-size: clamp(30px, 4.9vw, 64px); }
 html[lang="en"] { word-break: normal; overflow-wrap: break-word; }
 html[lang="en"] body { word-break: normal; }

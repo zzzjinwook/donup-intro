@@ -4,22 +4,23 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#ffffff" />
-  <title>DonUp | 말하면 기록되는 가계부</title>
+  <title>돈업 DonUp | 말하고 찍는 AI 가계부</title>
   <meta
     name="description"
-    content="말하고 찍는 가계부. 소비와 예산을 한눈에."
+    content="돈업(DonUp)은 문장·음성·사진으로 수입과 지출을 기록하고 예산·소비 통계를 살펴보는 iPhone 가계부 앱이에요."
   />
   <link rel="canonical" href="https://donup.app/" />
   <link rel="icon" href="./assets/screens/donup-icon-256.png" />
   <link rel="apple-touch-icon" href="./assets/donup-app-icon.png" />
   <link rel="stylesheet" href="./styles.css" />
+  <script src="./script.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#intro">본문으로 건너뛰기</a>
+  <a class="skip-link" href="#top">본문으로 건너뛰기</a>
 
   <header class="topbar" data-topbar>
     <a class="brand" href="#top" aria-label="DonUp 맨 위로">
-      <img src="./assets/screens/donup-icon-256.png" alt="" width="28" height="28" />
+      <img src="./assets/screens/donup-icon-256.webp" alt="" width="28" height="28" />
       <span>DonUp</span>
     </a>
     <nav class="topbar-nav" aria-label="주요 메뉴">
@@ -32,7 +33,7 @@
     <a class="pill pill-dark topbar-cta" href="#download">앱 다운로드</a>
   </header>
 
-  <main id="top">
+  <main id="top" tabindex="-1">
     <!-- 1. 히어로: 둥근 장면 + 카테고리 오브젝트 + 가운데 큰 문구 -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-frame" data-hero-frame>
@@ -62,6 +63,7 @@
       <div class="intro-head reveal">
         <p class="eyebrow">소개합니다</p>
         <h2 id="intro-title">한 줄이면 끝나는 기록,<br />나만의 가계부 DonUp</h2>
+        <p class="intro-summary">돈업(DonUp)은 문장·음성·사진으로 수입과 지출을 기록하고 예산·소비 통계를 살펴보는 iPhone 가계부 앱이에요.</p>
         <div class="store-row" id="download">
           <a class="pill pill-soft" href="https://apps.apple.com/kr/app/donup/id6770472441" target="_blank" rel="noreferrer">
             <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.2 1-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8 0 0-2.6-1-2.6-3.9zM14 5.5c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.6 2.8-1.4z"/></svg>
@@ -82,33 +84,33 @@
           <img class="obj obj-float obj-r1" data-scroll-depth="-0.1" src="./assets/illustrations/shopping.webp" alt="" width="1254" height="1254" loading="lazy" />
           <img class="obj obj-float obj-r2" data-scroll-depth="0.18" src="./assets/illustrations/food.webp" alt="" width="1254" height="1254" loading="lazy" />
 
-          <figure class="phone" id="feature-panel" role="tabpanel" aria-labelledby="feature-tab-home" data-phone>
+          <div class="phone" id="feature-panel" role="tabpanel" aria-labelledby="feature-tab-home" data-phone tabindex="0">
             <div class="phone-screen">
               <img class="screen is-active" data-screen="home" src="./assets/screens/iphone16promax/home-pink-light.webp" alt="DonUp 홈 화면. 이번 달 지출과 전달 대비 흐름, 남은 정기 지출과 예산 주의, 최근 내역이 보입니다." width="1320" height="2868" />
               <img class="screen" data-screen="history" aria-hidden="true" src="./assets/screens/iphone16promax/history-mint-light.webp" alt="DonUp 내역 화면. 날짜별로 카테고리 아이콘과 금액이 정리된 목록이 보입니다." width="1320" height="2868" loading="lazy" />
               <img class="screen" data-screen="budget" aria-hidden="true" src="./assets/screens/iphone16promax/budget-mint-light.webp" alt="DonUp 예산 화면. 카테고리별 예산과 남은 금액이 보입니다." width="1320" height="2868" loading="lazy" />
               <img class="screen" data-screen="statistics" aria-hidden="true" src="./assets/screens/iphone16promax/statistics-skyblue-light.webp" alt="DonUp 통계 화면. 기간별 지출 흐름과 분석 카드가 보입니다." width="1320" height="2868" loading="lazy" />
-              <img class="screen" data-screen="donworry" aria-hidden="true" src="./assets/screens/iphone16promax/donworry-pink-light.webp" alt="DonUp 돈워리 화면. 가계부를 바탕으로 한 AI 답변과 제안이 보입니다." width="1320" height="2868" loading="lazy" />
+              <img class="screen" data-screen="donworry" aria-hidden="true" src="./assets/screens/iphone16promax/donworry-chart-pink-light.webp" alt="DonUp 돈워리 화면. AI 답변과 카테고리별 지출 차트가 보입니다." width="1320" height="2868" loading="lazy" />
             </div>
-            <figcaption class="phone-caption" data-caption aria-live="off">이번 달 지출과 남은 정기 지출, 예산 주의를 홈에서 먼저 확인해요.</figcaption>
-          </figure>
+            <p class="phone-caption" data-caption aria-live="off">이번 달 지출과 남은 정기 지출, 예산 주의를 홈에서 먼저 확인해요.</p>
+          </div>
         </div>
 
         <div class="pill-track" role="tablist" aria-label="DonUp 기능 미리보기">
           <button class="feature-pill is-current" type="button" role="tab" id="feature-tab-home" aria-controls="feature-panel" aria-selected="true" data-target="home" data-tint="pink" data-caption="이번 달 지출과 남은 정기 지출, 예산 주의를 홈에서 먼저 확인해요.">
-            <span class="pill-fill" aria-hidden="true"></span><span class="pill-label"><svg class="pill-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 11l8-6.5L20 11M6 9.5V19h12V9.5M10 19v-5h4v5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>홈에서 한눈에</span>
+            <span class="pill-fill" aria-hidden="true"></span><span class="pill-label"><svg class="pill-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 11l8-6.5L20 11M6 9.5V19h12V9.5M10 19v-5h4v5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>홈</span>
           </button>
           <button class="feature-pill" type="button" role="tab" id="feature-tab-history" aria-controls="feature-panel" aria-selected="false" tabindex="-1" data-target="history" data-tint="mint" data-caption="날짜별 내역이 카테고리 아이콘과 함께 정리돼요.">
-            <span class="pill-fill" aria-hidden="true"></span><span class="pill-label"><svg class="pill-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>내역을 모아 봐요</span>
+            <span class="pill-fill" aria-hidden="true"></span><span class="pill-label"><svg class="pill-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>내역</span>
           </button>
           <button class="feature-pill" type="button" role="tab" id="feature-tab-budget" aria-controls="feature-panel" aria-selected="false" tabindex="-1" data-target="budget" data-tint="mint" data-caption="카테고리별 예산과 남은 금액을 바로 확인해요.">
-            <span class="pill-fill" aria-hidden="true"></span><span class="pill-label"><svg class="pill-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3.5a8.5 8.5 0 1 0 8.5 8.5M12 3.5V12h8.5M12 3.5a8.5 8.5 0 0 1 8.5 8.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>예산을 지켜요</span>
+            <span class="pill-fill" aria-hidden="true"></span><span class="pill-label"><svg class="pill-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3.5a8.5 8.5 0 1 0 8.5 8.5M12 3.5V12h8.5M12 3.5a8.5 8.5 0 0 1 8.5 8.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>예산</span>
           </button>
           <button class="feature-pill" type="button" role="tab" id="feature-tab-statistics" aria-controls="feature-panel" aria-selected="false" tabindex="-1" data-target="statistics" data-tint="sky" data-caption="기간별 지출 흐름을 비교하고 어디에 더 썼는지 살펴봐요.">
-            <span class="pill-fill" aria-hidden="true"></span><span class="pill-label"><svg class="pill-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 20h16M7 16v-4M12 16V7M17 16v-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>소비 흐름을 읽어요</span>
+            <span class="pill-fill" aria-hidden="true"></span><span class="pill-label"><svg class="pill-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 20h16M7 16v-4M12 16V7M17 16v-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>통계</span>
           </button>
-          <button class="feature-pill" type="button" role="tab" id="feature-tab-donworry" aria-controls="feature-panel" aria-selected="false" tabindex="-1" data-target="donworry" data-tint="pink" data-caption="내 가계부를 바탕으로 AI 돈워리가 답하고 제안해요.">
-            <span class="pill-fill" aria-hidden="true"></span><span class="pill-label"><svg class="pill-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 18.5V7a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H8.5zM9 9.5h6M9 12.5h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>돈워리에게 물어봐요</span>
+          <button class="feature-pill" type="button" role="tab" id="feature-tab-donworry" aria-controls="feature-panel" aria-selected="false" tabindex="-1" data-target="donworry" data-tint="pink" data-caption="돈워리가 내 소비를 차트로 보여주고, 줄일 수 있는 지출을 함께 찾아줘요.">
+            <span class="pill-fill" aria-hidden="true"></span><span class="pill-label"><svg class="pill-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 18.5V7a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H8.5zM9 9.5h6M9 12.5h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>돈워리</span>
           </button>
         </div>
         <div class="autoplay-row">
@@ -221,7 +223,72 @@
       </div>
     </section>
 
-    <!-- 7. 마무리: 검정 무대가 끝나며 하늘 장면이 드러남 -->
+    <section class="pricing" id="pricing" aria-labelledby="pricing-title">
+      <div class="pricing-inner">
+        <header class="pricing-heading reveal">
+          <h2 id="pricing-title">시작은 무료로.<br />더 편하게, Pro로.</h2>
+          <p>기록·예산·통계는 무료로 시작하고, Pro로 자산관리·자동 기록·맞춤 설정까지 더해보세요.</p>
+        </header>
+        <div class="pricing-plans">
+          <div class="pricing-free">
+            <h3>무료</h3>
+            <p class="pricing-amount">₩0</p>
+            <p>매일의 기록에 필요한 기본 기능</p>
+            <a class="pill pill-dark" href="#download">무료로 시작하기</a>
+          </div>
+          <div class="pricing-pro">
+            <div class="pricing-pro-heading"><h3>DonUp Pro</h3><span>모든 Pro 기능 포함</span></div>
+            <dl class="pricing-billing">
+              <div><dt><span>월간</span><span class="pricing-trial">7일 무료체험</span></dt><dd>₩1,900<span>매월 결제</span></dd></div>
+              <div><dt><span>연간</span><span class="pricing-trial">7일 무료체험</span></dt><dd>₩15,000<span>매년 결제</span></dd></div>
+              <div><dt><span>평생</span></dt><dd>₩29,900<span>한 번 결제</span></dd></div>
+            </dl>
+            <a class="pill pill-dark" href="https://apps.apple.com/kr/app/donup/id6770472441" target="_blank" rel="noreferrer">앱에서 Pro 보기 <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <table class="pricing-comparison">
+          <caption class="sr-only">무료와 Pro 기능 비교</caption>
+          <colgroup><col class="pricing-feature-col" /><col /><col /></colgroup>
+          <thead><tr><td>무료와 Pro 비교</td><th scope="col">무료</th><th scope="col">Pro</th></tr></thead>
+          <tbody aria-labelledby="pricing-group-record">
+            <tr class="pricing-group"><th id="pricing-group-record" scope="rowgroup" colspan="3">기록</th></tr>
+            <tr class="pricing-item" tabindex="0"><th scope="row">내역 기록 · 예산 · 통계</th><td><span class="pricing-yes" role="img" aria-label="포함">O</span></td><td><span class="pricing-yes" role="img" aria-label="포함">O</span></td></tr>
+            <tr class="pricing-item" tabindex="0"><th scope="row">추가 지갑 만들기<small>직접 만든 개인·공유 지갑 합산</small></th><td>기본 지갑 + 1개</td><td>무제한</td></tr>
+          </tbody>
+          <tbody aria-labelledby="pricing-group-ai">
+            <tr class="pricing-group"><th id="pricing-group-ai" scope="rowgroup" colspan="3">AI와 자동화</th></tr>
+            <tr class="pricing-item" tabindex="0"><th scope="row">사진 · 촬영 AI 입력<small>사진과 촬영 횟수 합산</small></th><td>하루 1회</td><td>무제한</td></tr>
+            <tr class="pricing-item" tabindex="0"><th scope="row">돈워리 대화</th><td>하루 3회</td><td>하루 20회</td></tr>
+            <tr class="pricing-item" tabindex="0"><th scope="row">고속 이미지 분석</th><td><span class="pricing-no" role="img" aria-label="미포함">X</span></td><td><span class="pricing-yes" role="img" aria-label="포함">O</span></td></tr>
+            <tr class="pricing-item" tabindex="0"><th scope="row">결제·이미지 자동 기록<small>결제 문자·카드/은행 알림·Apple Pay·후면 탭</small></th><td><span class="pricing-no" role="img" aria-label="미포함">X</span></td><td><span class="pricing-yes" role="img" aria-label="포함">O</span></td></tr>
+          </tbody>
+          <tbody aria-labelledby="pricing-group-assets">
+            <tr class="pricing-group"><th id="pricing-group-assets" scope="rowgroup" colspan="3">자산</th></tr>
+            <tr class="pricing-item" tabindex="0"><th scope="row">자산관리<small>예금·투자·부채, 순자산 추이·자산 비중·수익률</small></th><td><span class="pricing-no" role="img" aria-label="미포함">X</span></td><td><span class="pricing-yes" role="img" aria-label="포함">O</span></td></tr>
+          </tbody>
+          <tbody aria-labelledby="pricing-group-personalization">
+            <tr class="pricing-group"><th id="pricing-group-personalization" scope="rowgroup" colspan="3">맞춤 설정</th></tr>
+            <tr class="pricing-item" tabindex="0"><th scope="row">테마 색상</th><td>기본 3가지</td><td>기본 + 프리미엄 14가지</td></tr>
+            <tr class="pricing-item" tabindex="0"><th scope="row">홈 문구 편집<small>고정 문구와 시간대별 문구</small></th><td>기본 문구</td><td>직접 편집</td></tr>
+          </tbody>
+          <tbody aria-labelledby="pricing-group-backup">
+            <tr class="pricing-group"><th id="pricing-group-backup" scope="rowgroup" colspan="3">동기화와 백업</th></tr>
+            <tr class="pricing-item" tabindex="0"><th scope="row">계정 동기화 · 자동 백업</th><td><span class="pricing-yes" role="img" aria-label="포함">O</span></td><td><span class="pricing-yes" role="img" aria-label="포함">O</span></td></tr>
+            <tr class="pricing-item" tabindex="0"><th scope="row">JSON 파일 백업·복원</th><td><span class="pricing-no" role="img" aria-label="미포함">X</span></td><td><span class="pricing-yes" role="img" aria-label="포함">O</span></td></tr>
+          </tbody>
+        </table>
+        <div class="pricing-notes">
+          <p>7일 무료체험은 대상자에 한해 월간·연간 구독 중 최초 1회 제공돼요. 이용 가능 여부는 앱에서 확인할 수 있어요.</p>
+          <p>한국 App Store에서는 무료체험 후 유료 전환에 별도 동의가 필요해요. 동의하지 않으면 체험 종료 후 갱신되지 않아요. 다른 국가·지역에서는 취소 여부와 해당 스토어의 동의 조건에 따라 선택한 요금제로 갱신돼요.</p>
+          <p>자산관리는 개인·공유 지갑 모두 Pro에서 이용할 수 있어요. 빠른 작성 단축어는 무료예요.</p>
+          <p>한국 App Store 가격 기준입니다. 국가·지역에 따라 가격이 다르며, 최종 가격과 체험 혜택은 앱의 구매 화면에서 확인하세요.</p>
+          <p>월간·연간은 자동 갱신 구독이며, 평생은 한 번 결제하는 상품입니다. AI 기능은 데이터 사용 동의 후 이용할 수 있어요.</p>
+          <a href="./support#pro">Pro에 대해 더 알아보기 <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. 마무리: 요금제 뒤에서 이어지는 하늘 장면 -->
     <section class="finale" id="contact" aria-labelledby="finale-title">
       <div class="finale-scene" aria-hidden="true">
         <img class="obj obj-f1" src="./assets/illustrations/food.webp" alt="" width="1254" height="1254" loading="lazy" />
@@ -244,59 +311,10 @@
         </div>
       </div>
     </section>
-    <section class="pricing" id="pricing" aria-labelledby="pricing-title">
-      <div class="pricing-inner">
-        <header class="pricing-heading reveal">
-          <h2 id="pricing-title">시작은 무료로.<br />더 편하게, Pro로.</h2>
-          <p>기록·예산·통계는 무료로 시작하고, Pro로 자산관리·자동 기록·맞춤 설정까지 더해보세요.</p>
-        </header>
-        <div class="pricing-plans">
-          <div class="pricing-free">
-            <h3>무료</h3>
-            <p class="pricing-amount">₩0</p>
-            <p>매일의 기록에 필요한 기본 기능</p>
-            <a class="pill pill-dark" href="#download">무료로 시작하기</a>
-          </div>
-          <div class="pricing-pro">
-            <div class="pricing-pro-heading"><h3>DonUp Pro</h3><span>모든 Pro 기능 포함</span></div>
-            <dl class="pricing-billing">
-              <div><dt>월간</dt><dd>₩1,900<span>매월 결제</span></dd></div>
-              <div><dt>연간</dt><dd>₩15,000<span>매년 결제</span></dd></div>
-              <div><dt>평생</dt><dd>₩29,900<span>한 번 결제</span></dd></div>
-            </dl>
-            <a class="pill pill-dark" href="https://apps.apple.com/kr/app/donup/id6770472441" target="_blank" rel="noreferrer">앱에서 Pro 보기 <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
-        <table class="pricing-comparison">
-          <caption class="sr-only">무료와 Pro 기능 비교</caption>
-          <colgroup><col class="pricing-feature-col" /><col /><col /></colgroup>
-          <thead><tr><th scope="col">기능</th><th scope="col">무료</th><th scope="col">DonUp Pro</th></tr></thead>
-          <tbody>
-            <tr><th scope="row">자산관리<small>예금·투자·부채, 순자산 추이·자산 비중·수익률</small></th><td><span class="pricing-no" role="img" aria-label="미포함">X</span></td><td><span class="pricing-yes" role="img" aria-label="포함">O</span></td></tr>
-            <tr><th scope="row">추가 지갑 만들기<small>직접 만든 개인·공유 지갑 합산</small></th><td>기본 지갑 + 1개</td><td>제한 없음</td></tr>
-            <tr><th scope="row">내역 기록 · 예산 · 통계</th><td><span class="pricing-yes" role="img" aria-label="포함">O</span></td><td><span class="pricing-yes" role="img" aria-label="포함">O</span></td></tr>
-            <tr><th scope="row">계정 동기화 · 자동 백업</th><td><span class="pricing-yes" role="img" aria-label="포함">O</span></td><td><span class="pricing-yes" role="img" aria-label="포함">O</span></td></tr>
-            <tr><th scope="row">사진 · 촬영 AI 입력<small>사진과 촬영 횟수 합산</small></th><td>하루 1회</td><td>제한 없음</td></tr>
-            <tr><th scope="row">고속 이미지 분석</th><td><span class="pricing-no" role="img" aria-label="미포함">X</span></td><td><span class="pricing-yes" role="img" aria-label="포함">O</span></td></tr>
-            <tr><th scope="row">돈워리 대화</th><td>하루 3회</td><td>하루 20회</td></tr>
-            <tr><th scope="row">결제·이미지 자동 기록<small>결제 문자·카드/은행 알림·Apple Pay·후면 탭</small></th><td><span class="pricing-no" role="img" aria-label="미포함">X</span></td><td><span class="pricing-yes" role="img" aria-label="포함">O</span></td></tr>
-            <tr><th scope="row">테마 색상</th><td>기본 3가지</td><td>기본 + 프리미엄 14가지</td></tr>
-            <tr><th scope="row">홈 문구 편집<small>고정 문구와 시간대별 문구</small></th><td>기본 문구</td><td>직접 편집</td></tr>
-            <tr><th scope="row">JSON 파일 백업·복원</th><td><span class="pricing-no" role="img" aria-label="미포함">X</span></td><td><span class="pricing-yes" role="img" aria-label="포함">O</span></td></tr>
-          </tbody>
-        </table>
-        <div class="pricing-notes">
-          <p>자산관리는 개인·공유 지갑 모두 Pro에서 이용할 수 있어요. 빠른 작성 단축어는 무료예요.</p>
-          <p>한국 App Store 가격 기준입니다. 국가·지역에 따라 가격이 다르며, 최종 가격과 체험 혜택은 앱의 구매 화면에서 확인하세요.</p>
-          <p>월간·연간은 자동 갱신 구독이며, 평생은 한 번 결제하는 상품입니다. AI 기능은 데이터 사용 동의 후 이용할 수 있어요.</p>
-          <a href="./support#pro">Pro에 대해 더 알아보기 <span aria-hidden="true">↗</span></a>
-        </div>
-      </div>
-    </section>
 
       <footer class="footer">
         <div class="footer-brand">
-          <img src="./assets/screens/donup-icon-256.png" alt="" width="24" height="24" />
+          <img src="./assets/screens/donup-icon-256.webp" alt="" width="24" height="24" />
           <strong>DonUp</strong>
         </div>
         <nav class="footer-links" aria-label="문서와 문의">
@@ -310,6 +328,5 @@
       </footer>
   </main>
 
-  <script src="./script.js"></script>
 </body>
 </html>
