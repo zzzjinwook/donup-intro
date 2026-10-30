@@ -21,7 +21,7 @@
   .section-rail ol,
   .section-rail ul {
     display: grid;
-    gap: 2px;
+    gap: 0;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -32,7 +32,8 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    min-height: 28px;
+    min-width: 36px;
+    min-height: 24px;
     padding: 0 4px;
     border-radius: 8px;
     color: var(--ink-soft);
@@ -65,25 +66,18 @@
     background: var(--accent);
   }
 
-  /* 글자는 평소 숨기고(눈금만), 레일에 마우스를 올리거나 포커스가 들어오면 보인다.
-     본문 위에 잠깐 겹치므로 읽을 수 있게 바탕을 깐다. 링크 이름은 보조기술에 그대로 남는다. */
-  .section-rail a {
-    font-size: 0;
+  /* 링크 이름은 보조기술에 남기고, 마우스와 키보드 탐색 때만 표시한다. */
+  .section-rail-label {
+    position: absolute;
+    left: 36px;
+    opacity: 0;
+    pointer-events: none;
   }
 
-  .section-rail:hover a,
-  .section-rail:focus-within a {
-    font-size: 13px;
-  }
-
-  .section-rail:hover ol,
-  .section-rail:hover ul,
-  .section-rail:focus-within ol,
-  .section-rail:focus-within ul {
-    padding: 6px 10px 6px 0;
-    border-radius: 14px;
-    background: rgba(255, 255, 255, 0.92);
-    box-shadow: 0 6px 24px rgba(11, 11, 13, 0.08);
+  .section-rail a:hover .section-rail-label,
+  .section-rail a:focus-visible .section-rail-label {
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .section-rail a:hover,
@@ -110,14 +104,6 @@
 
   body.is-night .section-rail a[aria-current="location"] {
     color: #ff8fb0;
-  }
-
-  body.is-night .section-rail:hover ol,
-  body.is-night .section-rail:hover ul,
-  body.is-night .section-rail:focus-within ol,
-  body.is-night .section-rail:focus-within ul {
-    background: rgba(20, 20, 22, 0.92);
-    box-shadow: 0 0 0 1px var(--night-line);
   }
 }
 

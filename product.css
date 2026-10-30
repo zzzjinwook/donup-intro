@@ -45,9 +45,6 @@
 .flow-chart-label { margin: 28px 0 0; font-size: 15px; color: #535865; }
 .flow-hub img { width: 48%; border-radius: 9px; }
 html:not(.js) .flow-replay { display: none; }
-@media (min-width: 1180px) {
-  .section-rail a[aria-current="location"] .section-rail-label { font-size: 12px; }
-}
 @media (max-width: 860px) {
   .topbar .topbar-nav:has(.product-menu), .site-bar .site-nav:has(.product-menu) { display: flex; margin-left: auto; }
   .topbar:has(.product-menu) .language-menu, .site-bar:has(.product-menu) .language-menu { margin-left: 0; }

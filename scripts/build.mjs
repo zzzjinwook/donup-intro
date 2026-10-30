@@ -129,7 +129,7 @@ ${document.sections.map((section, index) => `<section class="legal-section" id="
         html = html.replace('__FEATURE_TITLE__', escape(product.pages[key].title + ' | DonUp')).replace('__FEATURE_DESCRIPTION__', escape(product.pages[key].description)).replace('<div data-feature-content></div>', featurePage(product, locale, key));
       }
       if (page === 'index') html = html.replace('<div data-product-story></div>', productStory(product, locale)).replace('<div data-section-rail></div>', sectionRail(product));
-      if (page === 'index') html = html.replace(/(<a class="text-link" href="[^"]*support">)/, `<p class="guide-discovery"><a href="${pageURL(locale, guideRoute)}">${escape(guide.title)}</a></p>$1`);
+      if (page === 'index') html = html.replace('<div data-guide-discovery></div>', `<div class="guide-discovery"><a class="pill pill-outline guide-discovery-button" href="${pageURL(locale, guideRoute)}"><span>${escape(guide.title)}</span><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>`);
       if (page === 'support') html = html.replace('<div class="support-body">', `<div class="support-body"><aside class="guide-discovery"><a href="${pageURL(locale, guideRoute)}">${escape(guide.title)}</a><p>${escape(guide.answer)}</p></aside>`);
     }
     if (page !== '404') html = html.replace(/(<nav class="(?:topbar-nav|site-nav|legal-nav)"[^>]*>)([\s\S]*?)(<\/nav>)/, (_, start, links, end) => start + featureMenu(product, locale, page) + links.replace(/<a href="[^"]*#intro">[^<]*<\/a>/, '') + end);
