@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-30",
+  "assets": [
+    {
+      "name": "record-cards",
+      "generator": "built-in image_gen",
+      "promptSource": "STORY_IMAGE_PROMPTS.md",
+      "transparent": true,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "generatedSource": "/Users/hjw/.codex/generated_images/01a1803a-a89a-78d2-b01f-5ecd5f0cc846/exec-7f31ce5c-21b0-42e8-8406-7d4164634c90.png",
+      "png": "assets/illustrations/story-record-cards-v1.png",
+      "webp": "assets/illustrations/story-record-cards-v1.webp",
+      "webpBytes": 109770,
+      "webpSHA256": "d4f15f1c49e4409f2590d144e300aa4608c3bf0cd915d2721066a8dbe9a447cc",
+      "encoding": {
+        "quality": 90,
+        "method": 6,
+        "alphaQuality": 100
+      },
+      "role": "decorative illustration; not app UI"
+    },
+    {
+      "name": "insight-ribbon",
+      "generator": "built-in image_gen",
+      "promptSource": "STORY_IMAGE_PROMPTS.md",
+      "transparent": true,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "generatedSource": "/Users/hjw/.codex/generated_images/01a1803a-a89a-78d2-b01f-5ecd5f0cc846/exec-5db12902-965c-4f5b-8a3f-3fbccb83f9e0.png",
+      "png": "assets/illustrations/story-insight-ribbon-v1.png",
+      "webp": "assets/illustrations/story-insight-ribbon-v1.webp",
+      "webpBytes": 87036,
+      "webpSHA256": "6635a493ab9f72f4787e4d0b47d9ec25786246a4d5b5fd62f9d562305986ffaa",
+      "encoding": {
+        "quality": 90,
+        "method": 6,
+        "alphaQuality": 100
+      },
+      "role": "decorative illustration; not app UI"
+    }
+  ]
+}

@@ -8,6 +8,7 @@ import { createHash } from 'node:crypto';
 import { locales, prefix, pageURL, escapeHTML } from './i18n.mjs';
 import { answerText } from './seo.mjs';
 import { guideRoute, guideQuestions } from './guide.mjs';
+import { featureRoutes } from './product.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const json = file => JSON.parse(readFileSync(join(root, file), 'utf8'));
@@ -19,7 +20,7 @@ test('all five languages produce complete linked pages, localized controls and r
   const supportKo = json('support-content.json');
   const legal = json('legal-content.json');
   const screenshotMap = json('i18n/screenshots.json');
-  const pages = ['index', 'support', 'security', 'privacy', 'terms', '404', guideRoute];
+  const pages = ['index', 'support', 'security', 'privacy', 'terms', '404', guideRoute, ...featureRoutes];
   for (const locale of Object.keys(locales)) {
     const dictionary = locale === 'ko' ? source : json(`i18n/${locale}.json`);
     assert.deepEqual(Object.keys(dictionary).sort(), Object.keys(source).sort());
@@ -107,6 +108,14 @@ test('all five languages produce complete linked pages, localized controls and r
         for (const target of Object.keys(locales)) assert.ok(html.includes(`hreflang="${target}" href="https://donup.app${pageURL(target, page === 'index' ? '' : page)}"`));
       } else assert.ok(html.includes('name="robots" content="noindex,follow"'));
       if (page === 'index') {
+        const copy = json('content/product-story.json').locales[locale];
+        for (const key of ['record', 'budget', 'insights']) {
+          assert.ok(html.includes(`data-story-step="${key}"`));
+          assert.ok(html.includes(`data-story-screen="${key}"`));
+        }
+        assert.ok(html.includes('data-flow-scene'));
+        assert.ok(html.includes(`aria-label="${escapeHTML(copy.railLabel)}"`));
+        assert.ok(html.includes('data-section-nav'));
         assert.ok(html.includes(`href="${pageURL(locale, guideRoute)}"`));
         for (const item of support.categories.flatMap(c => c.items).filter(item => item.featured)) {
           assert.ok(html.includes(`href="${pageURL(locale, 'support')}#faq-${item.id}"`));
@@ -120,6 +129,16 @@ test('all five languages produce complete linked pages, localized controls and r
             assert.ok(html.includes(screenshotMap[locale][key]));
           }
         }
+      }
+      if (featureRoutes.includes(page)) {
+        const key = page.split('/')[1];
+        const copy = json('content/product-story.json').locales[locale].pages[key];
+        assert.ok(html.includes(`<h1>${copy.headline.map(line => `<span>${escapeHTML(line)}</span>`).join('')}</h1>`));
+        for (const section of copy.sections) {
+          assert.ok(html.includes(`<p>${escapeHTML(section.text)}</p>`));
+          assert.ok(support.categories.flatMap(category => category.items).some(item => '#faq-' + item.id === section.href));
+        }
+        if (locale !== 'ko') assert.ok(html.includes(screenshotMap[locale][copy.screen]));
       }
       if (page === 'support') {
         assert.ok(html.includes(`href="${pageURL(locale, guideRoute)}"`));
@@ -169,9 +188,9 @@ test('all five languages produce complete linked pages, localized controls and r
     }
   };
   inspect(dist);
-  for (const path of ['i18n', 'scripts', '.agents', 'SEO_AUDIT.md', 'CAPTURE_NOTES.md', 'package.json', 'social-card.html']) assert.ok(!existsSync(join(dist, path)));
-  assert.equal((readFileSync(join(dist, 'sitemap.xml'), 'utf8').match(/<loc>/g) ?? []).length, 30);
-  assert.equal((readFileSync(join(dist, 'sitemap.xml'), 'utf8').match(/<lastmod>/g) ?? []).length, 20);
+  for (const path of ['i18n', 'scripts', '.agents', 'content', 'SEO_AUDIT.md', 'CAPTURE_NOTES.md', 'package.json', 'social-card.html', 'features/template.html', 'STORY_IMAGE_PROMPTS.md', 'SCROLL_STORY_NOTES.md']) assert.ok(!existsSync(join(dist, path)));
+  assert.equal((readFileSync(join(dist, 'sitemap.xml'), 'utf8').match(/<loc>/g) ?? []).length, 40);
+  assert.equal((readFileSync(join(dist, 'sitemap.xml'), 'utf8').match(/<lastmod>/g) ?? []).length, 30);
   const publishing = json('content/search-publishing.json');
   assert.equal(readFileSync(join(dist, publishing.indexNowKey + '.txt'), 'utf8'), publishing.indexNowKey);
   const home = readFileSync(join(dist, 'index.html'), 'utf8');

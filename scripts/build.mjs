@@ -5,12 +5,13 @@ import { createHash } from 'node:crypto';
 import { locales, prefix, pageURL, escapeHTML as escape, translator, translateHTML, languageMenu } from './i18n.mjs';
 import { structuredData, jsonLDScript, sitemap, llmsText, helpFeed } from './seo.mjs';
 import { guideRoute, guideQuestions, renderGuide } from './guide.mjs';
+import { featureRoutes, featureMenu, sectionRail, productStory, featurePage } from './product.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const output = join(root, 'dist');
 const read = file => readFile(join(root, file), 'utf8');
 const json = async file => JSON.parse(await read(file));
-const publicFiles = ['styles.css', 'script.js', 'legal.css', 'support.css', 'support.js', 'language.css', 'language.js', 'fonts.css', '_headers', 'assets/fonts/OFL.txt', 'assets/donup-app-icon.png', 'assets/donup-share-v1.png'];
+const publicFiles = ['styles.css', 'script.js', 'legal.css', 'support.css', 'support.js', 'language.css', 'language.js', 'fonts.css', 'story.css', 'story.js', 'product.css', '_headers', 'assets/fonts/OFL.txt', 'assets/donup-app-icon.png', 'assets/donup-share-v1.png'];
 const screenshotMap = await json('i18n/screenshots.json');
 const screenshotFiles = [...new Set(Object.values(screenshotMap).flatMap(screens =>
   Object.entries(screens).flatMap(([key, path]) => [`assets/screens/iphone16promax/${key}.webp`, path.replace(/^\//, '')])))];
@@ -42,9 +43,11 @@ const legal = await json('legal-content.json');
 const koreanSupport = await json('support-content.json');
 const pageDates = await json('content/page-dates.json');
 const entryGuide = await json('content/entry-guide.json');
+const products = await json('content/product-story.json');
 pageDates[guideRoute] = entryGuide.updated;
-const pages = ['index', 'support', 'security', 'privacy', 'terms', '404', guideRoute];
-const templates = Object.fromEntries(await Promise.all(pages.map(async page => [page, await read(page + '.html')])));
+for (const route of featureRoutes) pageDates[route] = products.updated;
+const pages = ['index', 'support', 'security', 'privacy', 'terms', '404', guideRoute, ...featureRoutes];
+const templates = Object.fromEntries(await Promise.all(pages.map(async page => [page, await read(featureRoutes.includes(page) ? 'features/template.html' : page + '.html')])));
 const inlineStyles = Object.fromEntries(await Promise.all(publicFiles.filter(file => file.endsWith('.css'))
   .map(async file => [file, (await read(file)).replace(/\/\*[\s\S]*?\*\//g, comment => comment.includes('Copyright') ? comment : '').trim()])));
 const generated = [];
@@ -77,7 +80,9 @@ for (const locale of Object.keys(locales)) {
   const t = translator(dictionary);
   const pageNames = { support: t('도움말'), security: t('개인정보 보호'), privacy: t('개인정보 처리방침'), terms: t('이용약관') };
   const guide = entryGuide.locales[locale];
+  const product = products.locales[locale];
   pageNames[guideRoute] = guide.title;
+  for (const route of featureRoutes) pageNames[route] = product.pages[route.split('/')[1]].title;
   const related = {
     'free-pro': [{ href: pageURL(locale) + '#pricing', label: t('무료와 Pro 비교') }],
     pricing: [{ href: pageURL(locale) + '#pricing', label: t('무료와 Pro 비교') }],
@@ -119,9 +124,15 @@ ${document.sections.map((section, index) => `<section class="legal-section" id="
       html = html.replace('<div data-help-content></div>', supportContent).replace('<div data-home-faq></div>', support.categories.flatMap(category => category.items).filter(item => item.featured).map(item => faq(item, 'faq-item', [{ href: pageURL(locale, 'support') + '#faq-' + item.id, label: t('도움말에서 자세히 보기') }], t)).join('\n'));
       if (page === 'support') html = html.replace(/(<h1 id="support-title">)[^<]*(<\/h1>)/, `$1${escape(support.title)}$2`).replace(/(<p class="support-lead">)[^<]*(<\/p>)/, `$1${escape(support.subtitle)}$2`);
       if (page === guideRoute) html = html.replace('__GUIDE_TITLE__', escape(guide.title + ' | DonUp')).replace('__GUIDE_DESCRIPTION__', escape(guide.description)).replace('<div data-guide-content></div>', renderGuide(guide, locale, t, entryGuide.updated));
+      if (featureRoutes.includes(page)) {
+        const key = page.split('/')[1];
+        html = html.replace('__FEATURE_TITLE__', escape(product.pages[key].title + ' | DonUp')).replace('__FEATURE_DESCRIPTION__', escape(product.pages[key].description)).replace('<div data-feature-content></div>', featurePage(product, locale, key));
+      }
+      if (page === 'index') html = html.replace('<div data-product-story></div>', productStory(product, locale)).replace('<div data-section-rail></div>', sectionRail(product));
       if (page === 'index') html = html.replace(/(<a class="text-link" href="[^"]*support">)/, `<p class="guide-discovery"><a href="${pageURL(locale, guideRoute)}">${escape(guide.title)}</a></p>$1`);
       if (page === 'support') html = html.replace('<div class="support-body">', `<div class="support-body"><aside class="guide-discovery"><a href="${pageURL(locale, guideRoute)}">${escape(guide.title)}</a><p>${escape(guide.answer)}</p></aside>`);
     }
+    if (page !== '404') html = html.replace(/(<nav class="(?:topbar-nav|site-nav|legal-nav)"[^>]*>)([\s\S]*?)(<\/nav>)/, (_, start, links, end) => start + featureMenu(product, locale, page) + links.replace(/<a href="[^"]*#intro">[^<]*<\/a>/, '') + end);
     if (pageNames[page]) html = html.replace(/(<main\b[^>]*>)/, `$1<nav class="page-path" aria-label="${escape(t('현재 위치'))}"><ol><li><a href="${pageURL(locale)}">DonUp</a></li><li aria-current="page">${escape(pageNames[page])}</li></ol></nav>`);
     html = html.replace(/<html lang="([^"]+)"/, `<html lang="$1" ${Object.entries(runtimeKeys).map(([key, value]) => `data-${key}="${escape(t(value))}"`).join(' ')}`);
     if (locale !== 'ko') html = html.replaceAll('https://apps.apple.com/kr/app/', 'https://apps.apple.com/app/');
@@ -151,7 +162,7 @@ ${jsonLDScript(structuredData({ locale, page, title, description, image, pageNam
     if (locale === 'ja' && page === 'index') html = html.replace('もっと便利に、Proで。</h2>', 'もっと便利に、<span class="pricing-title-phrase">Proで。</span></h2>');
     const localeFont = locales[locale].font;
     const fontAssets = '<link rel="stylesheet" href="/fonts.css" />' + (localeFont ? `<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=${localeFont.replaceAll(' ', '+')}:wght@100..900&amp;display=swap" />` : '');
-    const commonAssets = '<link rel="stylesheet" href="/language.css" /><script src="/language.js" defer></script>' + fontAssets;
+    const commonAssets = '<link rel="stylesheet" href="/language.css" /><script src="/language.js" defer></script><link rel="stylesheet" href="/product.css" />' + (page === 'index' ? '<link rel="stylesheet" href="/story.css" /><script src="/story.js" defer></script>' : '') + fontAssets;
     html = html.includes('</head>') ? html.replace('</head>', commonAssets + '</head>') : html.replace('</body>', commonAssets + '</body>');
     // These small page styles avoid extra render-blocking round trips on the first visit.
     html = html.replace(/<link rel="stylesheet" href="\/([\w-]+\.css)"\s*\/>/g,

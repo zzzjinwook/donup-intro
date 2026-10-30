@@ -1,0 +1,615 @@
+/* DonUp 스크롤 스토리·흐름 장면·섹션 레일. story.js와 짝을 이룬다.
+   이름공간: .section-rail / .story- / .flow- 만 쓴다. body·reveal·기존 캐러셀은 건드리지 않는다. */
+
+/* ---------- 좌측 섹션 레일 (넓은 화면 전용) ---------- */
+
+.section-rail {
+  display: none;
+}
+
+@media (min-width: 1180px) {
+  .section-rail {
+    position: fixed;
+    left: 14px;
+    top: 50%;
+    z-index: 40;
+    display: block;
+    transform: translateY(-50%);
+    color: var(--ink);
+  }
+
+  .section-rail ol,
+  .section-rail ul {
+    display: grid;
+    gap: 2px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .section-rail a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 28px;
+    padding: 0 4px;
+    border-radius: 8px;
+    color: var(--ink-soft);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  /* 눈금: 평소엔 짧은 선, 현재 섹션은 길고 진한 분홍 */
+  .section-rail a::before {
+    content: "";
+    flex: none;
+    width: 12px;
+    height: 2px;
+    border-radius: 2px;
+    background: currentColor;
+    opacity: 0.35;
+    transition: width 0.3s var(--ease-out), opacity 0.3s, background-color 0.3s;
+  }
+
+  .section-rail a[aria-current="location"] {
+    color: var(--accent-text);
+  }
+
+  .section-rail a[aria-current="location"]::before {
+    width: 22px;
+    opacity: 1;
+    background: var(--accent);
+  }
+
+  /* 글자는 평소 숨기고(눈금만), 레일에 마우스를 올리거나 포커스가 들어오면 보인다.
+     본문 위에 잠깐 겹치므로 읽을 수 있게 바탕을 깐다. 링크 이름은 보조기술에 그대로 남는다. */
+  .section-rail a {
+    font-size: 0;
+  }
+
+  .section-rail:hover a,
+  .section-rail:focus-within a {
+    font-size: 13px;
+  }
+
+  .section-rail:hover ol,
+  .section-rail:hover ul,
+  .section-rail:focus-within ol,
+  .section-rail:focus-within ul {
+    padding: 6px 10px 6px 0;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 6px 24px rgba(11, 11, 13, 0.08);
+  }
+
+  .section-rail a:hover,
+  .section-rail a:focus-visible {
+    color: var(--ink);
+  }
+
+  .section-rail a:hover::before,
+  .section-rail a:focus-visible::before {
+    opacity: 0.8;
+  }
+
+  .section-rail a:focus-visible {
+    outline-offset: 1px;
+  }
+
+  body.is-night .section-rail {
+    color: #fff;
+  }
+
+  body.is-night .section-rail a {
+    color: var(--night-text);
+  }
+
+  body.is-night .section-rail a[aria-current="location"] {
+    color: #ff8fb0;
+  }
+
+  body.is-night .section-rail:hover ol,
+  body.is-night .section-rail:hover ul,
+  body.is-night .section-rail:focus-within ol,
+  body.is-night .section-rail:focus-within ul {
+    background: rgba(20, 20, 22, 0.92);
+    box-shadow: 0 0 0 1px var(--night-line);
+  }
+}
+
+/* ---------- #everyday 제품 스토리 ---------- */
+
+.product-story {
+  position: relative;
+  padding: clamp(72px, 10vw, 140px) var(--page-gutter);
+}
+
+.story-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(32px, 6vw, 88px);
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.story-copy h2 {
+  margin-bottom: clamp(24px, 3vw, 36px);
+  font-size: clamp(30px, 4.2vw, 48px);
+}
+
+.story-step {
+  border-top: 1px solid rgba(11, 11, 13, 0.1);
+}
+
+.story-step:last-of-type {
+  border-bottom: 1px solid rgba(11, 11, 13, 0.1);
+}
+
+.story-step summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 64px;
+  padding: 14px 2px;
+  cursor: pointer;
+  list-style: none;
+  border-radius: 12px;
+}
+
+.story-step summary::-webkit-details-marker {
+  display: none;
+}
+
+/* 펼침 표시: 얇은 더하기 → 빼기 */
+.story-step summary::after {
+  content: "";
+  flex: none;
+  width: 14px;
+  height: 14px;
+  background:
+    linear-gradient(currentColor, currentColor) center / 14px 2px no-repeat,
+    linear-gradient(currentColor, currentColor) center / 2px 14px no-repeat;
+  color: var(--ink-soft);
+  transition: transform 0.3s var(--ease-out), background-size 0.3s var(--ease-out);
+}
+
+.story-step[open] summary::after {
+  background-size: 14px 2px, 2px 0;
+  color: var(--accent-text);
+}
+
+.story-step summary h3 {
+  font-size: clamp(19px, 2vw, 23px);
+  color: var(--ink-soft);
+  transition: color 0.25s;
+}
+
+.story-step[open] summary h3,
+.story-step summary:hover h3 {
+  color: var(--ink);
+}
+
+.story-step > :not(summary) {
+  margin: 0 0 14px;
+  color: var(--ink-soft);
+}
+
+.story-step > p {
+  max-width: 34em;
+}
+
+.story-step > a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-bottom: 18px;
+  color: var(--accent-text);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.story-step > a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.story-step[open] > :not(summary) {
+  animation: story-panel-in 0.42s var(--ease-out) both;
+}
+
+@keyframes story-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+
+.story-media {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 0;
+}
+
+.story-orbit {
+  position: absolute;
+  z-index: 0;
+  width: min(78%, 420px);
+  height: auto;
+  right: -6%;
+  bottom: -4%;
+  opacity: 0.9;
+  pointer-events: none;
+  transform: translate3d(0, calc((0.5 - var(--story-progress, 0.5)) * 48px), 0) rotate(calc(var(--story-progress, 0.5) * 10deg - 5deg));
+  transition: transform 0.6s var(--ease-out);
+}
+
+/* 실제 캡처 폰 세 장을 한자리에 겹쳐 두고 하나만 보인다. 살짝 기울인 정도만 연출한다. */
+.story-phones {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  /* 폰 이미지 가로/세로 비율(--story-phone-ratio)로 화면 높이 안에 들어오게 너비를 제한한다. */
+  width: min(100%, 340px, calc((100svh - 180px) * var(--story-phone-ratio, 0.48)));
+  transform: rotate(-4deg);
+}
+
+.story-screen {
+  grid-area: 1 / 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate3d(0, 18px, 0) scale(0.97);
+  transition:
+    opacity 0.45s var(--ease-out),
+    transform 0.6s var(--ease-out),
+    visibility 0s linear 0.45s;
+}
+
+/* 기본(스크립트 전·스크립트 없음): 첫 장 */
+.product-story:not([data-story-active]) .story-screen:first-child,
+.product-story[data-story-active="record"] [data-story-screen="record"],
+.product-story[data-story-active="budget"] [data-story-screen="budget"],
+.product-story[data-story-active="insights"] [data-story-screen="insights"] {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition:
+    opacity 0.45s var(--ease-out),
+    transform 0.6s var(--ease-out),
+    visibility 0s;
+}
+
+/* 스크립트가 없을 때는 열린 패널을 따라간다(:has 지원 브라우저). */
+html:not(.js) .product-story:has([data-story-step="budget"][open]) .story-screen:first-child,
+html:not(.js) .product-story:has([data-story-step="insights"][open]) .story-screen:first-child {
+  opacity: 0;
+  visibility: hidden;
+}
+
+html:not(.js) .product-story:has([data-story-step="budget"][open]) [data-story-screen="budget"],
+html:not(.js) .product-story:has([data-story-step="insights"][open]) [data-story-screen="insights"] {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+/* 스크롤 연동 모드: story.js가 넓고 충분히 높은 화면에서만 켠다.
+   단계마다 화면 높이의 70%만큼 머문다. 휠은 가로채지 않고 일반 스크롤 그대로다. */
+.product-story.is-scroll-story {
+  min-height: calc(100vh + var(--story-steps, 3) * 70vh);
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.product-story.is-scroll-story .story-shell {
+  position: sticky;
+  top: calc(68px + env(safe-area-inset-top));
+  min-height: calc(100vh - 68px - env(safe-area-inset-top));
+  padding: 24px 0;
+}
+
+/* 단계 진행 표시(스크롤 모드에서만) */
+.product-story.is-scroll-story .story-copy {
+  position: relative;
+  padding-left: 22px;
+}
+
+.product-story.is-scroll-story .story-copy::before,
+.product-story.is-scroll-story .story-copy::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 2px;
+  border-radius: 2px;
+}
+
+.product-story.is-scroll-story .story-copy::before {
+  top: 0;
+  background: rgba(11, 11, 13, 0.08);
+}
+
+.product-story.is-scroll-story .story-copy::after {
+  top: 0;
+  background: var(--accent);
+  transform-origin: top;
+  transform: scaleY(var(--story-progress, 0));
+}
+
+@media (max-width: 899px) {
+  .story-shell {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 40px;
+  }
+
+  .story-media {
+    order: -1;
+  }
+
+  .story-phones {
+    width: min(68vw, 280px);
+    transform: rotate(-3deg);
+  }
+
+  .story-orbit {
+    width: min(52vw, 240px);
+    right: 0;
+  }
+}
+
+/* ---------- #flow 흐름 장면 ---------- */
+
+.flow-story {
+  position: relative;
+  display: grid;
+  gap: 20px;
+}
+
+.flow-story [data-flow-scene] {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(20px, 5vw, 64px);
+  width: 100%;
+  max-width: 880px;
+}
+
+.flow-entries,
+.flow-bars {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+
+.flow-entry {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 10px 16px;
+  border-radius: 16px;
+  background: var(--paper);
+  box-shadow: 0 0 0 1px rgba(11, 11, 13, 0.08);
+  font-size: 15px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+/* 항목에서 허브로 이동하는 작은 점. 위치 차이(--flow-dx/dy)는 story.js가 잰다. */
+.flow-entry::after {
+  content: "";
+  position: absolute;
+  right: -5px;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  margin-top: -5px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.flow-hub {
+  display: grid;
+  place-items: center;
+  width: clamp(72px, 9vw, 104px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent-text);
+}
+
+.flow-hub svg,
+.flow-hub img {
+  width: 52%;
+  height: auto;
+}
+
+.flow-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 10px 16px;
+  border-radius: 16px;
+  background: var(--paper-soft);
+  font-size: 15px;
+  font-weight: 600;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* 막대 채움. 비율은 --flow-fill(0~1)로 지정, 없으면 차례로 0.78 / 0.52 / 0.32 */
+.flow-bar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: var(--tint-pink);
+  transform-origin: left;
+  transform: scaleX(var(--flow-fill, 0.78));
+}
+
+.flow-bar:nth-child(2)::before { transform: scaleX(var(--flow-fill, 0.52)); background: var(--tint-mint); }
+.flow-bar:nth-child(3)::before { transform: scaleX(var(--flow-fill, 0.32)); background: var(--tint-sky); }
+
+.flow-replay {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--paper-soft);
+  color: var(--ink);
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.flow-replay:hover {
+  background: var(--accent-soft);
+}
+
+.flow-replay[disabled] {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* 재생: 한 사이클 약 3.6초 후 최종 상태로 멈춘다.
+   0.0–1.0s 항목 등장 → 1.0–2.2s 점이 허브로 → 2.0s 허브 반응 → 2.2–3.6s 막대 채움 */
+[data-flow-scene].is-playing .flow-entry {
+  animation: flow-entry-in 0.7s var(--ease-out) both;
+  animation-delay: calc(var(--flow-i, 0) * 160ms);
+}
+
+[data-flow-scene].is-playing .flow-entry::after {
+  animation: flow-dot 1.2s cubic-bezier(0.55, 0, 0.3, 1) both;
+  animation-delay: calc(1s + var(--flow-i, 0) * 120ms);
+}
+
+[data-flow-scene].is-playing .flow-hub {
+  animation: flow-hub-pulse 0.6s var(--ease-out) both;
+  animation-delay: 2.05s;
+}
+
+[data-flow-scene].is-playing .flow-bar::before {
+  animation: flow-bar-fill 1s var(--ease-out) both;
+  animation-delay: calc(2.25s + var(--flow-i, 0) * 140ms);
+}
+
+[data-flow-scene].is-playing .flow-bar {
+  animation: flow-bar-in 0.5s var(--ease-out) both;
+  animation-delay: calc(2.15s + var(--flow-i, 0) * 140ms);
+}
+
+@keyframes flow-entry-in {
+  from {
+    opacity: 0;
+    transform: translate3d(-18px, 0, 0);
+  }
+}
+
+@keyframes flow-dot {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) scale(0.6);
+  }
+  15% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(var(--flow-dx, 0px), var(--flow-dy, 0px), 0) scale(0.5);
+  }
+}
+
+@keyframes flow-hub-pulse {
+  40% {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes flow-bar-in {
+  from {
+    opacity: 0.4;
+  }
+}
+
+@keyframes flow-bar-fill {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+@media (max-width: 760px) {
+  .flow-story [data-flow-scene] {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: stretch;
+    gap: 18px;
+  }
+
+  .flow-hub {
+    justify-self: center;
+  }
+}
+
+/* ---------- 동작 줄이기 ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .section-rail a::before,
+  .story-step summary::after,
+  .story-step summary h3,
+  .story-orbit,
+  .story-screen {
+    transition: none !important;
+  }
+
+  .story-step[open] > :not(summary) {
+    animation: none;
+  }
+
+  .story-orbit {
+    transform: none;
+  }
+
+  .story-screen {
+    transform: none;
+  }
+
+  /* 사용자가 재생 버튼을 직접 누른 경우(.is-user-play)만 흐름 장면을 움직인다. */
+  [data-flow-scene].is-playing:not(.is-user-play) .flow-entry,
+  [data-flow-scene].is-playing:not(.is-user-play) .flow-entry::after,
+  [data-flow-scene].is-playing:not(.is-user-play) .flow-hub,
+  [data-flow-scene].is-playing:not(.is-user-play) .flow-bar,
+  [data-flow-scene].is-playing:not(.is-user-play) .flow-bar::before {
+    animation: none;
+  }
+}
+
+/* 자동 재생 대기: 첫 프레임에서 멈춤 */
+[data-flow-scene].is-paused .flow-entry,
+[data-flow-scene].is-paused .flow-entry::after,
+[data-flow-scene].is-paused .flow-hub,
+[data-flow-scene].is-paused .flow-bar,
+[data-flow-scene].is-paused .flow-bar::before {
+  animation-play-state: paused;
+}

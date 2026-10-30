@@ -1,0 +1,715 @@
+{
+  "updated": "2026-10-30",
+  "locales": {
+    "ko": {
+      "menu": "기능 살펴보기",
+      "menuIntro": "돈업 한눈에",
+      "menuRecord": "가볍게 기록하기",
+      "menuInsights": "예산과 소비 이해하기",
+      "railLabel": "페이지 섹션 탐색",
+      "rail": [
+        "시작",
+        "앱 미리보기",
+        "매일의 기록",
+        "기록의 흐름",
+        "테마",
+        "자동 기록",
+        "개인정보 보호",
+        "자주 묻는 질문",
+        "요금제"
+      ],
+      "eyebrow": "일상의 돈을 이해하는 방법",
+      "headline": [
+        "기록은 가볍게,",
+        "내 돈은 선명하게."
+      ],
+      "steps": [
+        {
+          "id": "record",
+          "title": "기억이 흐려지기 전에 한 줄로",
+          "text": "말하듯 적거나 사진으로 남겨보세요. 기록한 내역이 날짜와 카테고리별로 모여요. AI 입력은 선택한 경우에만 사용할 수 있어요.",
+          "link": "기록 방법 살펴보기",
+          "route": "recording",
+          "screen": "history-mint-light",
+          "alt": "공개 샘플 데이터가 날짜별로 정리된 DonUp 내역 화면"
+        },
+        {
+          "id": "budget",
+          "title": "남은 예산부터, 차분하게",
+          "text": "카테고리별 예산과 남은 금액을 확인해요. 정기 지출도 함께 살펴보며 이번 달의 계획을 세울 수 있어요.",
+          "link": "예산과 자산 살펴보기",
+          "route": "insights",
+          "screen": "budget-mint-light",
+          "alt": "카테고리별 예산과 남은 금액을 보여주는 DonUp 예산 화면"
+        },
+        {
+          "id": "insights",
+          "title": "숫자 너머의 이유가 궁금할 때",
+          "text": "통계에서 소비 흐름을 살펴보고, 돈워리에게 질문해 보세요. 내역 작성에서도 바로 질문하고 답변을 확장해 볼 수 있어요.",
+          "link": "돈워리와 통계 살펴보기",
+          "route": "insights",
+          "screen": "donworry-chart-pink-light",
+          "alt": "내역 작성에서 질문한 뒤 확장한 돈워리의 답변과 소비 차트"
+        }
+      ],
+      "flowEyebrow": "기록에서 이해까지",
+      "flowTitle": [
+        "흩어진 지출이",
+        "하나의 흐름이 되도록."
+      ],
+      "flowText": "내역을 남기고, 예산을 확인하고, 소비를 돌아보세요. 복잡한 숫자보다 나에게 필요한 다음 행동이 먼저 보이도록.",
+      "flowEntries": [
+        "점심",
+        "커피",
+        "교통"
+      ],
+      "flowResult": "나의 소비 흐름",
+      "flowNote": "기능을 설명하기 위한 예시 그래픽입니다.",
+      "replay": "흐름 다시 보기",
+      "back": "돈업 홈으로",
+      "sample": "실제 앱의 공개 샘플 화면입니다.",
+      "more": "함께 알아보기",
+      "download": "App Store에서 시작하기",
+      "conditions": "이용 조건",
+      "pages": {
+        "recording": {
+          "title": "AI 입력과 자동 기록",
+          "description": "DonUp의 문장·음성·사진 입력, 결제 문자와 Apple Pay 단축어를 알아보세요. 무료 범위와 AI 동의 조건도 함께 안내해요.",
+          "eyebrow": "매일의 기록",
+          "headline": [
+            "적는 시간은 줄이고,",
+            "기록은 이어가세요."
+          ],
+          "lead": "기억나는 순간 한 줄로. 나에게 맞는 입력 방법을 골라 내역을 쌓아보세요.",
+          "screen": "history-mint-light",
+          "alt": "날짜별 지출과 수입이 정리된 DonUp 내역 샘플",
+          "art": "story-record-cards-v1",
+          "sections": [
+            {
+              "title": "문장과 음성으로, 말하듯이",
+              "text": "지출을 짧은 문장으로 적거나 음성으로 입력할 수 있어요. AI가 정리한 결과는 확인하고 저장해 주세요.",
+              "href": "#faq-sentence",
+              "link": "입력 방법 알아보기"
+            },
+            {
+              "title": "사진 한 장에서 시작하는 기록",
+              "text": "사진과 촬영 AI 입력은 합산 하루 1회 무료예요. Pro에서는 횟수 제한 없이 사용할 수 있어요. AI 기능은 데이터 사용 동의가 필요해요.",
+              "href": "#faq-photo",
+              "link": "사진 입력 도움말"
+            },
+            {
+              "title": "내 생활에 맞게 설정하는 자동화",
+              "text": "결제 문자·Apple Pay 등의 자동 기록은 Pro에서 제공해요. 카드·은행 알림 자동 기록은 iOS 27 이상이 필요하며, 결제 문자·알림 분석은 로그인과 AI 데이터 사용 동의가 필요해요.",
+              "href": "#faq-automation",
+              "link": "자동 기록 설정하기"
+            }
+          ],
+          "condition": "빠른 작성 단축어는 무료예요. 자동화별 지원 조건과 설정 방법은 도움말에서 확인해 주세요. AI 사용은 선택 사항이며, 허용하지 않아도 직접 기록할 수 있어요."
+        },
+        "insights": {
+          "title": "예산·통계·자산과 돈워리",
+          "description": "DonUp의 카테고리 예산, 소비 통계, Pro 자산관리와 돈워리를 살펴보세요. 기록을 바탕으로 내 돈의 흐름을 이해해요.",
+          "eyebrow": "내 돈을 이해하는 시간",
+          "headline": [
+            "오늘의 숫자에서,",
+            "다음 달의 계획으로."
+          ],
+          "lead": "예산과 통계는 무료로 시작해요. 더 자세히 살펴보고 싶을 땐 자산관리와 돈워리를 함께 활용해 보세요.",
+          "screen": "statistics-skyblue-light",
+          "alt": "기간별 지출 흐름과 분석 카드가 보이는 DonUp 통계 샘플",
+          "art": "story-insight-ribbon-v1",
+          "sections": [
+            {
+              "title": "예산과 정기 지출을 함께",
+              "text": "카테고리별로 예산을 정하고 남은 금액을 확인해요. 반복되는 지출을 함께 살펴보면 이번 달에 쓸 수 있는 돈을 가늠하기 쉬워져요.",
+              "href": "#faq-budget-ratio",
+              "link": "예산 도움말"
+            },
+            {
+              "title": "자산도, 부채도 한곳에서",
+              "text": "Pro 자산관리에서 예금·투자·부채를 기록하고 순자산 추이와 자산 비중·수익률을 살펴볼 수 있어요. 개인 지갑과 공유 지갑의 자산관리는 모두 Pro 기능이에요.",
+              "href": "#faq-free-pro",
+              "link": "무료와 Pro 범위 확인"
+            },
+            {
+              "title": "돈워리에게 질문해 보세요",
+              "text": "내역 작성 화면에서도 바로 질문하고 돈워리의 답변을 확장해 볼 수 있어요. AI 데이터 사용을 허용한 경우에 이용할 수 있고, 무료 하루 3회·Pro 하루 20회 제공돼요.",
+              "href": "#faq-donworry",
+              "link": "돈워리 도움말"
+            }
+          ],
+          "condition": "공유 가계부에 참여한 사람은 그 가계부의 기존 내역·예산·자산을 함께 보고 작성할 수 있어요. 돈워리의 답변은 기록을 이해하는 참고 정보이며 중요한 금전 결정은 직접 확인해 주세요."
+        }
+      },
+      "menuShort": "기능"
+    },
+    "en": {
+      "menu": "Explore features",
+      "menuIntro": "DonUp at a glance",
+      "menuRecord": "Keep a lighter log",
+      "menuInsights": "Understand your spending",
+      "railLabel": "Page sections",
+      "rail": [
+        "Start",
+        "App preview",
+        "Daily entries",
+        "The flow",
+        "Themes",
+        "Automations",
+        "Privacy",
+        "FAQ",
+        "Plans"
+      ],
+      "eyebrow": "Make sense of everyday money",
+      "headline": [
+        "Lighter logging.",
+        "A clearer picture."
+      ],
+      "steps": [
+        {
+          "id": "record",
+          "title": "A quick line before you forget",
+          "text": "Write naturally or start with a photo. Your entries come together by date and category. AI input is available only when you allow it.",
+          "link": "Explore ways to log",
+          "route": "recording",
+          "screen": "history-mint-light",
+          "alt": "DonUp entry history with public sample data organized by date"
+        },
+        {
+          "id": "budget",
+          "title": "Start with what is left to spend",
+          "text": "Check each category’s budget and remaining amount. Keep recurring expenses in view as you plan the rest of the month.",
+          "link": "Explore budgets and assets",
+          "route": "insights",
+          "screen": "budget-mint-light",
+          "alt": "DonUp category budgets and remaining amounts"
+        },
+        {
+          "id": "insights",
+          "title": "Curious about the story behind a number?",
+          "text": "Explore spending trends in Statistics, then ask DonWorry. You can also ask directly in Add Entry and expand the response.",
+          "link": "Explore DonWorry and Statistics",
+          "route": "insights",
+          "screen": "donworry-chart-pink-light",
+          "alt": "An expanded DonWorry answer and spending chart opened from Add Entry"
+        }
+      ],
+      "flowEyebrow": "From entries to understanding",
+      "flowTitle": [
+        "Scattered expenses.",
+        "One clearer flow."
+      ],
+      "flowText": "Log an entry, check your budget, and reflect on your spending. Find a useful next step in the numbers you already have.",
+      "flowEntries": [
+        "Lunch",
+        "Coffee",
+        "Transport"
+      ],
+      "flowResult": "My spending flow",
+      "flowNote": "An illustrative graphic explaining the features.",
+      "replay": "Replay the flow",
+      "back": "Back to DonUp",
+      "sample": "Actual app screens with public sample data.",
+      "more": "Keep exploring",
+      "download": "Get started on the App Store",
+      "conditions": "Availability",
+      "pages": {
+        "recording": {
+          "title": "AI Input and Entry Automations",
+          "description": "Explore DonUp text, voice and photo input, payment messages and Apple Pay shortcuts, including free limits and AI consent.",
+          "eyebrow": "Everyday entries",
+          "headline": [
+            "Less time typing.",
+            "More room for a habit."
+          ],
+          "lead": "A quick line while you remember. Choose an input method that fits the way you spend.",
+          "screen": "history-mint-light",
+          "alt": "DonUp sample entries organized by date",
+          "art": "story-record-cards-v1",
+          "sections": [
+            {
+              "title": "Type or speak naturally",
+              "text": "Enter an expense as a short sentence or use your voice. Review the result before saving an entry organized by AI.",
+              "href": "#faq-sentence",
+              "link": "How to enter an expense"
+            },
+            {
+              "title": "Start with a photo",
+              "text": "AI photo input and camera input share one free use per day. Pro removes this count limit. AI features require data-use consent.",
+              "href": "#faq-photo",
+              "link": "Photo input help"
+            },
+            {
+              "title": "Automations that fit your routine",
+              "text": "Automatic logging from payment messages and Apple Pay is available with Pro. Card and bank notification logging requires iOS 27 or later. Payment message and notification analysis requires sign-in and AI data-use consent.",
+              "href": "#faq-automation",
+              "link": "Set up Entry Automations"
+            }
+          ],
+          "condition": "The Quick Entry shortcut is free. See Help for each automation’s requirements. AI is optional, and manual entry remains available without consent."
+        },
+        "insights": {
+          "title": "Budgets, Statistics, Assets and DonWorry",
+          "description": "Explore category budgets, spending statistics, Pro asset management and DonWorry in DonUp. Understand your money through your entries.",
+          "eyebrow": "Time to understand your money",
+          "headline": [
+            "Today’s numbers.",
+            "Next month’s plan."
+          ],
+          "lead": "Start with free budgets and statistics. Add asset management and DonWorry when you want a closer look.",
+          "screen": "statistics-skyblue-light",
+          "alt": "DonUp sample spending trends and analysis cards",
+          "art": "story-insight-ribbon-v1",
+          "sections": [
+            {
+              "title": "Budgets and recurring expenses together",
+              "text": "Set category budgets and see what is left. Keeping recurring expenses in view can help you plan the rest of the month.",
+              "href": "#faq-budget-ratio",
+              "link": "Budget help"
+            },
+            {
+              "title": "Assets and debts in one place",
+              "text": "Pro asset management lets you record deposits, investments and debts, and view net-worth trends, asset allocation and returns. Asset management requires Pro in both personal and shared wallets.",
+              "href": "#faq-free-pro",
+              "link": "Compare Free and Pro"
+            },
+            {
+              "title": "Ask DonWorry",
+              "text": "You can also ask directly in Add Entry and expand the DonWorry response. AI data use must be allowed. You can use DonWorry 3 times a day for free, or 20 with Pro.",
+              "href": "#faq-donworry",
+              "link": "DonWorry help"
+            }
+          ],
+          "condition": "Members of a shared ledger can view and edit that ledger’s existing entries, budgets and assets. DonWorry helps interpret your records; independently verify important financial decisions."
+        }
+      },
+      "menuShort": "Features"
+    },
+    "ja": {
+      "menu": "機能を見る",
+      "menuIntro": "DonUpを知る",
+      "menuRecord": "気軽に記録する",
+      "menuInsights": "予算と支出を知る",
+      "railLabel": "ページのセクション",
+      "rail": [
+        "トップ",
+        "アプリ",
+        "毎日の記録",
+        "記録の流れ",
+        "テーマ",
+        "自動記録",
+        "プライバシー",
+        "よくある質問",
+        "プラン"
+      ],
+      "eyebrow": "毎日のお金を知るために",
+      "headline": [
+        "記録は軽やかに。",
+        "お金は、くっきり。"
+      ],
+      "steps": [
+        {
+          "id": "record",
+          "title": "忘れてしまう前に、ひと言で",
+          "text": "話すように入力したり、写真から始めたり。明細は日付とカテゴリごとにまとまります。AI入力は許可した場合だけ利用できます。",
+          "link": "記録の方法を見る",
+          "route": "recording",
+          "screen": "history-mint-light",
+          "alt": "公開サンプルデータが日付別に並ぶDonUpの明細画面"
+        },
+        {
+          "id": "budget",
+          "title": "残りの予算から、落ち着いて",
+          "text": "カテゴリごとの予算と残額を確認。定期支出も見ながら、今月の予定を立てられます。",
+          "link": "予算と資産を見る",
+          "route": "insights",
+          "screen": "budget-mint-light",
+          "alt": "カテゴリごとの予算と残額を表示するDonUpの画面"
+        },
+        {
+          "id": "insights",
+          "title": "数字の理由が気になったら",
+          "text": "統計で支出の流れを見て、DonWorryに質問。明細作成画面からもそのまま質問し、回答を拡大して確認できます。",
+          "link": "DonWorryと統計を見る",
+          "route": "insights",
+          "screen": "donworry-chart-pink-light",
+          "alt": "明細作成から開いたDonWorryの拡大回答と支出グラフ"
+        }
+      ],
+      "flowEyebrow": "記録から、理解へ",
+      "flowTitle": [
+        "ばらばらの支出を、",
+        "ひとつの流れに。"
+      ],
+      "flowText": "明細を残し、予算を確認し、支出を振り返る。今ある数字から、次の行動を見つけましょう。",
+      "flowEntries": [
+        "ランチ",
+        "コーヒー",
+        "交通"
+      ],
+      "flowResult": "自分の支出の流れ",
+      "flowNote": "機能を説明するイメージ図です。",
+      "replay": "流れをもう一度見る",
+      "back": "DonUpホームへ",
+      "sample": "実際のアプリの公開サンプル画面です。",
+      "more": "もっと見る",
+      "download": "App Storeで始める",
+      "conditions": "利用条件",
+      "pages": {
+        "recording": {
+          "title": "AI入力と明細記録のオートメーション",
+          "description": "DonUpの文章・音声・写真入力、カード利用通知やApple Payのショートカットを紹介。無料の範囲とAI利用の許可条件も確認できます。",
+          "eyebrow": "毎日の記録",
+          "headline": [
+            "入力の時間は短く、",
+            "記録は続くように。"
+          ],
+          "lead": "覚えているうちに、ひと言。暮らしに合った入力方法で明細を残しましょう。",
+          "screen": "history-mint-light",
+          "alt": "日付別に並ぶDonUpの明細サンプル",
+          "art": "story-record-cards-v1",
+          "sections": [
+            {
+              "title": "文章と音声で、話すように",
+              "text": "支出を短い文章や音声で入力できます。AIが整理した結果は、確認してから保存してください。",
+              "href": "#faq-sentence",
+              "link": "入力方法を見る"
+            },
+            {
+              "title": "写真1枚から始める記録",
+              "text": "写真・カメラのAI入力は合計で1日1回無料です。Proなら回数制限なく使えます。AI機能にはデータ利用の許可が必要です。",
+              "href": "#faq-photo",
+              "link": "写真入力のヘルプ"
+            },
+            {
+              "title": "暮らしに合わせるオートメーション",
+              "text": "カード利用通知やApple Payなどからの自動記録はProで利用できます。カード・銀行の通知からの自動記録はiOS 27以降が必要です。メッセージ・通知の分析にはログインとAIのデータ利用の許可が必要です。",
+              "href": "#faq-automation",
+              "link": "自動記録を設定する"
+            }
+          ],
+          "condition": "クイック入力のショートカットは無料です。自動化ごとの条件はヘルプで確認してください。AIは任意で、許可しなくても手動入力できます。"
+        },
+        "insights": {
+          "title": "予算・統計・資産とDonWorry",
+          "description": "DonUpのカテゴリ予算、支出統計、Proの資産管理とDonWorryを紹介。記録からお金の流れを把握しましょう。",
+          "eyebrow": "お金を知る時間",
+          "headline": [
+            "今日の数字から、",
+            "来月の計画へ。"
+          ],
+          "lead": "予算と統計は無料で始められます。詳しく知りたいときは、資産管理とDonWorryも活用できます。",
+          "screen": "statistics-skyblue-light",
+          "alt": "期間別の支出と分析カードを表示するDonUpの統計サンプル",
+          "art": "story-insight-ribbon-v1",
+          "sections": [
+            {
+              "title": "予算と定期支出を一緒に",
+              "text": "カテゴリ別に予算を決めて残額を確認。定期支出も見ることで、今月使えるお金を考えやすくなります。",
+              "href": "#faq-budget-ratio",
+              "link": "予算のヘルプ"
+            },
+            {
+              "title": "資産も負債も、ひとつの場所で",
+              "text": "Proの資産管理で預金・投資・負債を記録し、純資産の推移、資産配分、収益率を確認できます。個人・共有ウォレットの資産管理は、どちらもProの機能です。",
+              "href": "#faq-free-pro",
+              "link": "無料とProの範囲を見る"
+            },
+            {
+              "title": "DonWorryに質問する",
+              "text": "明細作成画面からもそのまま質問し、DonWorryの回答を拡大できます。AIのデータ利用の許可が必要です。無料は1日3回、Proは1日20回です。",
+              "href": "#faq-donworry",
+              "link": "DonWorryのヘルプ"
+            }
+          ],
+          "condition": "共有家計簿に参加すると、その家計簿の既存の明細・予算・資産を一緒に閲覧・作成できます。DonWorryの回答は記録を理解する参考情報です。重要なお金の判断はご自身で確認してください。"
+        }
+      },
+      "menuShort": "機能"
+    },
+    "zh-Hans": {
+      "menu": "探索功能",
+      "menuIntro": "认识 DonUp",
+      "menuRecord": "轻松记一笔",
+      "menuInsights": "了解预算与消费",
+      "railLabel": "页面章节导航",
+      "rail": [
+        "首页",
+        "应用预览",
+        "日常记录",
+        "记录流转",
+        "主题",
+        "自动记录",
+        "隐私",
+        "常见问题",
+        "方案"
+      ],
+      "eyebrow": "理解日常收支的方法",
+      "headline": [
+        "轻松记录，",
+        "清楚了解自己的钱。"
+      ],
+      "steps": [
+        {
+          "id": "record",
+          "title": "趁还记得，写下一句话",
+          "text": "像说话一样输入，或从照片开始。记录会按日期和类别整理。AI 输入仅在你允许时使用。",
+          "link": "了解记录方式",
+          "route": "recording",
+          "screen": "history-mint-light",
+          "alt": "按日期整理公开示例数据的 DonUp 记录页面"
+        },
+        {
+          "id": "budget",
+          "title": "先看看预算还剩多少",
+          "text": "查看每个类别的预算与剩余金额。结合定期支出，规划这个月接下来的花费。",
+          "link": "了解预算与资产",
+          "route": "insights",
+          "screen": "budget-mint-light",
+          "alt": "显示各类别预算与剩余金额的 DonUp 页面"
+        },
+        {
+          "id": "insights",
+          "title": "想了解数字背后的原因？",
+          "text": "在统计中查看消费趋势，再问问 DonWorry。也可以在添加记录页面直接提问，再展开查看完整回答。",
+          "link": "了解 DonWorry 与统计",
+          "route": "insights",
+          "screen": "donworry-chart-pink-light",
+          "alt": "从添加记录打开的 DonWorry 展开回答与消费图表"
+        }
+      ],
+      "flowEyebrow": "从记录到理解",
+      "flowTitle": [
+        "零散的支出，",
+        "汇成清楚的流向。"
+      ],
+      "flowText": "记下一笔，查看预算，再回顾消费。从已有的数字里，找到适合自己的下一步。",
+      "flowEntries": [
+        "午餐",
+        "咖啡",
+        "交通"
+      ],
+      "flowResult": "我的消费流向",
+      "flowNote": "用于说明功能的示意图。",
+      "replay": "重看记录流转",
+      "back": "返回 DonUp 首页",
+      "sample": "实际应用的公开示例页面。",
+      "more": "继续了解",
+      "download": "在 App Store 开始使用",
+      "conditions": "使用条件",
+      "pages": {
+        "recording": {
+          "title": "AI 输入与记录自动化",
+          "description": "了解 DonUp 的文字、语音、照片输入，以及支付短信和 Apple Pay 快捷指令，包括免费额度与 AI 数据使用许可。",
+          "eyebrow": "日常记录",
+          "headline": [
+            "少花时间输入，",
+            "更轻松地坚持。"
+          ],
+          "lead": "趁还记得，简单记一句。选择适合自己日常消费的输入方式。",
+          "screen": "history-mint-light",
+          "alt": "按日期整理的 DonUp 收支记录示例",
+          "art": "story-record-cards-v1",
+          "sections": [
+            {
+              "title": "像说话一样，用文字或语音输入",
+              "text": "可以用简短文字或语音输入支出。请先确认 AI 整理的结果，再保存记录。",
+              "href": "#faq-sentence",
+              "link": "了解输入方式"
+            },
+            {
+              "title": "从一张照片开始",
+              "text": "照片和拍照 AI 输入合计每天免费 1 次。Pro 不限次数。AI 功能需要允许 AI 数据使用。",
+              "href": "#faq-photo",
+              "link": "照片输入帮助"
+            },
+            {
+              "title": "适合日常习惯的自动化",
+              "text": "支付短信、Apple Pay 等自动记录为 Pro 功能。银行卡/银行通知自动记录需要 iOS 27 或更高版本。支付短信与通知分析需要登录并允许 AI 数据使用。",
+              "href": "#faq-automation",
+              "link": "设置记录自动化"
+            }
+          ],
+          "condition": "快速记录快捷指令免费。各项自动化的条件请查看帮助。AI 可自由选择；不允许 AI 数据使用，也能手动记录。"
+        },
+        "insights": {
+          "title": "预算、统计、资产与 DonWorry",
+          "description": "了解 DonUp 的分类预算、消费统计、Pro 资产管理与 DonWorry，通过记录看清资金流向。",
+          "eyebrow": "了解自己的钱",
+          "headline": [
+            "从今天的数字，",
+            "到下个月的计划。"
+          ],
+          "lead": "预算与统计可以免费开始。想进一步了解时，可以使用资产管理与 DonWorry。",
+          "screen": "statistics-skyblue-light",
+          "alt": "显示消费趋势与分析卡片的 DonUp 统计示例",
+          "art": "story-insight-ribbon-v1",
+          "sections": [
+            {
+              "title": "一起查看预算与定期支出",
+              "text": "按类别设置预算，查看剩余金额。结合定期支出，更容易规划这个月还能花多少钱。",
+              "href": "#faq-budget-ratio",
+              "link": "预算帮助"
+            },
+            {
+              "title": "资产与负债，集中了解",
+              "text": "Pro 资产管理可以记录存款、投资与负债，查看净资产趋势、资产占比与收益率。个人与共享钱包的资产管理都需要 Pro。",
+              "href": "#faq-free-pro",
+              "link": "比较免费与 Pro"
+            },
+            {
+              "title": "问问 DonWorry",
+              "text": "也可以在添加记录页面直接提问，再展开查看 DonWorry 回答。需要允许 AI 数据使用。免费每天 3 次，Pro 每天 20 次。",
+              "href": "#faq-donworry",
+              "link": "DonWorry 帮助"
+            }
+          ],
+          "condition": "加入共享账本后，成员可以一起查看和编辑该账本现有的记录、预算和资产。DonWorry 的回答用于辅助理解记录；重要的财务决定请自行核实。"
+        }
+      },
+      "menuShort": "功能"
+    },
+    "zh-Hant": {
+      "menu": "探索功能",
+      "menuIntro": "認識 DonUp",
+      "menuRecord": "輕鬆記一筆",
+      "menuInsights": "瞭解預算與消費",
+      "railLabel": "頁面章節導覽",
+      "rail": [
+        "首頁",
+        "App 預覽",
+        "日常記錄",
+        "記錄流轉",
+        "主題",
+        "自動記錄",
+        "隱私",
+        "常見問題",
+        "方案"
+      ],
+      "eyebrow": "理解日常收支的方法",
+      "headline": [
+        "輕鬆記錄，",
+        "清楚瞭解自己的錢。"
+      ],
+      "steps": [
+        {
+          "id": "record",
+          "title": "趁還記得，寫下一句話",
+          "text": "像說話一樣輸入，或從照片開始。記錄會依日期與類別整理。AI 輸入只在你允許時使用。",
+          "link": "瞭解記錄方式",
+          "route": "recording",
+          "screen": "history-mint-light",
+          "alt": "依日期整理公開範例資料的 DonUp 記錄頁面"
+        },
+        {
+          "id": "budget",
+          "title": "先看看預算還剩多少",
+          "text": "查看每個類別的預算與剩餘金額。搭配定期支出，規劃這個月接下來的花費。",
+          "link": "瞭解預算與資產",
+          "route": "insights",
+          "screen": "budget-mint-light",
+          "alt": "顯示各類別預算與剩餘金額的 DonUp 頁面"
+        },
+        {
+          "id": "insights",
+          "title": "想瞭解數字背後的原因？",
+          "text": "在統計中查看消費趨勢，再問問 DonWorry。也可以在新增記錄頁面直接提問，再展開查看完整回答。",
+          "link": "瞭解 DonWorry 與統計",
+          "route": "insights",
+          "screen": "donworry-chart-pink-light",
+          "alt": "從新增記錄開啟的 DonWorry 展開回答與消費圖表"
+        }
+      ],
+      "flowEyebrow": "從記錄到理解",
+      "flowTitle": [
+        "零散的支出，",
+        "匯成清楚的流向。"
+      ],
+      "flowText": "記下一筆，查看預算，再回顧消費。從既有的數字裡，找到適合自己的下一步。",
+      "flowEntries": [
+        "午餐",
+        "咖啡",
+        "交通"
+      ],
+      "flowResult": "我的消費流向",
+      "flowNote": "用來說明功能的示意圖。",
+      "replay": "重看記錄流轉",
+      "back": "返回 DonUp 首頁",
+      "sample": "實際 App 的公開範例畫面。",
+      "more": "繼續瞭解",
+      "download": "在 App Store 開始使用",
+      "conditions": "使用條件",
+      "pages": {
+        "recording": {
+          "title": "AI 輸入與記錄自動化",
+          "description": "瞭解 DonUp 的文字、語音、照片輸入，以及付款簡訊與 Apple Pay 捷徑，包含免費次數與 AI 資料使用許可。",
+          "eyebrow": "日常記錄",
+          "headline": [
+            "少花時間輸入，",
+            "更輕鬆地持續。"
+          ],
+          "lead": "趁還記得，簡單記一句。選擇適合自己日常消費的輸入方式。",
+          "screen": "history-mint-light",
+          "alt": "依日期整理的 DonUp 收支記錄範例",
+          "art": "story-record-cards-v1",
+          "sections": [
+            {
+              "title": "像說話一樣，以文字或語音輸入",
+              "text": "可以用簡短文字或語音輸入支出。請先確認 AI 整理的結果，再儲存記錄。",
+              "href": "#faq-sentence",
+              "link": "瞭解輸入方式"
+            },
+            {
+              "title": "從一張照片開始",
+              "text": "照片與拍照 AI 輸入合計每天免費 1 次。Pro 不限次數。AI 功能需要允許 AI 資料使用。",
+              "href": "#faq-photo",
+              "link": "照片輸入說明"
+            },
+            {
+              "title": "適合日常習慣的自動化",
+              "text": "付款簡訊、Apple Pay 等自動記錄為 Pro 功能。信用卡／銀行通知自動記錄需要 iOS 27 或以上版本。付款簡訊與通知分析需要登入並允許 AI 資料使用。",
+              "href": "#faq-automation",
+              "link": "設定記錄自動化"
+            }
+          ],
+          "condition": "快速記錄捷徑免費。各項自動化的條件請查看說明。AI 可自由選擇；不允許 AI 資料使用，也能手動紀錄。"
+        },
+        "insights": {
+          "title": "預算、統計、資產與 DonWorry",
+          "description": "瞭解 DonUp 的分類預算、消費統計、Pro 資產管理與 DonWorry，透過記錄看清資金流向。",
+          "eyebrow": "瞭解自己的錢",
+          "headline": [
+            "從今天的數字，",
+            "到下個月的計畫。"
+          ],
+          "lead": "預算與統計可以免費開始。想進一步瞭解時，可以使用資產管理與 DonWorry。",
+          "screen": "statistics-skyblue-light",
+          "alt": "顯示消費趨勢與分析卡片的 DonUp 統計範例",
+          "art": "story-insight-ribbon-v1",
+          "sections": [
+            {
+              "title": "一起查看預算與定期支出",
+              "text": "依類別設定預算，查看剩餘金額。搭配定期支出，更容易規劃這個月還能花多少錢。",
+              "href": "#faq-budget-ratio",
+              "link": "預算說明"
+            },
+            {
+              "title": "資產與負債，集中瞭解",
+              "text": "Pro 資產管理可以紀錄存款、投資與負債，查看淨資產趨勢、資產占比與報酬率。個人與共享錢包的資產管理都需要 Pro。",
+              "href": "#faq-free-pro",
+              "link": "比較免費與 Pro"
+            },
+            {
+              "title": "問問 DonWorry",
+              "text": "也可以在新增記錄頁面直接提問，再展開查看 DonWorry 回答。需要允許 AI 資料使用。免費每天 3 次，Pro 每天 20 次。",
+              "href": "#faq-donworry",
+              "link": "DonWorry 說明"
+            }
+          ],
+          "condition": "加入共享記帳本後，成員可以一起查看並編輯該記帳本現有的記錄、預算與資產。DonWorry 的回答用於輔助理解記錄；重要的財務決定請自行確認。"
+        }
+      },
+      "menuShort": "功能"
+    }
+  }
+}

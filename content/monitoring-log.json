@@ -1,0 +1,16 @@
+{
+  "timezone": "Asia/Seoul",
+  "checks": [
+    {
+      "date": "2026-10-30",
+      "automation": "seo-geo",
+      "checkedAt": "2026-10-30T03:00:07.593250+09:00",
+      "decision": "DONT_NOTIFY",
+      "artifact": "/Users/hjw/Developer/donup/output/website-seo-daily-20261030/summary.json",
+      "status": "40개 공개 페이지 정상, GSC/네이버/Bing 신규 성과 집계 대기",
+      "changes": [],
+      "deployment": false,
+      "nextReview": "2026-10-31 02:00 Asia/Seoul"
+    }
+  ]
+}
